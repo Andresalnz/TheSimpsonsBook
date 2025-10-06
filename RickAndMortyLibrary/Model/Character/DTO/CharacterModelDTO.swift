@@ -7,79 +7,72 @@
 
 import Foundation
 
-struct CharacterModelDTO: Codable, Identifiable, Hashable {
-    let id: Int?
-    let info: CharactersInfoDTO?
-    let characters: [CharactersResultsDTO]?
+// MARK: - Simpsons API DTOs
+
+struct SimpsonsCharactersPageDTO: Codable {
+    let count: Int?
+    let next: String?
+    let prev: String?
+    let pages: Int?
+    let characters: [SimpsonsCharacterDTO]?
     
     enum CodingKeys: String, CodingKey {
-        case id
-        case info
+        case count
+        case next
+        case prev
+        case pages
         case characters = "results"
     }
 }
 
-struct CharactersInfoDTO: Codable, Identifiable, Hashable {
+struct SimpsonsCharacterDTO: Codable, Identifiable, Hashable {
     let id: Int?
-    let count: Int?
-    let pages: Int?
-    let next: String?
-    let prev: String?
-    
-}
-
-struct CharactersResultsDTO: Codable, Identifiable, Hashable {
-    let id: Int?
-    let name: String?
-    let status: Status?
-    let species: Species?
-    let type: String?
+    let age: Int?
+    let birthdate: String?
     let gender: Gender?
-    let origin, location: LocationOriginDTO?
-    let image: String?
-    let episode: [String]?
-    let url: String?
-    let created: String?
+    let name: String?
+    let occupation: String?
+    let portraitPath: String?
+    let phrases: [String]?
+    let status: SimpsonsCharacterStatus?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case age
+        case birthdate
+        case gender
+        case name
+        case occupation
+        case portraitPath = "portrait_path"
+        case phrases
+        case status
+    }
 }
 
-
-struct LocationOriginDTO: Codable, Identifiable, Hashable {
-    let id: Int?
-    let name: String?
-    let url: String?
+enum SimpsonsCharacterStatus: String, Codable, CaseIterable {
+    case alive = "Alive"
+    case deceased = "Deceased"
+    case unknown = "Unknown"
 }
 
 /*
  {
-   "info": {
-     "count": 826,
-     "pages": 42,
-     "next": "https://rickandmortyapi.com/api/character/?page=2",
-     "prev": null
-   },
+   "count": 1182,
+   "next": "https://thesimpsonsapi.com/api/characters?page=2",
+   "prev": null,
+   "pages": 60,
    "results": [
      {
        "id": 1,
-       "name": "Rick Sanchez",
-       "status": "Alive",
-       "species": "Human",
-       "type": "",
+       "age": 39,
+       "birthdate": "1956-05-12",
        "gender": "Male",
-       "origin": {
-         "name": "Earth",
-         "url": "https://rickandmortyapi.com/api/location/1"
-       },
-       "location": {
-         "name": "Earth",
-         "url": "https://rickandmortyapi.com/api/location/20"
-       },
-       "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
-       "episode": [
-         "https://rickandmortyapi.com/api/episode/1",
-         "https://rickandmortyapi.com/api/episode/2",
-         // ...
-       ],
-       "url": "https://rickandmortyapi.com/api/character/1",
-       "created": "2017-11-04T18:48:46.250Z"
-     },
+       "name": "Homer Simpson",
+       "occupation": "Safety Inspector",
+       "portrait_path": "/character/1.webp",
+       "phrases": ["Doh!", "..."],
+       "status": "Alive"
+     }
+   ]
+ }
  */
