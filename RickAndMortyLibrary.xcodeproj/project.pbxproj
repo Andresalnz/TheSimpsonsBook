@@ -29,7 +29,6 @@
 		9F798BCB2B18FFA7008BEC6E /* ListWithSeparation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F798BCA2B18FFA7008BEC6E /* ListWithSeparation.swift */; };
 		9F8445F92AF1E50700460822 /* SectionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8445F82AF1E50700460822 /* SectionImageView.swift */; };
 		9F8445FB2AF1E6B200460822 /* SectionInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8445FA2AF1E6B200460822 /* SectionInformationView.swift */; };
-		9F8445FD2AF1E6F700460822 /* SectionEpisodesAndCharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8445FC2AF1E6F700460822 /* SectionEpisodesAndCharactersView.swift */; };
 		9F8814882AE26F4700448501 /* EpisodeModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8814872AE26F4700448501 /* EpisodeModelDTO.swift */; };
 		9F88148A2AE26F5300448501 /* EpisodeModelBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8814892AE26F5300448501 /* EpisodeModelBO.swift */; };
 		9F88148C2AE26F6100448501 /* EpisodeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88148B2AE26F6100448501 /* EpisodeMapper.swift */; };
@@ -89,7 +88,6 @@
 		9F798BCA2B18FFA7008BEC6E /* ListWithSeparation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWithSeparation.swift; sourceTree = "<group>"; };
 		9F8445F82AF1E50700460822 /* SectionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionImageView.swift; sourceTree = "<group>"; };
 		9F8445FA2AF1E6B200460822 /* SectionInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionInformationView.swift; sourceTree = "<group>"; };
-		9F8445FC2AF1E6F700460822 /* SectionEpisodesAndCharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionEpisodesAndCharactersView.swift; sourceTree = "<group>"; };
 		9F8814872AE26F4700448501 /* EpisodeModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeModelDTO.swift; sourceTree = "<group>"; };
 		9F8814892AE26F5300448501 /* EpisodeModelBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeModelBO.swift; sourceTree = "<group>"; };
 		9F88148B2AE26F6100448501 /* EpisodeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeMapper.swift; sourceTree = "<group>"; };
@@ -338,7 +336,6 @@
 			children = (
 				9F8445F82AF1E50700460822 /* SectionImageView.swift */,
 				9F8445FA2AF1E6B200460822 /* SectionInformationView.swift */,
-				9F8445FC2AF1E6F700460822 /* SectionEpisodesAndCharactersView.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -625,7 +622,6 @@
 				9F0DEA512AE1D92E009376F1 /* DetailViewModel.swift in Sources */,
 				9F0DEA3A2AE15F3B009376F1 /* ListHomeViewModel.swift in Sources */,
 				9F4458182B6BB62B0076994F /* CharacterFavouriteView.swift in Sources */,
-				9F8445FD2AF1E6F700460822 /* SectionEpisodesAndCharactersView.swift in Sources */,
 				9FFE6A432B7F7B9E004CEEA9 /* SwipeActionsViewModifier.swift in Sources */,
 				9F0C75D22B31C30F00DF1CB7 /* TabBarView.swift in Sources */,
 				9F0DEA532AE1D93B009376F1 /* DetailView.swift in Sources */,
