@@ -10,5 +10,4 @@ import Foundation
 struct RowListMain: Codable, Hashable, HomeRowView {
     var image: URL?
     var name: String?
-    var species: Species?
 }

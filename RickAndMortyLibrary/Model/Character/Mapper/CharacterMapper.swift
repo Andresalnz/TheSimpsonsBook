@@ -7,37 +7,41 @@
 
 import Foundation
 
-extension CharactersResultsDTO {
-    func toBo() -> CharactersResultsBO {
-        
-        var urlEpisodes: [URL] = []
-        episode?.forEach({ episode in
-            if let episode = URL(string: episode) {
-                urlEpisodes.append(episode)
-            }
-        })
-        
-        return CharactersResultsBO(rowListMain: RowListMain(),
-                                   rowDetail: RowDetail(),
-                                   id: id,
-                                   name: name,
-                                   status: status,
-                                   species: species,
-                                   type: type,
-                                   gender: gender,
-                                   origin: origin?.toBo(),
-                                   location: location?.toBo(),
-                                   image: URL(string: image ?? ""),
-                                   episode: urlEpisodes,
-                                   url: URL(string: url ?? ""),
-                                   created: Date())
+// MARK: - Simpsons DTO -> BO Mappers
+extension SimpsonsCharacterDTO {
+    func toBo() -> SimpsonsCharacterBO {
+        SimpsonsCharacterBO(
+            id: id,
+            age: age,
+            birthdate: birthdate,
+            gender: gender?.toBo(),
+            name: name,
+            occupation: occupation,
+            portraitPath: URL(string: portraitPath ?? ""),
+            phrases: phrases,
+            status: status?.toBo()
+        )
     }
 }
 
+// MARK: - Enum Mappers
+extension SimpsonsCharacterGenderDTO {
+    func toBo() -> SimpsonsCharacterGenderBO {
+        switch self {
+        case .female: return .female
+        case .male: return .male
+        case .unknown: return .unknown
+        case .genderless: return .Genderless
+        }
+    }
+}
 
-extension LocationOriginDTO {
-    func toBo() -> LocationOriginBO {
-        return LocationOriginBO(id: id, name: name,
-                                url: URL(string: url ?? ""))
+extension SimpsonsCharacterStatusDTO {
+    func toBo() -> SimpsonsCharacterStatusBO {
+        switch self {
+        case .alive: return .alive
+        case .deceased: return .dead
+        case .unknown: return .unknown
+        }
     }
 }

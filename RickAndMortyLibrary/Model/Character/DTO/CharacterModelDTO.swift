@@ -9,7 +9,8 @@ import Foundation
 
 // MARK: - Simpsons API DTOs
 
-struct SimpsonsCharactersPageDTO: Codable {
+struct SimpsonsCharactersPageDTO: Codable, Identifiable, Hashable {
+    let id: Int?
     let count: Int?
     let next: String?
     let prev: String?
@@ -17,6 +18,7 @@ struct SimpsonsCharactersPageDTO: Codable {
     let characters: [SimpsonsCharacterDTO]?
     
     enum CodingKeys: String, CodingKey {
+        case id
         case count
         case next
         case prev
@@ -29,12 +31,12 @@ struct SimpsonsCharacterDTO: Codable, Identifiable, Hashable {
     let id: Int?
     let age: Int?
     let birthdate: String?
-    let gender: Gender?
+    let gender: SimpsonsCharacterGenderDTO?
     let name: String?
     let occupation: String?
     let portraitPath: String?
     let phrases: [String]?
-    let status: SimpsonsCharacterStatus?
+    let status: SimpsonsCharacterStatusDTO?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -49,10 +51,17 @@ struct SimpsonsCharacterDTO: Codable, Identifiable, Hashable {
     }
 }
 
-enum SimpsonsCharacterStatus: String, Codable, CaseIterable {
+enum SimpsonsCharacterStatusDTO: String, Codable, CaseIterable {
     case alive = "Alive"
     case deceased = "Deceased"
     case unknown = "Unknown"
+}
+
+enum SimpsonsCharacterGenderDTO: String, Codable, CaseIterable {
+    case female = "Female"
+    case male = "Male"
+    case unknown = "unknown"
+    case genderless = "Genderless"
 }
 
 /*

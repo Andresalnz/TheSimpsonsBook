@@ -17,12 +17,11 @@ struct RowDetail: Codable, Hashable, Identifiable, Detail {
     var dimension: String?
     var residents: [URL]?
     var type: String?
-    var status: Status?
-    var gender: Gender?
+    var status: SimpsonsCharacterStatusBO?
+    var gender: SimpsonsCharacterGenderBO?
     var origin: LocationOriginBO?
     var location: LocationOriginBO?
     var episodes: [URL]?
     var image: URL?
     var name: String?
-    var species: Species?
 }
