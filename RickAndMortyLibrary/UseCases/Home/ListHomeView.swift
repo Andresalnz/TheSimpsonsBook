@@ -23,21 +23,12 @@ struct ListHomeView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                HomeContentView
-                VStack {
-                    if viewModel.isLoading {
-                        ProgressView()
-                    } else {
-                        Text("The End")
-                            .font(.footnote)
-                            .fontWeight(.light)
+            
+                List {
+                    ForEach(viewModel.characters, id: \.id) { character in
+                        CharacterRowView(name: character.name, image: character.portraitPath)
                     }
                 }
-                .listRowBackground(Color.clear)
-                .frame(maxWidth: .infinity, alignment: .center)
-            }
-            
             .navigationTitle(navigationTitle ?? Constants.noText)
         }
         .navigationViewStyle(.stack)
@@ -49,57 +40,57 @@ struct ListHomeView: View {
                 .font(.body)
         }
         .onAppear {
-            if viewModel.stateLoadListOnce() {
+           // if viewModel.stateLoadListOnce() {
                 viewModel.loadUI()
-            }
+            //}
         }
     }
     
-    //MARK: - ViewBuilder
-    @ViewBuilder
-    private var HomeContentView: some View {
-        switch type {
-            case .characters:
-                ForEach(viewModel.searchCharacters, id: \.id) { character in
-                    if let episodes = character.episode {
-                        NavigationLink(destination: DetailView(model: character.rowDetail, type: .characters, viewModel: DetailViewModel(allEpisodeCharacter: episodes, type: .characters))) {
-                            CharacterRowView(type: character.rowListMain)
-                                .onAppear {
-                                    if !viewModel.isLoading && viewModel.checkTheLastIdCharacters(of: character) {
-                                        viewModel.loadMoreIfNeeded()
-                                    }
-                                }
-                        }
-                    }
-                }
-                .modifier(StyleList())
-            case .episodes:
-                ForEach(viewModel.searchEpisodes, id: \.id) { episode in
-                    NavigationLink(destination: DetailView(model: episode.rowDetail, type: .episodes, viewModel: DetailViewModel(allEpisodeCharacter: episode.characters!, type: .episodes))) {
-                        TitleRowView(type: episode.rowListMain)
-                            .onAppear {
-                                if !viewModel.isLoading && viewModel.checkTheLastIdEpisodes(of: episode) {
-                                    viewModel.loadMoreIfNeeded()
-                                }
-                            }
-                    }
-                    
-                }
-                .modifier(StyleList())
-            case .locations:
-                ForEach(viewModel.searchLocations, id: \.id) { location in
-                    NavigationLink(destination: DetailView(model: location.rowDetail, type: .locations, viewModel: DetailViewModel(allEpisodeCharacter: location.residents!, type: .locations))) {
-                        TitleRowView(type: location.rowListMain)
-                            .onAppear {
-                                if !viewModel.isLoading && viewModel.checkTheLastIdLocations(of: location) {
-                                    viewModel.loadMoreIfNeeded()
-                                }
-                            }
-                    }
-                }
-                .modifier(StyleList())
-        }
-    }
+//    //MARK: - ViewBuilder
+//    @ViewBuilder
+//    private var HomeContentView: some View {
+//        switch type {
+//            case .characters:
+//                ForEach(viewModel.characters, id: \.id) { character in
+//                  //  if let episodes = character.episode {
+//                       // NavigationLink(destination: DetailView(model: character.rowDetail, type: .characters, viewModel: DetailViewModel(allEpisodeCharacter: episodes, type: .characters))) {
+//                    CharacterRowView(name: character.name, image: character.portraitPath)
+////                                .onAppear {
+////                                    if !viewModel.isLoading && viewModel.checkTheLastIdCharacters(of: character) {
+////                                        viewModel.loadMoreIfNeeded()
+////                                    }
+////                                }
+//                       // }
+//                   // }
+//                }
+//                .modifier(StyleList())
+//            case .episodes:
+//                ForEach(viewModel.searchEpisodes, id: \.id) { episode in
+//                    NavigationLink(destination: DetailView(model: episode.rowDetail, type: .episodes, viewModel: DetailViewModel(allEpisodeCharacter: episode.characters!, type: .episodes))) {
+//                        TitleRowView(type: episode.rowListMain)
+//                            .onAppear {
+//                                if !viewModel.isLoading && viewModel.checkTheLastIdEpisodes(of: episode) {
+//                                    viewModel.loadMoreIfNeeded()
+//                                }
+//                            }
+//                    }
+//                    
+//                }
+//                .modifier(StyleList())
+//            case .locations:
+//                ForEach(viewModel.searchLocations, id: \.id) { location in
+//                    NavigationLink(destination: DetailView(model: location.rowDetail, type: .locations, viewModel: DetailViewModel(allEpisodeCharacter: location.residents!, type: .locations))) {
+//                        TitleRowView(type: location.rowListMain)
+//                            .onAppear {
+//                                if !viewModel.isLoading && viewModel.checkTheLastIdLocations(of: location) {
+//                                    viewModel.loadMoreIfNeeded()
+//                                }
+//                            }
+//                    }
+//                }
+//                .modifier(StyleList())
+//        }
+//    }
 }
 
 #Preview {

@@ -7,13 +7,14 @@
 
 import SwiftUI
 
-struct CharacterRowView<T>: View  where T: HomeRowView {
+struct CharacterRowView: View {
     
-    let type: T
+    let name: String?
+    let image: URL?
     
     var body: some View {
         HStack {
-            if let image = type.image {
+            if let image = image {
                 AsyncImage(url: image) { image in
                     image.resizable()
                         .scaledToFit()
@@ -28,14 +29,14 @@ struct CharacterRowView<T>: View  where T: HomeRowView {
                 Image(systemName: "person.fill")
             }
             VStack(alignment: .leading) {
-                Text(type.name ?? Constants.noText)
+                Text(name ?? Constants.noText)
                     .font(.title3)
-                Text(type.species?.rawValue ?? Constants.noText)
+              
             }
         }
     }
 }
 
 #Preview {
-    CharacterRowView(type: RowListMain(image: URL(string: ""), name: "Rick", species: .Animal))
+    CharacterRowView(name: "Hommer", image: nil)
 }
