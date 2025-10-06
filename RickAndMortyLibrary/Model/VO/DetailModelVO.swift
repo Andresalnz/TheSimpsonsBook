@@ -7,7 +7,7 @@
 
 import Foundation
 import FirebaseFirestore
-import FirebaseFirestoreSwift
+
 
 struct RowDetail: Codable, Hashable, Identifiable, Detail {
     @DocumentID var id: String?
