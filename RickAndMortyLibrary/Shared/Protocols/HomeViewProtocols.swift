@@ -10,5 +10,5 @@ import Foundation
 protocol HomeRowView {
     var image: URL? { get }
     var name: String? { get }
-    var species: Species? { get }
+ 
 }
