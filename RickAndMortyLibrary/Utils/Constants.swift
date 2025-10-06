@@ -10,11 +10,11 @@ import Foundation
 //MARK: - Constants
 struct Constants {
     //URL'S
-    static let uri: String = "https://rickandmortyapi.com/api"
-    static let characters: String = "/character"
+    static let uri: String = "https://thesimpsonsapi.com/api"
+    static let characters: String = "/characters"
     static let locations: String = "/location"
     static let episodes: String = "/episode"
-    static let page: String = "/?page="
+    static let page: String = "?page="
     
     //Texts
     static let titleCharacters: String = "Characters"
