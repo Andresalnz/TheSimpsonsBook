@@ -18,7 +18,7 @@ struct RMFirebaseFirestoreSaveDocuments {
             let character: [String: Any] = [
                 "name": model.name ?? "",
                 "status": model.status?.rawValue ?? "",
-                "species": model.species?.rawValue ?? "",
+               
                 "type": model.type ?? "",
                 "gender": model.gender?.rawValue ?? "",
                 "origin": model.origin?.name ?? "",
