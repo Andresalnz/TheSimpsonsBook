@@ -16,7 +16,7 @@ struct SectionInformationView<T>: View where T: Detail {
         switch type {
             case .characters:
                 InfoDetailCharacterRowView(icon: Constants.Icons.circleFill.rawValue, label: Constants.status, value: Text(model.status?.rawValue ?? "").foregroundColor(model.status == .alive ? .green : .black))
-                InfoDetailCharacterRowView(icon: Constants.Icons.personCircle.rawValue, label: Constants.species, value: Text(model.species?.rawValue ?? Constants.noText))
+                InfoDetailCharacterRowView(icon: Constants.Icons.personCircle.rawValue, label: Constants.species, value: Text(""))
                 if model.type != "" {
                     InfoDetailCharacterRowView(icon: Constants.Icons.personCircle.rawValue, label: Constants.type, value: Text(model.type ?? Constants.noText))
                 }

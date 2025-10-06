@@ -9,9 +9,8 @@ import Foundation
 
 protocol DetailCharacter: Encodable {
     var image: URL? { get }
-    var species: Species? { get }
-    var status: Status? { get }
-    var gender: Gender? { get }
+    var status: SimpsonsCharacterStatusBO? { get }
+    var gender: SimpsonsCharacterGenderBO? { get }
     var origin: LocationOriginBO? { get }
     var location: LocationOriginBO? { get }
     var episodes: [URL]? { get }
