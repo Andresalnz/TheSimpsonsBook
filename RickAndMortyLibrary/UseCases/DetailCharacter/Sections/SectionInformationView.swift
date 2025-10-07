@@ -28,7 +28,7 @@ struct SectionInformationView<T>: View where T: Detail {
                 InfoDetailCharacterRowView(icon: Constants.Icons.mountain2CircleFill.rawValue, label: Constants.dimension, value: Text(model.dimension ?? Constants.noText))
             case .episodes:
                 InfoDetailCharacterRowView(icon: Constants.Icons.tvCircle.rawValue, label: Constants.airDate, value: Text(model.airDate ?? Constants.noText))
-                InfoDetailCharacterRowView(icon: Constants.Icons.ellipsisBubbleFill.rawValue, label: Constants.episode, value: Text(model.episode ?? Constants.noText))
+                InfoDetailCharacterRowView(icon: Constants.Icons.ellipsisBubbleFill.rawValue, label: Constants.episode, value: Text(""))
         }
         
         

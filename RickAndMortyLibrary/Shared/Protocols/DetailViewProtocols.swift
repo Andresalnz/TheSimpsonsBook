@@ -18,7 +18,7 @@ protocol DetailCharacter: Encodable {
 
 protocol DetailEpisode: Encodable {
     var airDate: String? { get }
-    var episode: String? { get }
+
     var characters: [URL]? { get }
 }
 

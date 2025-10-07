@@ -21,9 +21,7 @@ struct ListWithSeparation<T>: View where T: Detail {
                 }
                 
                 Spacer()
-                if let episode = model.episode {
-                    Text(episode)
-                }
+               
                
             }
         }
