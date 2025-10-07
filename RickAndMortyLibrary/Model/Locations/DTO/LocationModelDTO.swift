@@ -7,55 +7,57 @@
 
 import Foundation
 
-struct LocationModelDTO: Codable {
-    let info: LocationInfoDTO?
-    let locations: [LocationResultsDTO]?
+struct SimpsonsLocationsPageDTO: Codable, Hashable, Identifiable {
+    let id: Int?
+    let count: Int?
+    let next: String?
+    let prev: String?
+    let pages: Int?
+    let locations: [SimpsonsLocationDTO]?
     
     enum CodingKeys: String, CodingKey {
-        case info
+        case id
+        case count
+        case next
+        case prev
+        case pages
         case locations = "results"
     }
 }
 
-struct LocationInfoDTO: Codable {
-    let count: Int?
-    let pages: Int?
-    let next: String?
-    let prev: String?
-}
 
-struct LocationResultsDTO: Codable {
+struct SimpsonsLocationDTO: Codable, Hashable, Identifiable {
     let id: Int?
     let name: String?
-    let type: String?
+    let imagePath: String?
     let dimension: String?
-    let residents: [String]?
-    let url: String?
-    let created: String?
+    let town: String?
+    let use: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case imagePath = "image_path"
+        case dimension
+        case town
+        case use
+    }
 }
 
 /*
- "info": {
-     "count": 126,
-     "pages": 7,
-     "next": "https://rickandmortyapi.com/api/location?page=2",
-     "prev": null
-   },
+ {
+   "count": 477,
+   "next": "https://thesimpsonsapi.com/api/locations?page=2",
+   "prev": null,
+   "pages": 24,
    "results": [
      {
        "id": 1,
-       "name": "Earth",
-       "type": "Planet",
-       "dimension": "Dimension C-137",
-       "residents": [
-         "https://rickandmortyapi.com/api/character/1",
-         "https://rickandmortyapi.com/api/character/2",
-         // ...
-       ],
-       "url": "https://rickandmortyapi.com/api/location/1",
-       "created": "2017-11-10T12:42:04.162Z"
+       "name": "742 Evergreen Terrace",
+       "image_path": "/location/1.webp",
+       "town": "Springfield",
+       "use": "Residential"
      }
-     // ...
    ]
  }
  */

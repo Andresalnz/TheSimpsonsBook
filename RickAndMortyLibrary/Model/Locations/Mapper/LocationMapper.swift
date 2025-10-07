@@ -7,23 +7,15 @@
 
 import Foundation
 
-extension LocationResultsDTO {
-    func toBo() -> LocationResultsBO {
-        var urlresidents: [URL] = []
-        residents?.forEach({ resident in
-            if let resident = URL(string: resident) {
-                urlresidents.append(resident)
-            }
-        })
-        return LocationResultsBO(rowListMain: RowListMain(),
-                                 rowDetail: RowDetail(),
-                                 id: id,
-                                 name: name,
-                                 type: type,
-                                 dimension: dimension,
-                                 residents: urlresidents,
-                                 url: URL(string: url ?? ""),
-                                 created: Date())
+extension SimpsonsLocationDTO {
+    func toBo() -> SimpsonsLocationBO {
+       SimpsonsLocationBO(id: id,
+                          name: name,
+                          imagePath: URL(string: imagePath ?? ""),
+                          dimension: dimension,
+                          town: town,
+                          use: use)
+        
     }
 }
 
