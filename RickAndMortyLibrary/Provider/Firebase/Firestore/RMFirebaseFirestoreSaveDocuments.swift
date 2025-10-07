@@ -38,7 +38,7 @@ struct RMFirebaseFirestoreSaveDocuments {
         let episode: [String: Any] = [
             "name": model.name ?? "",
             "airDate": model.airDate ?? "",
-            "episode": model.episode ?? "",
+           
         ]
         
         do {

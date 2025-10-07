@@ -9,7 +9,8 @@ import Foundation
 
 // MARK: - Simpsons Episodes BO
 
-struct SimpsonsEpisodesPageBO: Codable {
+struct SimpsonsEpisodesPageBO: Codable,  Hashable, Identifiable {
+    let id: Int?
     let count: Int?
     let next: URL?
     let prev: URL?
@@ -17,6 +18,7 @@ struct SimpsonsEpisodesPageBO: Codable {
     let episodes: [SimpsonsEpisodeBO]?
     
     enum CodingKeys: String, CodingKey {
+        case id
         case count
         case next
         case prev
