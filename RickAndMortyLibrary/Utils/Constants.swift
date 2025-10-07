@@ -13,7 +13,7 @@ struct Constants {
     static let uri: String = "https://thesimpsonsapi.com/api"
     static let characters: String = "/characters"
     static let locations: String = "/location"
-    static let episodes: String = "/episode"
+    static let episodes: String = "/episodes"
     static let page: String = "?page="
     
     //Texts

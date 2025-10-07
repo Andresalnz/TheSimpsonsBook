@@ -10,10 +10,10 @@ import FirebaseFirestore
 
 protocol RickAndMortyInteractor {
     func getAllCharacters(_ page: Int) async throws -> SimpsonsCharactersPageDTO
-    func getAllEpisodes(_ page: Int) async throws -> EpisodeModelDTO
+    func getAllEpisodes(_ page: Int) async throws -> SimpsonsEpisodesPageDTO
     func getAllLocations(_ page: Int) async throws -> LocationModelDTO
     func singleCharacter(url: URL?) async throws -> SimpsonsCharactersPageDTO
-    func singleEpisode(url: URL?) async throws -> EpisodeResultsDTO
+    func singleEpisode(url: URL?) async throws -> SimpsonsEpisodesPageDTO
 }
 
 struct Interactor: RickAndMortyInteractor {
@@ -40,14 +40,14 @@ struct Interactor: RickAndMortyInteractor {
     //MARK: - Episodes
     
     //allEpisodes
-    func getAllEpisodes(_ page: Int) async throws -> EpisodeModelDTO {
-        return try await repository.getJSON(url: Util.Services.allEpisodes.shapeURL(page), type: EpisodeModelDTO.self)
+    func getAllEpisodes(_ page: Int) async throws -> SimpsonsEpisodesPageDTO {
+        return try await repository.getJSON(url: Util.Services.allEpisodes.shapeURL(page), type: SimpsonsEpisodesPageDTO.self)
     }
     
     
     //singleEpisode
-    func singleEpisode(url: URL?) async throws -> EpisodeResultsDTO {
-        return try await repository.getJSON(url: url, type: EpisodeResultsDTO.self)
+    func singleEpisode(url: URL?) async throws -> SimpsonsEpisodesPageDTO {
+        return try await repository.getJSON(url: url, type: SimpsonsEpisodesPageDTO.self)
     }
     
 
