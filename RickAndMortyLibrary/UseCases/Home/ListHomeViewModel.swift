@@ -20,7 +20,7 @@ final class ListHomeViewModel: ObservableObject {
     //MARK: - Published
     //Array que almacena la informacion
     @Published var characters: [SimpsonsCharacterBO]
-    @Published var episodes: [EpisodeResultsBO]
+    @Published var episodes: [SimpsonsEpisodeBO]
     @Published var locations: [LocationResultsBO]
     @Published var viewState: ViewState = .loading
     let type: TypeViewList
@@ -30,7 +30,7 @@ final class ListHomeViewModel: ObservableObject {
     @Published var showAlert = false
     
     //MARK: - Init
-    init(interactor: Interactor = Interactor.shared, characters: [SimpsonsCharacterBO] = [], episodes: [EpisodeResultsBO] = [], locations: [LocationResultsBO] = [], type: TypeViewList) {
+    init(interactor: Interactor = Interactor.shared, characters: [SimpsonsCharacterBO] = [], episodes: [SimpsonsEpisodeBO] = [], locations: [LocationResultsBO] = [], type: TypeViewList) {
         self.interactor = interactor
         self.characters = characters
         self.episodes = episodes

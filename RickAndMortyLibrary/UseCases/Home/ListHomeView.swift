@@ -53,10 +53,12 @@ struct ListHomeView: View {
                     CharacterRowView(name: character.name, image: character.portraitPath)
                 }
             case .episodes:
-                VStack {
+                ForEach(viewModel.episodes, id: \.id) { episode in
+                    CharacterRowView(name: episode.name, image: episode.imagePath)
                 }
-//                ForEach(viewModel.searchEpisodes, id: \.id) { episode in
-//                    NavigationLink(destination: DetailView(model: episode.rowDetail, type: .episodes, viewModel: DetailViewModel(allEpisodeCharacter: episode.characters!, type: .episodes))) {
+                
+                //                ForEach(viewModel.searchEpisodes, id: \.id) { episode in
+                //                    NavigationLink(destination: DetailView(model: episode.rowDetail, type: .episodes, viewModel: DetailViewModel(allEpisodeCharacter: episode.characters!, type: .episodes))) {
 //                        TitleRowView(type: episode.rowListMain)
 //                            .onAppear {
 //                                if !viewModel.isLoading && viewModel.checkTheLastIdEpisodes(of: episode) {
@@ -85,5 +87,5 @@ struct ListHomeView: View {
 }
 
 #Preview {
-    ListHomeView(type: .characters, navigationTitle: "Characters").environmentObject(ListHomeViewModel(type: .characters))
+    ListHomeView(type: .episodes, navigationTitle: "Characters").environmentObject(ListHomeViewModel(type: .episodes))
 }
