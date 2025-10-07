@@ -11,7 +11,7 @@ import FirebaseFirestore
 protocol RickAndMortyInteractor {
     func getAllCharacters(_ page: Int) async throws -> SimpsonsCharactersPageDTO
     func getAllEpisodes(_ page: Int) async throws -> SimpsonsEpisodesPageDTO
-    func getAllLocations(_ page: Int) async throws -> LocationModelDTO
+    func getAllLocations(_ page: Int) async throws -> SimpsonsLocationsPageDTO
     func singleCharacter(url: URL?) async throws -> SimpsonsCharactersPageDTO
     func singleEpisode(url: URL?) async throws -> SimpsonsEpisodesPageDTO
 }
@@ -55,8 +55,8 @@ struct Interactor: RickAndMortyInteractor {
     //MARK: - Location
     
     //allLocations
-    func getAllLocations(_ page: Int) async throws -> LocationModelDTO {
-        return try await repository.getJSON(url: Util.Services.allLocations.shapeURL(page), type: LocationModelDTO.self)
+    func getAllLocations(_ page: Int) async throws -> SimpsonsLocationsPageDTO {
+        return try await repository.getJSON(url: Util.Services.allLocations.shapeURL(page), type: SimpsonsLocationsPageDTO.self)
     }
     
     //MARK: - Firebase

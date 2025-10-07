@@ -58,7 +58,9 @@ struct ListHomeView: View {
                 }
                 
             case .locations:
-                VStack {}
+                ForEach(viewModel.locations, id: \.id) { location in
+                    CharacterRowView(name: location.name, image: location.imagePath)
+                }
 //                ForEach(viewModel.searchLocations, id: \.id) { location in
 //                    NavigationLink(destination: DetailView(model: location.rowDetail, type: .locations, viewModel: DetailViewModel(allEpisodeCharacter: location.residents!, type: .locations))) {
 //                        TitleRowView(type: location.rowListMain)
@@ -75,5 +77,5 @@ struct ListHomeView: View {
 }
 
 #Preview {
-    ListHomeView(type: .episodes, navigationTitle: "Characters").environmentObject(ListHomeViewModel(type: .episodes))
+    ListHomeView(type: .locations, navigationTitle: "Characters").environmentObject(ListHomeViewModel(type: .locations))
 }
