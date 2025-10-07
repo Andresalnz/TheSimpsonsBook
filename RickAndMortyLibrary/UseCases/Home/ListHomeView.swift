@@ -57,18 +57,6 @@ struct ListHomeView: View {
                     CharacterRowView(name: episode.name, image: episode.imagePath)
                 }
                 
-                //                ForEach(viewModel.searchEpisodes, id: \.id) { episode in
-                //                    NavigationLink(destination: DetailView(model: episode.rowDetail, type: .episodes, viewModel: DetailViewModel(allEpisodeCharacter: episode.characters!, type: .episodes))) {
-//                        TitleRowView(type: episode.rowListMain)
-//                            .onAppear {
-//                                if !viewModel.isLoading && viewModel.checkTheLastIdEpisodes(of: episode) {
-//                                    viewModel.loadMoreIfNeeded()
-//                                }
-//                            }
-//                    }
-//                    
-//                }
-               // .modifier(StyleList())
             case .locations:
                 VStack {}
 //                ForEach(viewModel.searchLocations, id: \.id) { location in
