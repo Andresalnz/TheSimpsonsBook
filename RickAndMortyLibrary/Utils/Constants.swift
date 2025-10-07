@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 //MARK: - Constants
 struct Constants {
@@ -60,3 +61,22 @@ struct Constants {
         case ellipsisBubbleFill = "ellipsis.bubble.fill"
     }
 }
+
+extension Color {
+    init(hex: String) {
+        var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+        hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
+
+        var rgb: UInt64 = 0
+        Scanner(string: hexSanitized).scanHexInt64(&rgb)
+
+        let hasAlpha = hexSanitized.count == 8
+        let red = Double((rgb >> (hasAlpha ? 24 : 16)) & 0xFF) / 255.0
+        let green = Double((rgb >> (hasAlpha ? 16 : 8)) & 0xFF) / 255.0
+        let blue = Double((rgb >> (hasAlpha ? 8 : 0)) & 0xFF) / 255.0
+        let alpha = hasAlpha ? Double(rgb & 0xFF) / 255.0 : 1.0
+
+        self.init(red: red, green: green, blue: blue, opacity: alpha)
+    }
+}
+
