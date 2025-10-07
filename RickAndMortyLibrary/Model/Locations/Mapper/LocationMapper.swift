@@ -11,7 +11,7 @@ extension SimpsonsLocationDTO {
     func toBo() -> SimpsonsLocationBO {
        SimpsonsLocationBO(id: id,
                           name: name,
-                          imagePath: URL(string: imagePath ?? ""),
+                          imagePath: imagePath,
                           dimension: dimension,
                           town: town,
                           use: use)

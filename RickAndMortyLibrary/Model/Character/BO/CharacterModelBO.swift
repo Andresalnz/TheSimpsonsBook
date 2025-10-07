@@ -32,7 +32,7 @@ struct SimpsonsCharacterBO: Codable, Identifiable, Hashable {
     let gender: SimpsonsCharacterGenderBO?
     let name: String?
     let occupation: String?
-    let portraitPath: URL?
+    let portraitPath: String?
     let phrases: [String]?
     let status: SimpsonsCharacterStatusBO?
     
@@ -46,6 +46,11 @@ struct SimpsonsCharacterBO: Codable, Identifiable, Hashable {
         case portraitPath = "portrait_path"
         case phrases
         case status
+    }
+    
+    var imageURL: URL? {
+        guard let portraitPath  else { return nil }
+        return URL(string: "https://cdn.thesimpsonsapi.com/200\(portraitPath)")
     }
 }
 
@@ -72,3 +77,10 @@ enum SimpsonsCharacterStatusBO: String, Codable, CaseIterable {
     case dead = "Dead"
     case unknown = "unknown"
 }
+
+
+//extension SimpsonsCharacterDTO {
+//    var imageURL: URL? {
+//        URL(string: "https://cdn.thesimpsonsapi.com/500\(portraitPath ?? "")")
+//    }
+//}

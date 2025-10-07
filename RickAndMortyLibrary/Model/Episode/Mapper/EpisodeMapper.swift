@@ -12,7 +12,7 @@ extension SimpsonsEpisodeDTO {
         SimpsonsEpisodeBO(id: id,
                           airdate: airdate,
                           episodeNumber: episodeNumber,
-                          imagePath: URL(string: imagePath ?? ""),
+                          imagePath: imagePath,
                           name: name,
                           season: season,
                           synopsis: synopsis)

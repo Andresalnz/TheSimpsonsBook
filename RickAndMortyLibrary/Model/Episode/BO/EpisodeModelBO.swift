@@ -34,10 +34,15 @@ struct SimpsonsEpisodeBO: Codable, Hashable, Identifiable {
     // Datos propios del episodio
     let airdate: String?
     let episodeNumber: Int?
-    let imagePath: URL?
+    let imagePath: String?
     let name: String?
     let season: Int?
     let synopsis: String?
+    
+    var imageURL: URL? {
+        guard let imagePath  else { return nil }
+        return URL(string: "https://cdn.thesimpsonsapi.com/500\(imagePath)")
+    }
     
     // Modelos auxiliares para UI existentes en el proyecto
 //    var rowListMain: RowListMain {
