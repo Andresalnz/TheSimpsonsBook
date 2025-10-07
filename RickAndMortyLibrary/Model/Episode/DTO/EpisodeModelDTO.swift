@@ -7,68 +7,60 @@
 
 import Foundation
 
+// MARK: - Simpsons Episodes DTOs
 
-struct EpisodeModelDTO: Codable {
-    let info: EpisodeInfoDTO?
-    let episodes: [EpisodeResultsDTO]?
+struct SimpsonsEpisodesPageDTO: Codable {
+    let count: Int?
+    let next: String?
+    let prev: String?
+    let pages: Int?
+    let episodes: [SimpsonsEpisodeDTO]?
     
     enum CodingKeys: String, CodingKey {
-        case info
+        case count
+        case next
+        case prev
+        case pages
         case episodes = "results"
     }
 }
 
-struct EpisodeInfoDTO: Codable {
-    let count: Int?
-    let pages: Int?
-    let next: String?
-    let prev: String?
-}
-
-struct EpisodeResultsDTO: Codable {
+struct SimpsonsEpisodeDTO: Codable, Identifiable, Hashable {
     let id: Int?
+    let airdate: String?
+    let episodeNumber: Int?
+    let imagePath: String?
     let name: String?
-    let airDate: String?
-    let episode: String?
-    let characters: [String]?
-    let url: String?
-    let created: String?
+    let season: Int?
+    let synopsis: String?
     
     enum CodingKeys: String, CodingKey {
         case id
+        case airdate
+        case episodeNumber = "episode_number"
+        case imagePath = "image_path"
         case name
-        case airDate = "air_date"
-        case episode
-        case characters
-        case url
-        case created
+        case season
+        case synopsis
     }
 }
 
-
 /*
  {
-   "info": {
-     "count": 51,
-     "pages": 3,
-     "next": "https://rickandmortyapi.com/api/episode?page=2",
-     "prev": null
-   },
+   "count": 768,
+   "next": "https://thesimpsonsapi.com/api/episodes?page=2",
+   "prev": null,
+   "pages": 39,
    "results": [
      {
        "id": 1,
-       "name": "Pilot",
-       "air_date": "December 2, 2013",
-       "episode": "S01E01",
-       "characters": [
-         "https://rickandmortyapi.com/api/character/1",
-         "https://rickandmortyapi.com/api/character/2",
-         //...
-       ],
-       "url": "https://rickandmortyapi.com/api/episode/1",
-       "created": "2017-11-10T12:56:33.798Z"
-     },
-     // ...
+       "airdate": "1989-12-17",
+       "episode_number": 1,
+       "image_path": "/episode/1.webp",
+       "name": "Simpsons Roasting on an Open Fire",
+       "season": 1,
+       "synopsis": "..."
+     }
    ]
  }
  */

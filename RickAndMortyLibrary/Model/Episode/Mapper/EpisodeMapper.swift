@@ -7,24 +7,15 @@
 
 import Foundation
 
-extension EpisodeResultsDTO {
-    func toBo() -> EpisodeResultsBO {
-        var urlCharacter: [URL] = []
-        characters?.forEach({ character in
-            if let character = URL(string: character) {
-                urlCharacter.append(character)
-            }
-            
-        })
-        return EpisodeResultsBO(rowListMain: RowListMain(),
-                                rowDetail: RowDetail(),
-                                id: id,
-                                name: name,
-                                airDate: airDate,
-                                episode: episode,
-                                characters: urlCharacter,
-                                url: URL(string: url ?? ""),
-                                created: Date())
+extension SimpsonsEpisodeDTO {
+    func toBo() -> SimpsonsEpisodeBO {
+        SimpsonsEpisodeBO(id: id,
+                          airdate: airdate,
+                          episodeNumber: episodeNumber,
+                          imagePath: URL(string: imagePath ?? ""),
+                          name: name,
+                          season: season,
+                          synopsis: synopsis)
     }
 }
 
