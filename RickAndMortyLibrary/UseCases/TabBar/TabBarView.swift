@@ -9,29 +9,39 @@ import SwiftUI
 
 struct TabBarView: View {
     
+    @State private var searchText: String = ""
+    
     var body: some View {
         TabView {
-            ListHomeView(type: .characters, navigationTitle: Constants.titleCharacters).environmentObject(ListHomeViewModel(type: .characters))
-                .tabItem {
-                    Image(systemName: "person.fill")
-                    Text(Constants.titleCharacters)
+            Tab(Constants.titleCharacters, systemImage: "person.fill") {
+                ListHomeView(type: .characters, navigationTitle: Constants.titleCharacters).environmentObject(ListHomeViewModel(type: .characters))
+            }
+            
+            Tab(Constants.titleEpisodes, systemImage: "book.fill") {
+                ListHomeView(type: .episodes, navigationTitle: Constants.titleEpisodes).environmentObject(ListHomeViewModel(type: .episodes))
+            }
+            
+            Tab(Constants.titleLocations, systemImage: "globe.fill") {
+                ListHomeView(type: .locations, navigationTitle: Constants.titleLocations).environmentObject(ListHomeViewModel(type: .locations))
+            }
+            
+           
+            Tab(role: .search) {
+                NavigationStack {
+                    Text("Search")
                 }
-            ListHomeView(type: .episodes, navigationTitle: Constants.titleEpisodes).environmentObject(ListHomeViewModel(type: .episodes))
-                .tabItem {
-                    Image(systemName: "book.fill")
-                    Text(Constants.titleEpisodes)
-                }
-            ListHomeView(type: .locations, navigationTitle: Constants.titleLocations).environmentObject(ListHomeViewModel(type: .locations))
-                .tabItem {
-                    Image(systemName: "globe")
-                    Text(Constants.titleLocations)
-                }
-            FavouritesView(viewModel: FavouritesViewModel(typeList: .locations))
-                .tabItem {
-                    Image(systemName: "heart")
-                    Text(Constants.titleFavourite)
-                }
+            }
+            
+            
+            
+            
+//            FavouritesView(viewModel: FavouritesViewModel(typeList: .locations))
+//                .tabItem {
+//                    Image(systemName: "heart")
+//                    Text(Constants.titleFavourite)
+//                }
         }
+        .searchable(text: $searchText, prompt: "Enter any search...")
     }
 }
 

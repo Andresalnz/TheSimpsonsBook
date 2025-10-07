@@ -11,33 +11,42 @@ struct CharacterRowView: View {
     
     let name: String?
     let image: URL?
+    let sizeImage: Double
+    let text: String?
     
     var body: some View {
         
-        HStack {
-            if let image = image {
-                AsyncImage(url: URL(string: "https://cdn.thesimpsonsapi.com/500\(image)" ) ) { image in
+        HStack(spacing: 20) {
+            
+                AsyncImage(url: image) { image in
                     image.resizable()
                         .scaledToFit()
-                        .frame(width: 50, height: 50, alignment: .center)
-                        .clipShape(RoundedRectangle(cornerRadius: 20.0), style: FillStyle())
+                        .frame(width: sizeImage)
+                       
+                      
+                        
                 }
                 placeholder: {
                     ProgressView()
                 }
                     
-            } else {
-                Image(systemName: "person.fill")
-            }
-            VStack(alignment: .leading) {
+            
+            VStack(alignment: .leading, spacing: 4) {
                 Text(name ?? Constants.noText)
                     .font(.title3)
+                    .lineLimit(1)
+                Text(text ?? "")
+                    .font(.footnote)
+                    .lineLimit(2)
+                    
               
             }
         }
+        
     }
 }
 
 #Preview {
-    CharacterRowView(name: "Homer", image: URL(string: "https://cdn.thesimpsonsapi.com/500/character/1.webp" ))
+
+    CharacterRowView(name: "Homer", image: URL(string: "https://cdn.thesimpsonsapi.com/200/episode/1.webp" ), sizeImage: 150, text: "Saety Guardian")
 }

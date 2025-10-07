@@ -44,29 +44,29 @@ final class ListHomeViewModel: ObservableObject {
    
     //MARK: - Search
     
-//    // Variable que devuelve un array de personajes segun lo que se busque
-//    var searchCharacters: [SimpsonsCharacterBO] {
-//        guard !searchText.isEmpty else { return characters }
-//        return characters.filter { character in
-//            character.name!.lowercased().contains(searchText.lowercased())
-//        }
-//    }
-//    
-//    // Variable que devuelve un array de episodios segun lo que se busque
-//    var searchEpisodes: [EpisodeResultsBO] {
-//        guard !searchText.isEmpty else { return episodes }
-//        return episodes.filter { episode in
-//            episode.name!.lowercased().contains(searchText.lowercased())
-//        }
-//    }
-//    
-//    //Variable que devuelve  un array de localizaciones segun lo que se busque
-//    var searchLocations: [LocationResultsBO] {
-//        guard !searchText.isEmpty else { return locations }
-//        return locations.filter { location in
-//            location.name!.lowercased().contains(searchText.lowercased())
-//        }
-//    }
+    // Variable que devuelve un array de personajes segun lo que se busque
+    var searchCharacters: [SimpsonsCharacterBO] {
+        guard !searchText.isEmpty else { return characters }
+        return characters.filter { character in
+            character.name!.lowercased().contains(searchText.lowercased())
+        }
+    }
+    
+    // Variable que devuelve un array de episodios segun lo que se busque
+    var searchEpisodes: [SimpsonsEpisodeBO] {
+        guard !searchText.isEmpty else { return episodes }
+        return episodes.filter { episode in
+            episode.name!.lowercased().contains(searchText.lowercased())
+        }
+    }
+    
+    //Variable que devuelve  un array de localizaciones segun lo que se busque
+    var searchLocations: [SimpsonsLocationBO] {
+        guard !searchText.isEmpty else { return locations }
+        return locations.filter { location in
+            location.name!.lowercased().contains(searchText.lowercased())
+        }
+    }
     
     //Propiedad que almacena el texto que se esta buscando
     @Published var searchText: String = ""

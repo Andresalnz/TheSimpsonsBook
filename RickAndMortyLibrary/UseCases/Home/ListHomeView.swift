@@ -28,7 +28,7 @@ struct ListHomeView: View {
                 }
             .navigationTitle(navigationTitle ?? Constants.noText)
         }
-        .listStyle(.plain)
+        //.listStyle(.plain)
         .navigationViewStyle(.stack)
         .searchable(text: $viewModel.searchText, prompt: Constants.searchPrompt)
         .alert(viewModel.errorMsg, isPresented: $viewModel.showAlert) {
@@ -49,33 +49,22 @@ struct ListHomeView: View {
     private var HomeContentView: some View {
         switch type {
             case .characters:
-                ForEach(viewModel.characters, id: \.id) { character in
-                    CharacterRowView(name: character.name, image: character.portraitPath)
+                ForEach(viewModel.searchCharacters, id: \.id) { character in
+                    CharacterRowView(name: character.name, image: character.imageURL, sizeImage: 70, text: character.occupation)
                 }
             case .episodes:
-                ForEach(viewModel.episodes, id: \.id) { episode in
-                    CharacterRowView(name: episode.name, image: episode.imagePath)
+                ForEach(viewModel.searchEpisodes, id: \.id) { episode in
+                    CharacterRowView(name: episode.name, image: episode.imageURL, sizeImage: 150, text: episode.synopsis)
                 }
                 
             case .locations:
-                ForEach(viewModel.locations, id: \.id) { location in
-                    CharacterRowView(name: location.name, image: location.imagePath)
+                ForEach(viewModel.searchLocations, id: \.id) { location in
+                    CharacterRowView(name: location.name, image: location.imageURL, sizeImage: 150, text: location.town)
                 }
-//                ForEach(viewModel.searchLocations, id: \.id) { location in
-//                    NavigationLink(destination: DetailView(model: location.rowDetail, type: .locations, viewModel: DetailViewModel(allEpisodeCharacter: location.residents!, type: .locations))) {
-//                        TitleRowView(type: location.rowListMain)
-//                            .onAppear {
-//                                if !viewModel.isLoading && viewModel.checkTheLastIdLocations(of: location) {
-//                                    viewModel.loadMoreIfNeeded()
-//                                }
-//                            }
-//                    }
-//                }
-//                .modifier(StyleList())
         }
     }
 }
 
 #Preview {
-    ListHomeView(type: .locations, navigationTitle: "Characters").environmentObject(ListHomeViewModel(type: .locations))
+    ListHomeView(type: .episodes, navigationTitle: "Characters").environmentObject(ListHomeViewModel(type: .episodes))
 }
