@@ -23,14 +23,12 @@ struct ListHomeView: View {
     
     var body: some View {
         NavigationView {
-            
                 List {
-                    ForEach(viewModel.characters, id: \.id) { character in
-                        CharacterRowView(name: character.name, image: character.portraitPath)
-                    }
+                    HomeContentView
                 }
             .navigationTitle(navigationTitle ?? Constants.noText)
         }
+        .listStyle(.plain)
         .navigationViewStyle(.stack)
         .searchable(text: $viewModel.searchText, prompt: Constants.searchPrompt)
         .alert(viewModel.errorMsg, isPresented: $viewModel.showAlert) {
@@ -46,25 +44,17 @@ struct ListHomeView: View {
         }
     }
     
-//    //MARK: - ViewBuilder
-//    @ViewBuilder
-//    private var HomeContentView: some View {
-//        switch type {
-//            case .characters:
-//                ForEach(viewModel.characters, id: \.id) { character in
-//                  //  if let episodes = character.episode {
-//                       // NavigationLink(destination: DetailView(model: character.rowDetail, type: .characters, viewModel: DetailViewModel(allEpisodeCharacter: episodes, type: .characters))) {
-//                    CharacterRowView(name: character.name, image: character.portraitPath)
-////                                .onAppear {
-////                                    if !viewModel.isLoading && viewModel.checkTheLastIdCharacters(of: character) {
-////                                        viewModel.loadMoreIfNeeded()
-////                                    }
-////                                }
-//                       // }
-//                   // }
-//                }
-//                .modifier(StyleList())
-//            case .episodes:
+    //MARK: - ViewBuilder
+    @ViewBuilder
+    private var HomeContentView: some View {
+        switch type {
+            case .characters:
+                ForEach(viewModel.characters, id: \.id) { character in
+                    CharacterRowView(name: character.name, image: character.portraitPath)
+                }
+            case .episodes:
+                VStack {
+                }
 //                ForEach(viewModel.searchEpisodes, id: \.id) { episode in
 //                    NavigationLink(destination: DetailView(model: episode.rowDetail, type: .episodes, viewModel: DetailViewModel(allEpisodeCharacter: episode.characters!, type: .episodes))) {
 //                        TitleRowView(type: episode.rowListMain)
@@ -76,8 +66,9 @@ struct ListHomeView: View {
 //                    }
 //                    
 //                }
-//                .modifier(StyleList())
-//            case .locations:
+               // .modifier(StyleList())
+            case .locations:
+                VStack {}
 //                ForEach(viewModel.searchLocations, id: \.id) { location in
 //                    NavigationLink(destination: DetailView(model: location.rowDetail, type: .locations, viewModel: DetailViewModel(allEpisodeCharacter: location.residents!, type: .locations))) {
 //                        TitleRowView(type: location.rowListMain)
@@ -89,8 +80,8 @@ struct ListHomeView: View {
 //                    }
 //                }
 //                .modifier(StyleList())
-//        }
-//    }
+        }
+    }
 }
 
 #Preview {

@@ -13,9 +13,10 @@ struct CharacterRowView: View {
     let image: URL?
     
     var body: some View {
+        
         HStack {
             if let image = image {
-                AsyncImage(url: image) { image in
+                AsyncImage(url: URL(string: "https://cdn.thesimpsonsapi.com/500\(image)" ) ) { image in
                     image.resizable()
                         .scaledToFit()
                         .frame(width: 50, height: 50, alignment: .center)
@@ -38,5 +39,5 @@ struct CharacterRowView: View {
 }
 
 #Preview {
-    CharacterRowView(name: "Hommer", image: nil)
+    CharacterRowView(name: "Homer", image: URL(string: "https://cdn.thesimpsonsapi.com/500/character/1.webp" ))
 }
