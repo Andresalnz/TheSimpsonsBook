@@ -18,10 +18,10 @@ final class FavouritesViewModel: ObservableObject {
     @Published var typeList: TypeViewList
     
     //interactor
-    private let interactor: Interactor
+    private let interactor: OldInteractor
     
     //MARK: - Init
-    init(interactor: Interactor = Interactor.shared, typeList: TypeViewList) {
+    init(interactor: OldInteractor = OldInteractor.shared, typeList: TypeViewList) {
         self.interactor = interactor
         self.typeList = typeList
     }

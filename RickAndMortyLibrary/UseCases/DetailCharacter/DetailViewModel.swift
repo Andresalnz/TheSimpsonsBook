@@ -17,7 +17,7 @@ final class DetailViewModel: ObservableObject {
     
     //MARK: - Variables
     
-    private let interactor: Interactor
+    private let interactor: OldInteractor
     
     //Propiedad que almacena las URL de los episodios del personaje elegido
    
@@ -39,7 +39,7 @@ final class DetailViewModel: ObservableObject {
     var character: SimpsonsCharactersPageBO?
     var nextLimit: Int = 5
     //MARK: - Init
-    init(interactor: Interactor = Interactor.shared, type: TypeViewList, allCharacters: [SimpsonsCharactersPageBO] = [], character: SimpsonsCharactersPageBO? = nil) {
+    init(interactor: OldInteractor = OldInteractor.shared, type: TypeViewList, allCharacters: [SimpsonsCharactersPageBO] = [], character: SimpsonsCharactersPageBO? = nil) {
         self.interactor = interactor
         
         self.type = type
