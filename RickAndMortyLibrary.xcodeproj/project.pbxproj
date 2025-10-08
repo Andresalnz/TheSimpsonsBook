@@ -43,6 +43,8 @@
 		9FAAFBCE2B0CD53800D65E6F /* DetailViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAFBCD2B0CD53800D65E6F /* DetailViewProtocols.swift */; };
 		9FAAFBD02B0CD69800D65E6F /* DetailModelVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAFBCF2B0CD69800D65E6F /* DetailModelVO.swift */; };
 		9FB5F8532B61073F00C4042D /* StyleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB5F8522B61073F00C4042D /* StyleList.swift */; };
+		9FCB85B02E96861900F1E21C /* SimpsonsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB85AF2E96861900F1E21C /* SimpsonsInteractorProtocol.swift */; };
+		9FCB85B32E9692C300F1E21C /* SimpsonsHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB85B22E9692C300F1E21C /* SimpsonsHomeInteractor.swift */; };
 		9FD128B62B6BF9AA00A9B8D6 /* EpisodeLocationFavourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD128B52B6BF9AA00A9B8D6 /* EpisodeLocationFavourite.swift */; };
 		9FD128B92B6C026700A9B8D6 /* ButtonFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD128B82B6C026700A9B8D6 /* ButtonFilterView.swift */; };
 		9FF9F9082AF18EAB00411BCC /* InfoDetailCharacterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF9F9072AF18EAB00411BCC /* InfoDetailCharacterRowView.swift */; };
@@ -99,6 +101,8 @@
 		9FAAFBCD2B0CD53800D65E6F /* DetailViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewProtocols.swift; sourceTree = "<group>"; };
 		9FAAFBCF2B0CD69800D65E6F /* DetailModelVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModelVO.swift; sourceTree = "<group>"; };
 		9FB5F8522B61073F00C4042D /* StyleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleList.swift; sourceTree = "<group>"; };
+		9FCB85AF2E96861900F1E21C /* SimpsonsInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsInteractorProtocol.swift; sourceTree = "<group>"; };
+		9FCB85B22E9692C300F1E21C /* SimpsonsHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsHomeInteractor.swift; sourceTree = "<group>"; };
 		9FD128B52B6BF9AA00A9B8D6 /* EpisodeLocationFavourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeLocationFavourite.swift; sourceTree = "<group>"; };
 		9FD128B82B6C026700A9B8D6 /* ButtonFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFilterView.swift; sourceTree = "<group>"; };
 		9FF9F9072AF18EAB00411BCC /* InfoDetailCharacterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDetailCharacterRowView.swift; sourceTree = "<group>"; };
@@ -399,6 +403,7 @@
 		9F8CFF142B04D5C600BC00EC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9FCB85B12E96928D00F1E21C /* Interactor */,
 				9F0DEA432AE18C79009376F1 /* Rows */,
 				9F0DEA372AE15F23009376F1 /* ListHomeView.swift */,
 				9F0DEA392AE15F3B009376F1 /* ListHomeViewModel.swift */,
@@ -476,8 +481,17 @@
 		9FCB85AD2E9684E900F1E21C /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				9FCB85AF2E96861900F1E21C /* SimpsonsInteractorProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		9FCB85B12E96928D00F1E21C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9FCB85B22E9692C300F1E21C /* SimpsonsHomeInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		9FD128B72B6C024D00A9B8D6 /* Views */ = {
@@ -633,6 +647,7 @@
 				9F0DEA532AE1D93B009376F1 /* DetailView.swift in Sources */,
 				9F524FB32B7E1F8400DE246A /* RMFirebaseFirestoreSaveDocuments.swift in Sources */,
 				9FD128B92B6C026700A9B8D6 /* ButtonFilterView.swift in Sources */,
+				9FCB85B32E9692C300F1E21C /* SimpsonsHomeInteractor.swift in Sources */,
 				9FAAFBD02B0CD69800D65E6F /* DetailModelVO.swift in Sources */,
 				9F0DEA3C2AE17AF6009376F1 /* Util.swift in Sources */,
 				9F8445FB2AF1E6B200460822 /* SectionInformationView.swift in Sources */,
@@ -644,6 +659,7 @@
 				9F88148C2AE26F6100448501 /* EpisodeMapper.swift in Sources */,
 				9F0DEA2D2AE149A9009376F1 /* CharacterModelDTO.swift in Sources */,
 				9FAAFBC52B0B882000D65E6F /* LocationMapper.swift in Sources */,
+				9FCB85B02E96861900F1E21C /* SimpsonsInteractorProtocol.swift in Sources */,
 				9F8445F92AF1E50700460822 /* SectionImageView.swift in Sources */,
 				9F88148A2AE26F5300448501 /* EpisodeModelBO.swift in Sources */,
 				9F8CFF192B04D92E00BC00EC /* Repository.swift in Sources */,
