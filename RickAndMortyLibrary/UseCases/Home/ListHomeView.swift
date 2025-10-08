@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-enum TypeViewList {
-    case characters
-    case locations
-    case episodes
+enum TypeViewList: String {
+    case characters = "/apicharacters"
+    case episodes = "/api/episodes"
+    case locations = "/apilocations"
 }
 
 struct ListHomeView: View {
@@ -39,7 +39,7 @@ struct ListHomeView: View {
         }
         .onAppear {
            // if viewModel.stateLoadListOnce() {
-                viewModel.loadUI()
+                viewModel.loadUI(type)
             //}
         }
     }

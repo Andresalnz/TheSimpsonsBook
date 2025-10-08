@@ -30,7 +30,7 @@ final class ListHomeViewModel: ObservableObject {
     @Published var showAlert = false
     
     //MARK: - Init
-    init(interactor: Interactor = Interactor.shared, characters: [SimpsonsCharacterBO] = [], episodes: [SimpsonsEpisodeBO] = [], locations: [SimpsonsLocationBO] = [], type: TypeViewList) {
+    init(interactor: Interactor = SimpsonsInteractor(repository: Repository()), characters: [SimpsonsCharacterBO] = [], episodes: [SimpsonsEpisodeBO] = [], locations: [SimpsonsLocationBO] = [], type: TypeViewList) {
         self.interactor = interactor
         self.characters = characters
         self.episodes = episodes
@@ -73,11 +73,11 @@ final class ListHomeViewModel: ObservableObject {
     
 
     //MARK: - Método para uso en la vista, para pintar todo lo necesario
-    func loadUI() {
+    func loadUI(_ type: TypeViewList) {
         Task {
-            try await loadData()
+            try await loadData(type)
         }
-        loadListOnce = false
+        //loadListOnce = false
     }
     
     @MainActor
@@ -85,7 +85,7 @@ final class ListHomeViewModel: ObservableObject {
         Task {
             viewState = .loading
             try await Task.sleep(nanoseconds: 2_000_000_000)
-            try await loadData()
+            //try await loadData()
         }
     }
     
@@ -106,45 +106,37 @@ final class ListHomeViewModel: ObservableObject {
 //    }
     
     //MARK: - Método que se ejecuta en el hilo principal, para realizar petición y cargar los primeros personajes
-    func loadData() async throws {
-        do {
-            switch type {
-                case .characters:
-                    pageCh += 1
-                    let getAllCharacters = try await interactor.getAllCharacters(pageCh)
-                    await MainActor.run {
-                        if let infoCharacters = getAllCharacters.characters {
-                            self.characters.append(contentsOf: infoCharacters.compactMap { $0.toBo() })
-                        }
-                        viewState = .finished
+    func loadData(_ type: TypeViewList) async throws {
+        switch type {
+            case .characters:
+            let getAllCharacters = try await interactor.getAllCharacters()
+                await MainActor.run {
+                    if let infoCharacters = getAllCharacters.characters {
+                        let character = infoCharacters.compactMap({ $0.toBo() })
+                        self.characters.append(contentsOf: character)
                     }
-                case .episodes:
-                    pageEp += 1
-                    let getAllEpisodes = try await interactor.getAllEpisodes(pageEp)
+                    viewState = .finished
+                }
+            case .episodes:
+                let getAllEpisodes = try await interactor.getAllEpisodes()
                     await MainActor.run {
                         if let infoEpisodes = getAllEpisodes.episodes {
-                            self.episodes.append(contentsOf: infoEpisodes.compactMap { $0.toBo() })
+                            let episode = infoEpisodes.compactMap({ $0.toBo() })
+                            self.episodes.append(contentsOf: episode)
                         }
                         viewState = .finished
                     }
-                case .locations:
-                    pageLo += 1
-                    let getAllLocations = try await interactor.getAllLocations(pageLo)
+            case .locations:
+                let getAllCharacters = try await interactor.getAllLocations()
                     await MainActor.run {
-                        if let infoLocations = getAllLocations.locations {
-                            self.locations.append(contentsOf: infoLocations.compactMap { $0.toBo() })
+                        if let infoLocations = getAllCharacters.locations {
+                            let location = infoLocations.compactMap({ $0.toBo() })
+                            self.locations.append(contentsOf: location)
                         }
                         viewState = .finished
                     }
-            }
-        } catch let error {
-            await MainActor.run {
-                guard let errorDescription = ErrorHandler.requestNotWork.errorDescription else { return }
-                errorMsg = errorDescription
-                print("ERROR -> \(error.localizedDescription)")
-                showAlert.toggle()
-            }
         }
+        
     }
 }
 
