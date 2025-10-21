@@ -23,6 +23,8 @@
 		9F0DEA532AE1D93B009376F1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA522AE1D93B009376F1 /* DetailView.swift */; };
 		9F11CA0C2B6A79FD00602315 /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F11CA0B2B6A79FD00602315 /* FavouritesViewModel.swift */; };
 		9F11CA0E2B6A7A0C00602315 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F11CA0D2B6A7A0C00602315 /* FavouritesView.swift */; };
+		9F358A8B2EA8067C00673350 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F358A8A2EA8067C00673350 /* LoadingView.swift */; };
+		9F358A8D2EA8096100673350 /* ListRowLoadingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F358A8C2EA8095900673350 /* ListRowLoadingStyle.swift */; };
 		9F4458182B6BB62B0076994F /* CharacterFavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4458172B6BB62B0076994F /* CharacterFavouriteView.swift */; };
 		9F524FB32B7E1F8400DE246A /* RMFirebaseFirestoreSaveDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F524FB22B7E1F8400DE246A /* RMFirebaseFirestoreSaveDocuments.swift */; };
 		9F7959032B6A6AD70083E9F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7959022B6A6AD70083E9F1 /* GoogleService-Info.plist */; };
@@ -81,6 +83,8 @@
 		9F0DEA522AE1D93B009376F1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		9F11CA0B2B6A79FD00602315 /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
 		9F11CA0D2B6A7A0C00602315 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		9F358A8A2EA8067C00673350 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		9F358A8C2EA8095900673350 /* ListRowLoadingStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowLoadingStyle.swift; sourceTree = "<group>"; };
 		9F4458172B6BB62B0076994F /* CharacterFavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFavouriteView.swift; sourceTree = "<group>"; };
 		9F524FB22B7E1F8400DE246A /* RMFirebaseFirestoreSaveDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMFirebaseFirestoreSaveDocuments.swift; sourceTree = "<group>"; };
 		9F7959022B6A6AD70083E9F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -374,6 +378,7 @@
 		9F8CFF112B04004100BC00EC /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				9F358A8C2EA8095900673350 /* ListRowLoadingStyle.swift */,
 				9FB5F8522B61073F00C4042D /* StyleList.swift */,
 				9FFE6A422B7F7B9E004CEEA9 /* SwipeActionsViewModifier.swift */,
 			);
@@ -396,6 +401,7 @@
 			children = (
 				9FF9F9072AF18EAB00411BCC /* InfoDetailCharacterRowView.swift */,
 				9F798BCA2B18FFA7008BEC6E /* ListWithSeparation.swift */,
+				9F358A8A2EA8067C00673350 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -647,8 +653,10 @@
 				9F0DEA532AE1D93B009376F1 /* DetailView.swift in Sources */,
 				9F524FB32B7E1F8400DE246A /* RMFirebaseFirestoreSaveDocuments.swift in Sources */,
 				9FD128B92B6C026700A9B8D6 /* ButtonFilterView.swift in Sources */,
+				9F358A8D2EA8096100673350 /* ListRowLoadingStyle.swift in Sources */,
 				9FCB85B32E9692C300F1E21C /* SimpsonsHomeInteractor.swift in Sources */,
 				9FAAFBD02B0CD69800D65E6F /* DetailModelVO.swift in Sources */,
+				9F358A8B2EA8067C00673350 /* LoadingView.swift in Sources */,
 				9F0DEA3C2AE17AF6009376F1 /* Util.swift in Sources */,
 				9F8445FB2AF1E6B200460822 /* SectionInformationView.swift in Sources */,
 				9F0DEA312AE149E1009376F1 /* CharacterMapper.swift in Sources */,
