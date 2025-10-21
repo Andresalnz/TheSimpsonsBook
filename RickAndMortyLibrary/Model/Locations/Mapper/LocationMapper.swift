@@ -9,8 +9,7 @@ import Foundation
 
 extension SimpsonsLocationDTO {
     func toBo() -> SimpsonsLocationBO {
-       SimpsonsLocationBO(id: id,
-                          name: name,
+       SimpsonsLocationBO(name: name,
                           imagePath: imagePath,
                           dimension: dimension,
                           town: town,

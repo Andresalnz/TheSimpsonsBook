@@ -27,7 +27,7 @@ struct SimpsonsLocationsPageBO: Codable, Hashable, Identifiable {
 
 
 struct SimpsonsLocationBO: Codable, Hashable, Identifiable {
-    let id: Int?
+    let id: UUID = UUID()
     let name: String?
     let imagePath: String?
     let dimension: String?

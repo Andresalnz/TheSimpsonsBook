@@ -29,7 +29,7 @@ struct SimpsonsEpisodesPageBO: Codable,  Hashable, Identifiable {
 
 struct SimpsonsEpisodeBO: Codable, Hashable, Identifiable {
     // Identifiable
-    let id: Int?
+    let id: UUID = UUID()
     
     // Datos propios del episodio
     let airdate: String?

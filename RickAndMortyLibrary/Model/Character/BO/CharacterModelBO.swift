@@ -26,7 +26,7 @@ struct SimpsonsCharactersPageBO: Codable {
 }
 
 struct SimpsonsCharacterBO: Codable, Identifiable, Hashable {
-    let id: Int?
+    let id: UUID = UUID()
     let age: Int?
     let birthdate: String?
     let gender: SimpsonsCharacterGenderBO?

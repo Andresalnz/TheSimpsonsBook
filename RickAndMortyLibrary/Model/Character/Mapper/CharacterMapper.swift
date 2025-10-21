@@ -11,7 +11,6 @@ import Foundation
 extension SimpsonsCharacterDTO {
     func toBo() -> SimpsonsCharacterBO {
         SimpsonsCharacterBO(
-            id: id,
             age: age,
             birthdate: birthdate,
             gender: gender?.toBo(),

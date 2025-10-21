@@ -9,8 +9,7 @@ import Foundation
 
 extension SimpsonsEpisodeDTO {
     func toBo() -> SimpsonsEpisodeBO {
-        SimpsonsEpisodeBO(id: id,
-                          airdate: airdate,
+        SimpsonsEpisodeBO(airdate: airdate,
                           episodeNumber: episodeNumber,
                           imagePath: imagePath,
                           name: name,
