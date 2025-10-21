@@ -32,11 +32,6 @@ extension Interactor {
         return try await repository.getJSON(url: url, type: type)
     }
     
-    // Helper genérico con URL
-    func fetchURL<T: Codable>(_ url: URL, as type: T.Type) async throws -> T {
-        return try await repository.getJSON(url: url, type: type)
-    }
-    
     //MARK: - Primera carga
     func getAllCharacters() async throws -> SimpsonsCharactersPageDTO {
         return try await fetch(.characters, as: SimpsonsCharactersPageDTO.self)
