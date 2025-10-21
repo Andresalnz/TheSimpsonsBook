@@ -8,9 +8,9 @@
 import SwiftUI
 
 enum TypeViewList: String {
-    case characters = "/apicharacters"
+    case characters = "/api/characters"
     case episodes = "/api/episodes"
-    case locations = "/apilocations"
+    case locations = "/api/locations"
 }
 
 struct ListHomeView: View {
@@ -23,12 +23,11 @@ struct ListHomeView: View {
     
     var body: some View {
         NavigationView {
-                List {
-                    HomeContentView
-                }
+            List {
+                HomeContentView
+            }
             .navigationTitle(navigationTitle ?? Constants.noText)
         }
-        //.listStyle(.plain)
         .navigationViewStyle(.stack)
         .searchable(text: $viewModel.searchText, prompt: Constants.searchPrompt)
         .alert(viewModel.errorMsg, isPresented: $viewModel.showAlert) {
@@ -37,10 +36,8 @@ struct ListHomeView: View {
             Text(Constants.messageAlertError)
                 .font(.body)
         }
-        .onAppear {
-           // if viewModel.stateLoadListOnce() {
-                viewModel.loadUI(type)
-            //}
+        .task {
+            await viewModel.load(type, mode: .initial)
         }
     }
     
@@ -49,17 +46,58 @@ struct ListHomeView: View {
     private var HomeContentView: some View {
         switch type {
             case .characters:
-                ForEach(viewModel.searchCharacters, id: \.id) { character in
+                if viewModel.characters.isEmpty {
+                    LoadingView(title: "Loading Characters")
+                }
+                ForEach(viewModel.characters, id: \.id) { character in
                     CharacterRowView(name: character.name, image: character.imageURL, sizeImage: 70, text: character.occupation)
+                        .onAppear {
+                            if viewModel.checkTheLastIdCharacters(.characters, of: character.id) {
+                                Task {
+                                    await viewModel.load(type, mode: .nextPage)
+                                }
+                            }
+                        }
+                    if viewModel.isLoading && viewModel.checkTheLastIdCharacters(.characters, of: character.id) {
+                        LoadingView(title: "Loading more Characters")
+                        
+                    }
                 }
             case .episodes:
-                ForEach(viewModel.searchEpisodes, id: \.id) { episode in
-                    CharacterRowView(name: episode.name, image: episode.imageURL, sizeImage: 150, text: episode.synopsis)
+                if viewModel.episodes.isEmpty {
+                    LoadingView(title: "Loading Episodes")
                 }
-                
+                ForEach(viewModel.episodes, id: \.id) { episode in
+                    CharacterRowView(name: episode.name, image: episode.imageURL, sizeImage: 150, text: episode.synopsis)
+                        .onAppear {
+                            if viewModel.checkTheLastIdCharacters(.episodes, of: episode.id) {
+                                Task {
+                                    await viewModel.load(type, mode: .nextPage)
+                                }
+                            }
+                        }
+                    if viewModel.isLoading && viewModel.checkTheLastIdCharacters(.episodes, of: episode.id) {
+                        LoadingView(title: "Loading more Episodes")
+                        
+                    }
+                }
             case .locations:
-                ForEach(viewModel.searchLocations, id: \.id) { location in
+                if viewModel.locations.isEmpty {
+                    LoadingView(title: "Loading Locations")
+                }
+                ForEach(viewModel.locations, id: \.id) { location in
                     CharacterRowView(name: location.name, image: location.imageURL, sizeImage: 150, text: location.town)
+                        .onAppear {
+                            if viewModel.checkTheLastIdCharacters(.locations, of: location.id) {
+                                Task {
+                                    await viewModel.load(type, mode: .nextPage)
+                                }
+                            }
+                        }
+                    if viewModel.isLoading && viewModel.checkTheLastIdCharacters(.locations, of: location.id) {
+                        LoadingView(title: "Loading more Locations")
+                        
+                    }
                 }
         }
     }
