@@ -27,6 +27,8 @@ struct SimpsonsCharactersPageBO: Codable {
 
 struct SimpsonsCharacterBO: Codable, Identifiable, Hashable {
     let id: UUID = UUID()
+    
+    let characterId: Int?
     let age: Int?
     let birthdate: String?
     let gender: SimpsonsCharacterGenderBO?
@@ -37,7 +39,7 @@ struct SimpsonsCharacterBO: Codable, Identifiable, Hashable {
     let status: SimpsonsCharacterStatusBO?
     
     enum CodingKeys: String, CodingKey {
-        case id
+        case characterId = "id"
         case age
         case birthdate
         case gender
