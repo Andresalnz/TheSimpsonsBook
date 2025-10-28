@@ -32,6 +32,7 @@
 		9F1221112EB121800024BCEF /* SimpsonsEpisodeDetailMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1221102EB121800024BCEF /* SimpsonsEpisodeDetailMapper.swift */; };
 		9F1221152EB122210024BCEF /* SimpsonsLocationBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1221142EB122210024BCEF /* SimpsonsLocationBO.swift */; };
 		9F1221172EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1221162EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift */; };
+		9F12211A2EB125290024BCEF /* SimpsonsDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1221192EB125290024BCEF /* SimpsonsDetailInteractor.swift */; };
 		9F358A8B2EA8067C00673350 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F358A8A2EA8067C00673350 /* LoadingView.swift */; };
 		9F358A8D2EA8096100673350 /* ListRowLoadingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F358A8C2EA8095900673350 /* ListRowLoadingStyle.swift */; };
 		9F4458182B6BB62B0076994F /* CharacterFavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4458172B6BB62B0076994F /* CharacterFavouriteView.swift */; };
@@ -101,6 +102,7 @@
 		9F1221102EB121800024BCEF /* SimpsonsEpisodeDetailMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsEpisodeDetailMapper.swift; sourceTree = "<group>"; };
 		9F1221142EB122210024BCEF /* SimpsonsLocationBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsLocationBO.swift; sourceTree = "<group>"; };
 		9F1221162EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonLocationDetailMapper.swift; sourceTree = "<group>"; };
+		9F1221192EB125290024BCEF /* SimpsonsDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsDetailInteractor.swift; sourceTree = "<group>"; };
 		9F358A8A2EA8067C00673350 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		9F358A8C2EA8095900673350 /* ListRowLoadingStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowLoadingStyle.swift; sourceTree = "<group>"; };
 		9F4458172B6BB62B0076994F /* CharacterFavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFavouriteView.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 		9F0DEA4F2AE1D916009376F1 /* DetailCharacter */ = {
 			isa = PBXGroup;
 			children = (
+				9F1221182EB125020024BCEF /* Interactor */,
 				9F8445F72AF1E4E600460822 /* Sections */,
 				9F0DEA522AE1D93B009376F1 /* DetailView.swift */,
 				9F0DEA502AE1D92E009376F1 /* DetailViewModel.swift */,
@@ -452,6 +455,14 @@
 				9F1221162EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift */,
 			);
 			path = Mapper;
+			sourceTree = "<group>";
+		};
+		9F1221182EB125020024BCEF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9F1221192EB125290024BCEF /* SimpsonsDetailInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		9F4458162B6BB6130076994F /* Rows */ = {
@@ -808,6 +819,7 @@
 				9F0DEA2F2AE149C6009376F1 /* CharacterModelBO.swift in Sources */,
 				9F11CA0E2B6A7A0C00602315 /* FavouritesView.swift in Sources */,
 				9F11CA0C2B6A79FD00602315 /* FavouritesViewModel.swift in Sources */,
+				9F12211A2EB125290024BCEF /* SimpsonsDetailInteractor.swift in Sources */,
 				9F0DEA382AE15F23009376F1 /* ListHomeView.swift in Sources */,
 				9F88148C2AE26F6100448501 /* EpisodeMapper.swift in Sources */,
 				9F0DEA2D2AE149A9009376F1 /* CharacterModelDTO.swift in Sources */,
