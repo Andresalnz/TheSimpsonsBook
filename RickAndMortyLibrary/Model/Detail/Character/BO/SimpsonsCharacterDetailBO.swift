@@ -15,7 +15,7 @@ struct SimpsonsCharacterDetailBO: Codable, Identifiable, Hashable {
     let description: String?
     let firstAppearanceEpId: Int?
     let firstAppearanceShId: Int?
-    let gender: SimpsonsCharacterGenderBO?
+    let gender: String?
     let name: String?
     let occupation: String?
     let phrases: [String]?
