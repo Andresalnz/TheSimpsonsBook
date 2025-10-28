@@ -17,7 +17,7 @@ extension SimpsonsCharacterDetailDTO {
             description: description,
             firstAppearanceEpId: firstAppearanceEpId,
             firstAppearanceShId: firstAppearanceShId,
-            gender: gender?.toBo(),
+            gender: gender,
             name: name,
             occupation: occupation,
             phrases: phrases,
