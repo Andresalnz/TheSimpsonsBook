@@ -38,4 +38,12 @@ extension Interactor {
     func getCharacterDetail(id: Int) async throws -> SimpsonsCharacterDetailDTO {
         return try await fetchDetail(.characters, as: SimpsonsCharacterDetailDTO.self, id)
     }
+    
+    func getEpisodeDetail(id: Int) async throws -> SimpsonsEpisodeDetailDTO {
+        return try await fetchDetail(.episodes, as: SimpsonsEpisodeDetailDTO.self, id)
+    }
+    
+    func getLocationDetail(id: Int) async throws -> SimpsonsLocationDetailDTO {
+        return try await fetchDetail(.locations, as: SimpsonsLocationDetailDTO.self, id)
+    }
 }

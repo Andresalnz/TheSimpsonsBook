@@ -33,6 +33,8 @@
 		9F1221152EB122210024BCEF /* SimpsonsLocationBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1221142EB122210024BCEF /* SimpsonsLocationBO.swift */; };
 		9F1221172EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1221162EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift */; };
 		9F12211A2EB125290024BCEF /* SimpsonsDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1221192EB125290024BCEF /* SimpsonsDetailInteractor.swift */; };
+		9F12211E2EB142AA0024BCEF /* DetailCharcterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F12211D2EB142AA0024BCEF /* DetailCharcterView.swift */; };
+		9F1221202EB142CB0024BCEF /* DetailCharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F12211F2EB142CB0024BCEF /* DetailCharacterViewModel.swift */; };
 		9F358A8B2EA8067C00673350 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F358A8A2EA8067C00673350 /* LoadingView.swift */; };
 		9F358A8D2EA8096100673350 /* ListRowLoadingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F358A8C2EA8095900673350 /* ListRowLoadingStyle.swift */; };
 		9F4458182B6BB62B0076994F /* CharacterFavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4458172B6BB62B0076994F /* CharacterFavouriteView.swift */; };
@@ -103,6 +105,8 @@
 		9F1221142EB122210024BCEF /* SimpsonsLocationBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsLocationBO.swift; sourceTree = "<group>"; };
 		9F1221162EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonLocationDetailMapper.swift; sourceTree = "<group>"; };
 		9F1221192EB125290024BCEF /* SimpsonsDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsDetailInteractor.swift; sourceTree = "<group>"; };
+		9F12211D2EB142AA0024BCEF /* DetailCharcterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharcterView.swift; sourceTree = "<group>"; };
+		9F12211F2EB142CB0024BCEF /* DetailCharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailCharacterViewModel.swift; path = RickAndMortyLibrary/UseCases/Detail/Views/DetailCharacterViewModel.swift; sourceTree = SOURCE_ROOT; };
 		9F358A8A2EA8067C00673350 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		9F358A8C2EA8095900673350 /* ListRowLoadingStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowLoadingStyle.swift; sourceTree = "<group>"; };
 		9F4458172B6BB62B0076994F /* CharacterFavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFavouriteView.swift; sourceTree = "<group>"; };
@@ -238,7 +242,7 @@
 			children = (
 				9F0C75D02B31C2D600DF1CB7 /* TabBar */,
 				9F8CFF142B04D5C600BC00EC /* Home */,
-				9F0DEA4F2AE1D916009376F1 /* DetailCharacter */,
+				9F0DEA4F2AE1D916009376F1 /* Detail */,
 				9F11CA0A2B6A79DE00602315 /* Favourites */,
 			);
 			path = UseCases;
@@ -316,15 +320,17 @@
 			path = Rows;
 			sourceTree = "<group>";
 		};
-		9F0DEA4F2AE1D916009376F1 /* DetailCharacter */ = {
+		9F0DEA4F2AE1D916009376F1 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				9F12211C2EB1426A0024BCEF /* ViewModel */,
+				9F12211B2EB142620024BCEF /* Views */,
 				9F1221182EB125020024BCEF /* Interactor */,
 				9F8445F72AF1E4E600460822 /* Sections */,
 				9F0DEA522AE1D93B009376F1 /* DetailView.swift */,
 				9F0DEA502AE1D92E009376F1 /* DetailViewModel.swift */,
 			);
-			path = DetailCharacter;
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		9F11CA0A2B6A79DE00602315 /* Favourites */ = {
@@ -463,6 +469,22 @@
 				9F1221192EB125290024BCEF /* SimpsonsDetailInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9F12211B2EB142620024BCEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9F12211D2EB142AA0024BCEF /* DetailCharcterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F12211C2EB1426A0024BCEF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9F12211F2EB142CB0024BCEF /* DetailCharacterViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9F4458162B6BB6130076994F /* Rows */ = {
@@ -805,7 +827,9 @@
 				9FFE6A432B7F7B9E004CEEA9 /* SwipeActionsViewModifier.swift in Sources */,
 				9F0C75D22B31C30F00DF1CB7 /* TabBarView.swift in Sources */,
 				9F0DEA532AE1D93B009376F1 /* DetailView.swift in Sources */,
+				9F12211E2EB142AA0024BCEF /* DetailCharcterView.swift in Sources */,
 				9F524FB32B7E1F8400DE246A /* RMFirebaseFirestoreSaveDocuments.swift in Sources */,
+				9F1221202EB142CB0024BCEF /* DetailCharacterViewModel.swift in Sources */,
 				9FD128B92B6C026700A9B8D6 /* ButtonFilterView.swift in Sources */,
 				9F358A8D2EA8096100673350 /* ListRowLoadingStyle.swift in Sources */,
 				9FCB85B32E9692C300F1E21C /* SimpsonsHomeInteractor.swift in Sources */,
