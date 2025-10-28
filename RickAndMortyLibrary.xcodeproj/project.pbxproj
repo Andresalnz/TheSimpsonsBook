@@ -23,6 +23,15 @@
 		9F0DEA532AE1D93B009376F1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA522AE1D93B009376F1 /* DetailView.swift */; };
 		9F11CA0C2B6A79FD00602315 /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F11CA0B2B6A79FD00602315 /* FavouritesViewModel.swift */; };
 		9F11CA0E2B6A7A0C00602315 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F11CA0D2B6A7A0C00602315 /* FavouritesView.swift */; };
+		9F1220FE2EB0F31E0024BCEF /* SimpsonsCharacterDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1220FD2EB0F31E0024BCEF /* SimpsonsCharacterDetailDTO.swift */; };
+		9F1221002EB0F4D10024BCEF /* SimpsonsEpisodeDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1220FF2EB0F4D10024BCEF /* SimpsonsEpisodeDetailDTO.swift */; };
+		9F1221042EB0F5380024BCEF /* SimpsonsLocationDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1221032EB0F5380024BCEF /* SimpsonsLocationDetailDTO.swift */; };
+		9F1221092EB11C750024BCEF /* SimpsonsCharacterDetailBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1221082EB11C750024BCEF /* SimpsonsCharacterDetailBO.swift */; };
+		9F12210B2EB11C770024BCEF /* SimpsonsCharacterDetailMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F12210A2EB11C770024BCEF /* SimpsonsCharacterDetailMapper.swift */; };
+		9F12210F2EB121500024BCEF /* SimpsonsEpisodeDetailBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F12210E2EB121500024BCEF /* SimpsonsEpisodeDetailBO.swift */; };
+		9F1221112EB121800024BCEF /* SimpsonsEpisodeDetailMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1221102EB121800024BCEF /* SimpsonsEpisodeDetailMapper.swift */; };
+		9F1221152EB122210024BCEF /* SimpsonsLocationBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1221142EB122210024BCEF /* SimpsonsLocationBO.swift */; };
+		9F1221172EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1221162EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift */; };
 		9F358A8B2EA8067C00673350 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F358A8A2EA8067C00673350 /* LoadingView.swift */; };
 		9F358A8D2EA8096100673350 /* ListRowLoadingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F358A8C2EA8095900673350 /* ListRowLoadingStyle.swift */; };
 		9F4458182B6BB62B0076994F /* CharacterFavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4458172B6BB62B0076994F /* CharacterFavouriteView.swift */; };
@@ -83,6 +92,15 @@
 		9F0DEA522AE1D93B009376F1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		9F11CA0B2B6A79FD00602315 /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
 		9F11CA0D2B6A7A0C00602315 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		9F1220FD2EB0F31E0024BCEF /* SimpsonsCharacterDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsCharacterDetailDTO.swift; sourceTree = "<group>"; };
+		9F1220FF2EB0F4D10024BCEF /* SimpsonsEpisodeDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsEpisodeDetailDTO.swift; sourceTree = "<group>"; };
+		9F1221032EB0F5380024BCEF /* SimpsonsLocationDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsLocationDetailDTO.swift; sourceTree = "<group>"; };
+		9F1221082EB11C750024BCEF /* SimpsonsCharacterDetailBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsCharacterDetailBO.swift; sourceTree = "<group>"; };
+		9F12210A2EB11C770024BCEF /* SimpsonsCharacterDetailMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsCharacterDetailMapper.swift; sourceTree = "<group>"; };
+		9F12210E2EB121500024BCEF /* SimpsonsEpisodeDetailBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsEpisodeDetailBO.swift; sourceTree = "<group>"; };
+		9F1221102EB121800024BCEF /* SimpsonsEpisodeDetailMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsEpisodeDetailMapper.swift; sourceTree = "<group>"; };
+		9F1221142EB122210024BCEF /* SimpsonsLocationBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsLocationBO.swift; sourceTree = "<group>"; };
+		9F1221162EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonLocationDetailMapper.swift; sourceTree = "<group>"; };
 		9F358A8A2EA8067C00673350 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		9F358A8C2EA8095900673350 /* ListRowLoadingStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowLoadingStyle.swift; sourceTree = "<group>"; };
 		9F4458172B6BB62B0076994F /* CharacterFavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFavouriteView.swift; sourceTree = "<group>"; };
@@ -227,6 +245,8 @@
 		9F0DEA272AE1440E009376F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F1220F92EB0F27A0024BCEF /* Detail */,
+				9F1220F82EB0F2380024BCEF /* MainListings */,
 				9FFE6A342B7E81B7004CEEA9 /* Firebase */,
 				9F0DEA282AE1497E009376F1 /* Character */,
 				9F8814832AE26EE100448501 /* Episode */,
@@ -313,6 +333,125 @@
 				9F11CA0D2B6A7A0C00602315 /* FavouritesView.swift */,
 			);
 			path = Favourites;
+			sourceTree = "<group>";
+		};
+		9F1220F82EB0F2380024BCEF /* MainListings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainListings;
+			sourceTree = "<group>";
+		};
+		9F1220F92EB0F27A0024BCEF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				9F1220FC2EB0F2960024BCEF /* Location */,
+				9F1220FB2EB0F28F0024BCEF /* Episode */,
+				9F1220FA2EB0F2860024BCEF /* Character */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		9F1220FA2EB0F2860024BCEF /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				9F1221072EB11A7B0024BCEF /* Mapper */,
+				9F1221062EB11A650024BCEF /* BO */,
+				9F1221012EB0F4F70024BCEF /* DTO */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		9F1220FB2EB0F28F0024BCEF /* Episode */ = {
+			isa = PBXGroup;
+			children = (
+				9F12210D2EB1211C0024BCEF /* Mapper */,
+				9F12210C2EB121160024BCEF /* BO */,
+				9F1221022EB0F5000024BCEF /* DTO */,
+			);
+			path = Episode;
+			sourceTree = "<group>";
+		};
+		9F1220FC2EB0F2960024BCEF /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				9F1221132EB121F60024BCEF /* Mapper */,
+				9F1221122EB121EC0024BCEF /* BO */,
+				9F1221052EB0F54B0024BCEF /* DTO */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		9F1221012EB0F4F70024BCEF /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				9F1220FD2EB0F31E0024BCEF /* SimpsonsCharacterDetailDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		9F1221022EB0F5000024BCEF /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				9F1220FF2EB0F4D10024BCEF /* SimpsonsEpisodeDetailDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		9F1221052EB0F54B0024BCEF /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				9F1221032EB0F5380024BCEF /* SimpsonsLocationDetailDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		9F1221062EB11A650024BCEF /* BO */ = {
+			isa = PBXGroup;
+			children = (
+				9F1221082EB11C750024BCEF /* SimpsonsCharacterDetailBO.swift */,
+			);
+			path = BO;
+			sourceTree = "<group>";
+		};
+		9F1221072EB11A7B0024BCEF /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				9F12210A2EB11C770024BCEF /* SimpsonsCharacterDetailMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		9F12210C2EB121160024BCEF /* BO */ = {
+			isa = PBXGroup;
+			children = (
+				9F12210E2EB121500024BCEF /* SimpsonsEpisodeDetailBO.swift */,
+			);
+			path = BO;
+			sourceTree = "<group>";
+		};
+		9F12210D2EB1211C0024BCEF /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				9F1221102EB121800024BCEF /* SimpsonsEpisodeDetailMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		9F1221122EB121EC0024BCEF /* BO */ = {
+			isa = PBXGroup;
+			children = (
+				9F1221142EB122210024BCEF /* SimpsonsLocationBO.swift */,
+			);
+			path = BO;
+			sourceTree = "<group>";
+		};
+		9F1221132EB121F60024BCEF /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				9F1221162EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift */,
+			);
+			path = Mapper;
 			sourceTree = "<group>";
 		};
 		9F4458162B6BB6130076994F /* Rows */ = {
@@ -643,9 +782,13 @@
 				9F798BCB2B18FFA7008BEC6E /* ListWithSeparation.swift in Sources */,
 				9FB5F8532B61073F00C4042D /* StyleList.swift in Sources */,
 				9F8CFF1B2B04DA4800BC00EC /* InteractorRickAndMorty.swift in Sources */,
+				9F1221092EB11C750024BCEF /* SimpsonsCharacterDetailBO.swift in Sources */,
 				9FAAFBC32B0B881000D65E6F /* LocationModelBO.swift in Sources */,
+				9F1221002EB0F4D10024BCEF /* SimpsonsEpisodeDetailDTO.swift in Sources */,
 				9F8814902AE2A96A00448501 /* Constants.swift in Sources */,
 				9F0DEA512AE1D92E009376F1 /* DetailViewModel.swift in Sources */,
+				9F12210B2EB11C770024BCEF /* SimpsonsCharacterDetailMapper.swift in Sources */,
+				9F1221112EB121800024BCEF /* SimpsonsEpisodeDetailMapper.swift in Sources */,
 				9F0DEA3A2AE15F3B009376F1 /* ListHomeViewModel.swift in Sources */,
 				9F4458182B6BB62B0076994F /* CharacterFavouriteView.swift in Sources */,
 				9FFE6A432B7F7B9E004CEEA9 /* SwipeActionsViewModifier.swift in Sources */,
@@ -655,8 +798,10 @@
 				9FD128B92B6C026700A9B8D6 /* ButtonFilterView.swift in Sources */,
 				9F358A8D2EA8096100673350 /* ListRowLoadingStyle.swift in Sources */,
 				9FCB85B32E9692C300F1E21C /* SimpsonsHomeInteractor.swift in Sources */,
+				9F1221172EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift in Sources */,
 				9FAAFBD02B0CD69800D65E6F /* DetailModelVO.swift in Sources */,
 				9F358A8B2EA8067C00673350 /* LoadingView.swift in Sources */,
+				9F1221042EB0F5380024BCEF /* SimpsonsLocationDetailDTO.swift in Sources */,
 				9F0DEA3C2AE17AF6009376F1 /* Util.swift in Sources */,
 				9F8445FB2AF1E6B200460822 /* SectionInformationView.swift in Sources */,
 				9F0DEA312AE149E1009376F1 /* CharacterMapper.swift in Sources */,
@@ -668,14 +813,17 @@
 				9F0DEA2D2AE149A9009376F1 /* CharacterModelDTO.swift in Sources */,
 				9FAAFBC52B0B882000D65E6F /* LocationMapper.swift in Sources */,
 				9FCB85B02E96861900F1E21C /* SimpsonsInteractorProtocol.swift in Sources */,
+				9F1221152EB122210024BCEF /* SimpsonsLocationBO.swift in Sources */,
 				9F8445F92AF1E50700460822 /* SectionImageView.swift in Sources */,
 				9F88148A2AE26F5300448501 /* EpisodeModelBO.swift in Sources */,
 				9F8CFF192B04D92E00BC00EC /* Repository.swift in Sources */,
+				9F1220FE2EB0F31E0024BCEF /* SimpsonsCharacterDetailDTO.swift in Sources */,
 				9F0DEA162AE13CC5009376F1 /* RickAndMortyLibraryApp.swift in Sources */,
 				9F8814882AE26F4700448501 /* EpisodeModelDTO.swift in Sources */,
 				9FFE6A452B83792E004CEEA9 /* RMFirebaseFirestoreDeleteDocuments.swift in Sources */,
 				9FF9F9082AF18EAB00411BCC /* InfoDetailCharacterRowView.swift in Sources */,
 				9F88148E2AE2975B00448501 /* ErrorHandler.swift in Sources */,
+				9F12210F2EB121500024BCEF /* SimpsonsEpisodeDetailBO.swift in Sources */,
 				9FAAFBCE2B0CD53800D65E6F /* DetailViewProtocols.swift in Sources */,
 				9FD128B62B6BF9AA00A9B8D6 /* EpisodeLocationFavourite.swift in Sources */,
 				9FFE6A3A2B7E81F8004CEEA9 /* FirebaseFirestoreCharacterModel.swift in Sources */,
