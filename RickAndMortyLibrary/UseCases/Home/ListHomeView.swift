@@ -22,10 +22,13 @@ struct ListHomeView: View {
     let navigationTitle: String?
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 HomeContentView
             }
+            .navigationDestination(for: SimpsonsCharacterBO.self, destination: { character in
+                DetailCharcterView(id: character.characterId)
+            })
             .navigationTitle(navigationTitle ?? Constants.noText)
         }
         .navigationViewStyle(.stack)
@@ -50,7 +53,9 @@ struct ListHomeView: View {
                     LoadingView(title: "Loading Characters")
                 }
                 ForEach(viewModel.characters, id: \.id) { character in
-                    CharacterRowView(name: character.name, image: character.imageURL, sizeImage: 70, text: character.occupation)
+                    NavigationLink(value: character, label: {
+                        CharacterRowView(name: character.name, image: character.imageURL, sizeImage: 70, text: character.occupation)
+                    })
                         .onAppear {
                             if viewModel.checkTheLastIdCharacters(.characters, of: character.id) {
                                 Task {
