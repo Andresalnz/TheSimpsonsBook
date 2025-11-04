@@ -44,9 +44,11 @@ final class DetailViewModel: ObservableObject {
                 character = mapped
                 viewState = .finished
             }
-        } catch let err {
-            print("ERROR DETAIL \(err.localizedDescription)")
+        } catch {
             errorInfo = ErrorWrapper(title: "An error has occurred!", error: ErrorHandler.invalidUrl, guidance: "We couldn’t complete your request.")
+            guard let errorInfo else { return }
+            viewState = .error(errorInfo)
+            
         }
     }
     
@@ -60,9 +62,10 @@ final class DetailViewModel: ObservableObject {
                 episode = mapped
                 viewState = .finished
             }
-        } catch let err {
-            print("ERROR DETAIL \(err.localizedDescription)")
+        } catch {
             errorInfo = ErrorWrapper(title: "An error has occurred!", error: ErrorHandler.invalidUrl, guidance: "We couldn’t complete your request.")
+            guard let errorInfo else { return }
+            viewState = .error(errorInfo)
         }
     }
     
@@ -76,9 +79,10 @@ final class DetailViewModel: ObservableObject {
                 location = mapped
                 viewState = .finished
             }
-        } catch let err {
-            print("ERROR DETAIL \(err.localizedDescription)")
+        } catch {
             errorInfo = ErrorWrapper(title: "An error has occurred!", error: ErrorHandler.invalidUrl, guidance: "We couldn’t complete your request.")
+            guard let errorInfo else { return }
+            viewState = .error(errorInfo)
         }
     }
 }
