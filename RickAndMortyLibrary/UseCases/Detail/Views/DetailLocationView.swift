@@ -1,19 +1,16 @@
 //
-//  DetailCharcterView.swift
+//  DetailLocationView.swift
 //  RickAndMortyLibrary
 //
-//  Created by Andres Aleu on 28/10/25.
+//  Created by Andres Aleu on 4/11/25.
 //
 
 import SwiftUI
 
-struct DetailCharcterView: View {
+struct DetailLocationView: View {
     
     let id: Int?
     @StateObject var viewModel: DetailCharacterViewModel = DetailCharacterViewModel()
-    
-    @State private var showAlert = false
-    @State private var errorMessage = "Ha ocurrido un error al cargar el detalle."
     
     var body: some View {
         switch viewModel.viewState {
@@ -21,15 +18,15 @@ struct DetailCharcterView: View {
                 ProgressView()
                     .frame(maxWidth: .infinity, alignment: .center)
                     .task {
-                        await viewModel.loadCharacter(id: id)
+                         await viewModel.loadLocation(id: id)
                     }
             case .finished:
                 ScrollView {
                     VStack(alignment: .leading, spacing: 12) {
-                        Text(viewModel.character?.name ?? "Sin nombre")
+                        Text(viewModel.location?.name ?? "Sin nombre")
                             .font(.title2)
                             .bold()
-                        Text(viewModel.character?.description ?? "Sin descripción")
+                        Text(viewModel.location?.description ?? "Sin descripción")
                             .font(.body)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -39,10 +36,9 @@ struct DetailCharcterView: View {
                 AppErrorView(errorWrapper: error)
         }
         
-    
     }
 }
 
 #Preview {
-    DetailCharcterView(id: 1, viewModel: DetailCharacterViewModel(character: Previews.previewDetailCharacter, episode: Previews.previewDetailEpisode, location: Previews.previewDetailLocation))
+    DetailLocationView(id: 1, viewModel: DetailCharacterViewModel(character: Previews.previewDetailCharacter, episode: Previews.previewDetailEpisode, location: Previews.previewDetailLocation))
 }
