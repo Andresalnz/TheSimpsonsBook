@@ -32,7 +32,7 @@ struct DetailEpisodeView: View {
                    .padding()
                }
             case .error(let error):
-                AppErrorView(errorWrapper: error)
+                ContentUnavailableView(error.title, systemImage: "exclamationmark.triangle", description: Text(error.guidance))
         }
     }
 }
