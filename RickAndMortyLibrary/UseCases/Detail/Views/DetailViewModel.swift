@@ -15,7 +15,7 @@ struct AlertInfo: Identifiable {
 }
 
 
-final class DetailCharacterViewModel: ObservableObject {
+final class DetailViewModel: ObservableObject {
     
     private let interactor: Interactor
     

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailEpisodeView: View {
     let id: Int?
-    @StateObject var viewModel: DetailCharacterViewModel = DetailCharacterViewModel()
+    @StateObject var viewModel: DetailViewModel = DetailViewModel()
     
     var body: some View {
         switch viewModel.viewState {
@@ -38,5 +38,5 @@ struct DetailEpisodeView: View {
 }
 
 #Preview {
-    DetailEpisodeView(id: 1, viewModel: DetailCharacterViewModel(character: Previews.previewDetailCharacter, episode: Previews.previewDetailEpisode, location: Previews.previewDetailLocation))
+    DetailEpisodeView(id: 1, viewModel: DetailViewModel(character: Previews.previewDetailCharacter, episode: Previews.previewDetailEpisode, location: Previews.previewDetailLocation))
 }

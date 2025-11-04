@@ -10,7 +10,7 @@ import SwiftUI
 struct DetailCharcterView: View {
     
     let id: Int?
-    @StateObject var viewModel: DetailCharacterViewModel = DetailCharacterViewModel()
+    @StateObject var viewModel: DetailViewModel = DetailViewModel()
     
     @State private var showAlert = false
     @State private var errorMessage = "Ha ocurrido un error al cargar el detalle."
@@ -44,5 +44,5 @@ struct DetailCharcterView: View {
 }
 
 #Preview {
-    DetailCharcterView(id: 1, viewModel: DetailCharacterViewModel(character: Previews.previewDetailCharacter, episode: Previews.previewDetailEpisode, location: Previews.previewDetailLocation))
+    DetailCharcterView(id: 1, viewModel: DetailViewModel(character: Previews.previewDetailCharacter, episode: Previews.previewDetailEpisode, location: Previews.previewDetailLocation))
 }

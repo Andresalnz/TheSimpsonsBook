@@ -33,7 +33,7 @@
 		9F1221172EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1221162EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift */; };
 		9F12211A2EB125290024BCEF /* SimpsonsDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1221192EB125290024BCEF /* SimpsonsDetailInteractor.swift */; };
 		9F12211E2EB142AA0024BCEF /* DetailCharcterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F12211D2EB142AA0024BCEF /* DetailCharcterView.swift */; };
-		9F1221202EB142CB0024BCEF /* DetailCharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F12211F2EB142CB0024BCEF /* DetailCharacterViewModel.swift */; };
+		9F1221202EB142CB0024BCEF /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F12211F2EB142CB0024BCEF /* DetailViewModel.swift */; };
 		9F1BFCA22EB91EFA00E7922F /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1BFCA12EB91EFA00E7922F /* NavigationManager.swift */; };
 		9F358A8B2EA8067C00673350 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F358A8A2EA8067C00673350 /* LoadingView.swift */; };
 		9F358A8D2EA8096100673350 /* ListRowLoadingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F358A8C2EA8095900673350 /* ListRowLoadingStyle.swift */; };
@@ -109,7 +109,7 @@
 		9F1221162EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonLocationDetailMapper.swift; sourceTree = "<group>"; };
 		9F1221192EB125290024BCEF /* SimpsonsDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsDetailInteractor.swift; sourceTree = "<group>"; };
 		9F12211D2EB142AA0024BCEF /* DetailCharcterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharcterView.swift; sourceTree = "<group>"; };
-		9F12211F2EB142CB0024BCEF /* DetailCharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailCharacterViewModel.swift; path = RickAndMortyLibrary/UseCases/Detail/Views/DetailCharacterViewModel.swift; sourceTree = SOURCE_ROOT; };
+		9F12211F2EB142CB0024BCEF /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewModel.swift; path = RickAndMortyLibrary/UseCases/Detail/Views/DetailViewModel.swift; sourceTree = SOURCE_ROOT; };
 		9F1BFCA12EB91EFA00E7922F /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		9F358A8A2EA8067C00673350 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		9F358A8C2EA8095900673350 /* ListRowLoadingStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowLoadingStyle.swift; sourceTree = "<group>"; };
@@ -493,7 +493,7 @@
 		9F12211C2EB1426A0024BCEF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				9F12211F2EB142CB0024BCEF /* DetailCharacterViewModel.swift */,
+				9F12211F2EB142CB0024BCEF /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -874,7 +874,7 @@
 				9F0DEA532AE1D93B009376F1 /* DetailView.swift in Sources */,
 				9F12211E2EB142AA0024BCEF /* DetailCharcterView.swift in Sources */,
 				9F524FB32B7E1F8400DE246A /* RMFirebaseFirestoreSaveDocuments.swift in Sources */,
-				9F1221202EB142CB0024BCEF /* DetailCharacterViewModel.swift in Sources */,
+				9F1221202EB142CB0024BCEF /* DetailViewModel.swift in Sources */,
 				9FD128B92B6C026700A9B8D6 /* ButtonFilterView.swift in Sources */,
 				9F358A8D2EA8096100673350 /* ListRowLoadingStyle.swift in Sources */,
 				9FCB85B32E9692C300F1E21C /* SimpsonsHomeInteractor.swift in Sources */,
