@@ -59,7 +59,6 @@
 		9FB5F8532B61073F00C4042D /* StyleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB5F8522B61073F00C4042D /* StyleList.swift */; };
 		9FC545D02EBA107700CB3DF1 /* DetailEpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC545CF2EBA107700CB3DF1 /* DetailEpisodeView.swift */; };
 		9FC545D22EBA108600CB3DF1 /* DetailLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC545D12EBA108600CB3DF1 /* DetailLocationView.swift */; };
-		9FC546072EBA700D00CB3DF1 /* AppErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC546062EBA700D00CB3DF1 /* AppErrorView.swift */; };
 		9FC5460A2EBA703300CB3DF1 /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC546092EBA703300CB3DF1 /* ErrorWrapper.swift */; };
 		9FCB85B02E96861900F1E21C /* SimpsonsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB85AF2E96861900F1E21C /* SimpsonsInteractorProtocol.swift */; };
 		9FCB85B32E9692C300F1E21C /* SimpsonsHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB85B22E9692C300F1E21C /* SimpsonsHomeInteractor.swift */; };
@@ -135,7 +134,6 @@
 		9FB5F8522B61073F00C4042D /* StyleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleList.swift; sourceTree = "<group>"; };
 		9FC545CF2EBA107700CB3DF1 /* DetailEpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEpisodeView.swift; sourceTree = "<group>"; };
 		9FC545D12EBA108600CB3DF1 /* DetailLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationView.swift; sourceTree = "<group>"; };
-		9FC546062EBA700D00CB3DF1 /* AppErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrorView.swift; sourceTree = "<group>"; };
 		9FC546092EBA703300CB3DF1 /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorWrapper.swift; path = RickAndMortyLibrary/UseCases/Error/View/ErrorWrapper.swift; sourceTree = SOURCE_ROOT; };
 		9FCB85AF2E96861900F1E21C /* SimpsonsInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsInteractorProtocol.swift; sourceTree = "<group>"; };
 		9FCB85B22E9692C300F1E21C /* SimpsonsHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsHomeInteractor.swift; sourceTree = "<group>"; };
@@ -248,7 +246,6 @@
 		9F0DEA262AE143FD009376F1 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				9FC546042EBA6FE800CB3DF1 /* Error */,
 				9F0C75D02B31C2D600DF1CB7 /* TabBar */,
 				9F8CFF142B04D5C600BC00EC /* Home */,
 				9F0DEA4F2AE1D916009376F1 /* Detail */,
@@ -668,22 +665,6 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		9FC546042EBA6FE800CB3DF1 /* Error */ = {
-			isa = PBXGroup;
-			children = (
-				9FC546052EBA6FFC00CB3DF1 /* View */,
-			);
-			path = Error;
-			sourceTree = "<group>";
-		};
-		9FC546052EBA6FFC00CB3DF1 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				9FC546062EBA700D00CB3DF1 /* AppErrorView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		9FC546082EBA701B00CB3DF1 /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -907,7 +888,6 @@
 				9FF9F9082AF18EAB00411BCC /* InfoDetailCharacterRowView.swift in Sources */,
 				9F88148E2AE2975B00448501 /* ErrorHandler.swift in Sources */,
 				9F12210F2EB121500024BCEF /* SimpsonsEpisodeDetailBO.swift in Sources */,
-				9FC546072EBA700D00CB3DF1 /* AppErrorView.swift in Sources */,
 				9FAAFBCE2B0CD53800D65E6F /* DetailViewProtocols.swift in Sources */,
 				9FD128B62B6BF9AA00A9B8D6 /* EpisodeLocationFavourite.swift in Sources */,
 				9FFE6A3A2B7E81F8004CEEA9 /* FirebaseFirestoreCharacterModel.swift in Sources */,
