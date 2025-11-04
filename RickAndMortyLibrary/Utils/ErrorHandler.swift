@@ -8,7 +8,7 @@
 import Foundation
 
 //MARK: - ErrorHandler
-enum ErrorHandler: String, Error {
+enum ErrorHandler: LocalizedError, Error {
     case invalidUrl
     case requestInvalid
     case requestNotWork
@@ -17,10 +17,12 @@ enum ErrorHandler: String, Error {
     case FirestoreNotSaveDocument
     case FirestoreNotGetDocuments
     
+   
+    
     public var errorDescription: String? {
         switch self {
             case .invalidUrl:
-                return NSLocalizedString("URL invalida", comment: "La url introducida es invalida")
+                return NSLocalizedString("Please check the URL format and try again.", comment: "La url introducida es invalida")
             case .requestNotWork:
                 return NSLocalizedString("Error en el servidor", comment: "No se ha podido realizar las peticiones")
             case .requestInvalid:
