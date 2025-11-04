@@ -12,6 +12,12 @@ enum LoadMode {
     case nextPage
 }
 
+enum ViewState {
+    case loading
+    case finished
+    case error(ErrorWrapper)
+}
+
 final class ListHomeViewModel: ObservableObject {
     
     //MARK: - Variables
@@ -45,10 +51,6 @@ final class ListHomeViewModel: ObservableObject {
         self.locations = locations
         self.type = type
     }
-    
-    var isLoading: Bool {
-           viewState == .loading
-       }
    
     //MARK: - Search
     var searchCharacters: [SimpsonsCharacterBO] {
@@ -208,12 +210,5 @@ final class ListHomeViewModel: ObservableObject {
                     }
                 }
         }
-    }
-}
-
-extension ListHomeViewModel {
-    enum ViewState {
-        case loading
-        case finished
     }
 }
