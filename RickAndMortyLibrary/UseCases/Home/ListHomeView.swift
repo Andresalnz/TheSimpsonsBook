@@ -13,21 +13,35 @@ enum TypeViewList: String {
     case locations = "/api/locations"
 }
 
+enum AppRoute: Hashable {
+    case characters(SimpsonsCharacterBO)
+    case episodes(SimpsonsEpisodeBO)
+    case locations(SimpsonsLocationBO)
+}
+
 struct ListHomeView: View {
     
     //MARK: - ViewModel
     @EnvironmentObject var viewModel: ListHomeViewModel
+    @StateObject private var nav = NavigationManager()
     
     var type: TypeViewList
     let navigationTitle: String?
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $nav.path) {
             List {
                 HomeContentView
             }
-            .navigationDestination(for: SimpsonsCharacterBO.self, destination: { character in
-                DetailCharcterView(id: character.characterId)
+            .navigationDestination(for: AppRoute.self, destination: { route in
+                switch route {
+                    case .characters(let character):
+                        DetailCharcterView(id: character.characterId)
+                    case .episodes(let episode):
+                        DetailEpisodeView(id: episode.episodeId)
+                    case .locations(let location):
+                        DetailLocationView(id: location.locationId)
+                }
             })
             .navigationTitle(navigationTitle ?? Constants.noText)
         }
@@ -53,8 +67,9 @@ struct ListHomeView: View {
                     LoadingView(title: "Loading Characters")
                 }
                 ForEach(viewModel.characters, id: \.id) { character in
-                    NavigationLink(value: character, label: {
-                        CharacterRowView(name: character.name, image: character.imageURL, sizeImage: 70, text: character.occupation)
+                    
+                    NavigationLink(value: AppRoute.characters(character), label: {
+                        CharacterRowView(name: character.name, image: character.portraitPath, sizeImage: 70, text: character.occupation)
                     })
                         .onAppear {
                             if viewModel.checkTheLastIdCharacters(.characters, of: character.id) {
@@ -63,7 +78,7 @@ struct ListHomeView: View {
                                 }
                             }
                         }
-                    if viewModel.isLoading && viewModel.checkTheLastIdCharacters(.characters, of: character.id) {
+                    if  viewModel.checkTheLastIdCharacters(.characters, of: character.id) {
                         LoadingView(title: "Loading more Characters")
                         
                     }
@@ -73,7 +88,9 @@ struct ListHomeView: View {
                     LoadingView(title: "Loading Episodes")
                 }
                 ForEach(viewModel.episodes, id: \.id) { episode in
-                    CharacterRowView(name: episode.name, image: episode.imageURL, sizeImage: 150, text: episode.synopsis)
+                    NavigationLink(value: AppRoute.episodes(episode), label: {
+                        CharacterRowView(name: episode.name, image: episode.imagePath, sizeImage: 150, text: episode.synopsis)
+                    })
                         .onAppear {
                             if viewModel.checkTheLastIdCharacters(.episodes, of: episode.id) {
                                 Task {
@@ -81,7 +98,7 @@ struct ListHomeView: View {
                                 }
                             }
                         }
-                    if viewModel.isLoading && viewModel.checkTheLastIdCharacters(.episodes, of: episode.id) {
+                    if  viewModel.checkTheLastIdCharacters(.episodes, of: episode.id) {
                         LoadingView(title: "Loading more Episodes")
                         
                     }
@@ -91,7 +108,9 @@ struct ListHomeView: View {
                     LoadingView(title: "Loading Locations")
                 }
                 ForEach(viewModel.locations, id: \.id) { location in
-                    CharacterRowView(name: location.name, image: location.imageURL, sizeImage: 150, text: location.town)
+                    NavigationLink(value: AppRoute.locations(location), label: {
+                        CharacterRowView(name: location.name, image: location.imagePath, sizeImage: 150, text: location.town)
+                    })
                         .onAppear {
                             if viewModel.checkTheLastIdCharacters(.locations, of: location.id) {
                                 Task {
@@ -99,7 +118,7 @@ struct ListHomeView: View {
                                 }
                             }
                         }
-                    if viewModel.isLoading && viewModel.checkTheLastIdCharacters(.locations, of: location.id) {
+                    if  viewModel.checkTheLastIdCharacters(.locations, of: location.id) {
                         LoadingView(title: "Loading more Locations")
                         
                     }
