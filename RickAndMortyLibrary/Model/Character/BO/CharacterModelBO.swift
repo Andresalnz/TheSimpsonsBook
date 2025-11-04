@@ -34,7 +34,7 @@ struct SimpsonsCharacterBO: Codable, Identifiable, Hashable {
     let gender: SimpsonsCharacterGenderBO?
     let name: String?
     let occupation: String?
-    let portraitPath: String?
+    let portraitPath: URL?
     let phrases: [String]?
     let status: SimpsonsCharacterStatusBO?
     

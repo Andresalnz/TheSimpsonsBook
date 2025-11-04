@@ -27,7 +27,9 @@ struct SimpsonsLocationsPageDTO: Codable, Hashable, Identifiable {
 
 
 struct SimpsonsLocationDTO: Codable, Hashable, Identifiable {
-    let id: Int?
+    let id: UUID = UUID()
+    
+    let locationId: Int?
     let name: String?
     let imagePath: String?
     let dimension: String?
@@ -35,7 +37,7 @@ struct SimpsonsLocationDTO: Codable, Hashable, Identifiable {
     let use: String?
     
     enum CodingKeys: String, CodingKey {
-        case id
+        case locationId = "id"
         case name
         case imagePath = "image_path"
         case dimension

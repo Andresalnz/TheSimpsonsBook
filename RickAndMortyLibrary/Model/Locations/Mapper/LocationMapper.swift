@@ -9,12 +9,12 @@ import Foundation
 
 extension SimpsonsLocationDTO {
     func toBo() -> SimpsonsLocationBO {
-       SimpsonsLocationBO(name: name,
-                          imagePath: imagePath,
-                          dimension: dimension,
-                          town: town,
-                          use: use)
-        
+     SimpsonsLocationBO(locationId: locationId,
+                        name: name,
+                        imagePath: URL(string: "https://cdn.thesimpsonsapi.com/500\(imagePath ?? "")"),
+                        dimension: dimension,
+                        town: town,
+                        use: use)
     }
 }
 

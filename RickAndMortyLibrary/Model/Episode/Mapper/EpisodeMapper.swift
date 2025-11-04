@@ -9,16 +9,12 @@ import Foundation
 
 extension SimpsonsEpisodeDTO {
     func toBo() -> SimpsonsEpisodeBO {
-        SimpsonsEpisodeBO(airdate: airdate,
-                          episodeNumber: episodeNumber,
-                          imagePath: imagePath,
-                          name: name,
-                          season: season,
-                          synopsis: synopsis)
+      SimpsonsEpisodeBO(episodeId: episodeId,
+                        airdate: airdate,
+                        episodeNumber: episodeNumber,
+                        imagePath: URL(string: "https://cdn.thesimpsonsapi.com/500\(imagePath ?? "")"),
+                        name: name,
+                        season: season,
+                        synopsis: synopsis)
     }
 }
-
-
-
-
-

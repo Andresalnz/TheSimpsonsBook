@@ -9,8 +9,11 @@ import Foundation
 
 // MARK: - Simpsons Episode Detail BO
 struct SimpsonsEpisodeDetailBO: Codable, Identifiable, Hashable {
-    let id: Int?
+    let id: UUID = UUID()
+    
+    let episodeDetailId: Int?
     let airdate: String?
+    let description: String?
     let episodeNumber: Int?
     let imagePath: URL?
     let name: String?
@@ -18,8 +21,9 @@ struct SimpsonsEpisodeDetailBO: Codable, Identifiable, Hashable {
     let synopsis: String?
     
     enum CodingKeys: String, CodingKey {
-        case id
+        case episodeDetailId = "id"
         case airdate
+        case description
         case episodeNumber = "episode_number"
         case imagePath = "image_path"
         case name

@@ -9,7 +9,9 @@ import Foundation
 
 // MARK: - Simpsons Character Detail DTO
 struct SimpsonsCharacterDetailDTO: Codable, Identifiable, Hashable {
-    let id: Int?
+    let id: UUID = UUID()
+    
+    let characterDetailId: Int?
     let age: Int?
     let birthdate: String?
     let description: String?
@@ -21,11 +23,11 @@ struct SimpsonsCharacterDetailDTO: Codable, Identifiable, Hashable {
     let phrases: [String]?
     let portraitPath: String?
     let status: String?
-    let firstAppearanceEp: SimpsonsFirstAppearanceDTO?
-    let firstAppearanceSh: SimpsonsFirstAppearanceDTO?
+    let firstAppearanceEp: SimpsonsFirstAppearanceCharacterDTO?
+    let firstAppearanceSh: SimpsonsFirstAppearanceCharacterDTO?
     
     enum CodingKeys: String, CodingKey {
-        case id
+        case characterDetailId = "id"
         case age
         case birthdate
         case description
@@ -43,8 +45,10 @@ struct SimpsonsCharacterDetailDTO: Codable, Identifiable, Hashable {
 }
 
 // MARK: - First Appearance (Episode/Short) DTO
-struct SimpsonsFirstAppearanceDTO: Codable, Identifiable, Hashable {
-    let id: Int?
+struct SimpsonsFirstAppearanceCharacterDTO: Codable, Identifiable, Hashable {
+    let id: UUID = UUID()
+    
+    let firstAppearanceId: Int?
     let airdate: String?
     let description: String?
     let episodeNumber: Int?
@@ -54,7 +58,7 @@ struct SimpsonsFirstAppearanceDTO: Codable, Identifiable, Hashable {
     let synopsis: String?
     
     enum CodingKeys: String, CodingKey {
-        case id
+        case firstAppearanceId = "id"
         case airdate
         case description
         case episodeNumber = "episode_number"

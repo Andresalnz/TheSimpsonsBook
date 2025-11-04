@@ -17,7 +17,7 @@ extension SimpsonsCharacterDTO {
             gender: gender?.toBo(),
             name: name,
             occupation: occupation,
-            portraitPath: portraitPath ,
+            portraitPath: URL(string: "https://cdn.thesimpsonsapi.com/500\(portraitPath ?? "")"),
             phrases: phrases,
             status: status?.toBo()
         )

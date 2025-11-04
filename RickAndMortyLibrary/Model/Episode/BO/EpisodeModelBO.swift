@@ -28,71 +28,19 @@ struct SimpsonsEpisodesPageBO: Codable,  Hashable, Identifiable {
 }
 
 struct SimpsonsEpisodeBO: Codable, Hashable, Identifiable {
-    // Identifiable
     let id: UUID = UUID()
     
-    // Datos propios del episodio
+    let episodeId: Int?
     let airdate: String?
     let episodeNumber: Int?
-    let imagePath: String?
+    let imagePath: URL?
     let name: String?
     let season: Int?
     let synopsis: String?
+   
     
-    var imageURL: URL? {
-        guard let imagePath  else { return nil }
-        return URL(string: "https://cdn.thesimpsonsapi.com/500\(imagePath)")
-    }
-    
-    // Modelos auxiliares para UI existentes en el proyecto
-//    var rowListMain: RowListMain {
-//        RowListMain(image: imagePath, name: name)
-//    }
-//    
-//    var rowDetail: RowDetail {
-//        RowDetail(
-//            airDate: airdate,
-//            episode: formattedEpisodeCode,
-//            characters: nil,
-//            dimension: nil,
-//            residents: nil,
-//            type: nil,
-//            status: nil,
-//            gender: nil,
-//            origin: nil,
-//            location: nil,
-//            episodes: nil,
-//            image: imagePath,
-//            name: name
-//        )
-//    }
-    
-    // Helper para representar “SxxExx” si tienes season/episodeNumber
-    private var formattedEpisodeCode: String? {
-        guard let s = season, let e = episodeNumber else { return nil }
-        let ss = String(format: "S%02d", s)
-        let ee = String(format: "E%02d", e)
-        return "\(ss)\(ee)"
-    }
-    
-    // Hashable
-//    static func == (lhs: EpisodeResultsBO, rhs: EpisodeResultsBO) -> Bool {
-//        lhs.id == rhs.id
-//        && lhs.airdate == rhs.airdate
-//        && lhs.episodeNumber == rhs.episodeNumber
-//        && lhs.imagePath == rhs.imagePath
-//        && lhs.name == rhs.name
-//        && lhs.season == rhs.season
-//        && lhs.synopsis == rhs.synopsis
-//    }
-//    
-//    func hash(into hasher: inout Hasher) {
-//        hasher.combine(id)
-//    }
-    
-    // Decoding keys para URLs y snake_case
     enum CodingKeys: String, CodingKey {
-        case id
+        case episodeId = "id"
         case airdate
         case episodeNumber = "episode_number"
         case imagePath = "image_path"

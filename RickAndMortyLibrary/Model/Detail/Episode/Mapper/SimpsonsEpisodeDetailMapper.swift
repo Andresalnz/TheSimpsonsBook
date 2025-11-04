@@ -10,10 +10,11 @@ import Foundation
 // MARK: - Simpsons Episode Detail Mapper
 extension SimpsonsEpisodeDetailDTO {
     func toBo() -> SimpsonsEpisodeDetailBO {
-        SimpsonsEpisodeDetailBO(id: id,
+        SimpsonsEpisodeDetailBO(episodeDetailId: episodeDetailId,
                                 airdate: airdate,
+                                description: description,
                                 episodeNumber: episodeNumber,
-                                imagePath: URL(string: imagePath ?? ""),
+                                imagePath: URL(string: "https://cdn.thesimpsonsapi.com/500\(imagePath ?? "")"),
                                 name: name,
                                 season: season,
                                 synopsis: synopsis)

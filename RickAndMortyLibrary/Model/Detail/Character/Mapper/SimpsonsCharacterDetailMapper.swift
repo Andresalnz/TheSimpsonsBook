@@ -11,7 +11,7 @@ import Foundation
 extension SimpsonsCharacterDetailDTO {
     func toBo() -> SimpsonsCharacterDetailBO {
         SimpsonsCharacterDetailBO(
-            id: id,
+            characterDetailId: characterDetailId,
             age: age,
             birthdate: birthdate,
             description: description,
@@ -21,7 +21,7 @@ extension SimpsonsCharacterDetailDTO {
             name: name,
             occupation: occupation,
             phrases: phrases,
-            portraitPath: URL(string: portraitPath ?? ""),
+            portraitPath: URL(string: "https://cdn.thesimpsonsapi.com/500\(portraitPath ?? "")"),
             status: status,
             firstAppearanceEp: firstAppearanceEp?.toBo(),
             firstAppearanceSh: firstAppearanceSh?.toBo()
@@ -30,14 +30,14 @@ extension SimpsonsCharacterDetailDTO {
 }
 
 // MARK: - First Appearance (Episode/Short) Mapper
-extension SimpsonsFirstAppearanceDTO {
-    func toBo() -> SimpsonsFirstAppearanceBO {
-        SimpsonsFirstAppearanceBO(
-            id: id,
+extension SimpsonsFirstAppearanceCharacterDTO {
+    func toBo() -> SimpsonsFirstAppearanceCharacterBO {
+        SimpsonsFirstAppearanceCharacterBO(
+            firstAppearanceId: firstAppearanceId,
             airdate: airdate,
             description: description,
             episodeNumber: episodeNumber,
-            imagePath: URL(string: imagePath ?? ""),
+            imagePath: URL(string: "https://cdn.thesimpsonsapi.com/500\(imagePath ?? "")"),
             name: name,
             season: season,
             synopsis: synopsis

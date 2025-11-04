@@ -28,19 +28,17 @@ struct SimpsonsLocationsPageBO: Codable, Hashable, Identifiable {
 
 struct SimpsonsLocationBO: Codable, Hashable, Identifiable {
     let id: UUID = UUID()
+    
+    let locationId: Int?
     let name: String?
-    let imagePath: String?
+    let imagePath: URL?
     let dimension: String?
     let town: String?
     let use: String?
-    
-    var imageURL: URL? {
-        guard let imagePath  else { return nil }
-        return URL(string: "https://cdn.thesimpsonsapi.com/500\(imagePath)")
-    }
+
     
     enum CodingKeys: String, CodingKey {
-        case id
+        case locationId = "id"
         case name
         case imagePath = "image_path"
         case dimension

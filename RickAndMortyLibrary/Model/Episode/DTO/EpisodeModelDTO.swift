@@ -28,7 +28,9 @@ struct SimpsonsEpisodesPageDTO: Codable, Hashable, Identifiable {
 }
 
 struct SimpsonsEpisodeDTO: Codable, Identifiable, Hashable {
-    let id: Int?
+    let id: UUID = UUID()
+    
+    let episodeId: Int?
     let airdate: String?
     let episodeNumber: Int?
     let imagePath: String?
@@ -37,7 +39,7 @@ struct SimpsonsEpisodeDTO: Codable, Identifiable, Hashable {
     let synopsis: String?
     
     enum CodingKeys: String, CodingKey {
-        case id
+        case episodeId = "id"
         case airdate
         case episodeNumber = "episode_number"
         case imagePath = "image_path"
