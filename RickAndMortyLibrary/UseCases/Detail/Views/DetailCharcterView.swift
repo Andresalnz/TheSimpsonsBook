@@ -10,10 +10,9 @@ import SwiftUI
 struct DetailCharcterView: View {
     
     let id: Int?
-    @StateObject var viewModel: DetailViewModel = DetailViewModel()
+    let rows = [GridItem(.adaptive(minimum: 150))]
     
-    @State private var showAlert = false
-    @State private var errorMessage = "Ha ocurrido un error al cargar el detalle."
+    @StateObject var viewModel: DetailViewModel = DetailViewModel()
     
     var body: some View {
         switch viewModel.viewState {
@@ -25,24 +24,42 @@ struct DetailCharcterView: View {
                     }
             case .finished:
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 12) {
-                        Text(viewModel.character?.name ?? "Sin nombre")
-                            .font(.title2)
-                            .bold()
-                        Text(viewModel.character?.description ?? "Sin descripción")
-                            .font(.body)
+                    VStack(spacing: 25) {
+                        EntityDetailHeaderView(image: viewModel.character?.portraitPath, title: viewModel.character?.name, description: viewModel.character?.description)
+                        LazyVGrid(columns: rows, spacing: 20) {
+                            EntityDetailCardView(title: "Age", content: viewModel.character?.age)
+                            EntityDetailCardView(title: "Birthdate", content: viewModel.character?.birthdate)
+                            EntityDetailCardView(title: "Gender", content: viewModel.character?.gender)
+                            EntityDetailCardView(title: "Occupation", content: viewModel.character?.occupation)
+                        }
+                        .padding(.horizontal)
+                        
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("First Appearance")
+                                .font(.title2)
+                                .foregroundStyle(Color.init(hex: "000DC2"))
+                            Text(viewModel.character?.firstAppearanceEp?.name ?? "")
+                                .font(.subheadline)
+                            Text("Famous phrases")
+                                .font(.title2)
+                                .foregroundStyle(Color.init(hex: "000DC2"))
+                            ForEach((viewModel.character?.phrases!)!, id: \.self) { phrase in
+                                Text(phrase)
+                                    .font(.subheadline)
+                                
+                            }
+                        }
+                        .padding(.horizontal)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding()
+                    
                 }
             case .error(let error):
                 ContentUnavailableView(error.title, systemImage: "exclamationmark.triangle", description: Text(error.guidance))
         }
-        
-    
     }
 }
 
 #Preview {
-    DetailCharcterView(id: 1, viewModel: DetailViewModel(character: Previews.previewDetailCharacter, episode: Previews.previewDetailEpisode, location: Previews.previewDetailLocation))
+    DetailCharcterView(id: 1, viewModel: DetailViewModel(character: Previews.previewDetailCharacter))
 }
