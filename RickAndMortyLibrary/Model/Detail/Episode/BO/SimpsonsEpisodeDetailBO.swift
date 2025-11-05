@@ -14,10 +14,10 @@ struct SimpsonsEpisodeDetailBO: Codable, Identifiable, Hashable {
     let episodeDetailId: Int?
     let airdate: String?
     let description: String?
-    let episodeNumber: Int?
+    let episodeNumber: String?
     let imagePath: URL?
     let name: String?
-    let season: Int?
+    let season: String?
     let synopsis: String?
     
     enum CodingKeys: String, CodingKey {

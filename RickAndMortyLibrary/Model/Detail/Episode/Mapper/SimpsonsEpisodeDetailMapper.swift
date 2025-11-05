@@ -13,10 +13,10 @@ extension SimpsonsEpisodeDetailDTO {
         SimpsonsEpisodeDetailBO(episodeDetailId: episodeDetailId,
                                 airdate: airdate,
                                 description: description,
-                                episodeNumber: episodeNumber,
+                                episodeNumber: "\(episodeNumber ?? 0)",
                                 imagePath: URL(string: "https://cdn.thesimpsonsapi.com/500\(imagePath ?? "")"),
                                 name: name,
-                                season: season,
+                                season: "\(season ?? 0)",
                                 synopsis: synopsis)
     }
 }

@@ -12,7 +12,7 @@ extension SimpsonsCharacterDetailDTO {
     func toBo() -> SimpsonsCharacterDetailBO {
         SimpsonsCharacterDetailBO(
             characterDetailId: characterDetailId,
-            age: age,
+            age: "\(age ?? 0)",
             birthdate: birthdate,
             description: description,
             firstAppearanceEpId: firstAppearanceEpId,

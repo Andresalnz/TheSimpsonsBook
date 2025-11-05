@@ -12,7 +12,7 @@ struct SimpsonsCharacterDetailBO: Codable, Identifiable, Hashable {
     let id: UUID = UUID()
     
     let characterDetailId: Int?
-    let age: Int?
+    let age: String?
     let birthdate: String?
     let description: String?
     let firstAppearanceEpId: Int?
