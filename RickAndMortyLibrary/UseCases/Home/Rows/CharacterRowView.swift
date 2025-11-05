@@ -34,7 +34,7 @@ struct CharacterRowView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(name ?? Constants.noText)
                     .font(.title3)
-                    .lineLimit(1)
+                    .lineLimit(2)
                 Text(text ?? "")
                     .font(.footnote)
                     .lineLimit(2)
