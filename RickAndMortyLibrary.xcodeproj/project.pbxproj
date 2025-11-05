@@ -42,8 +42,8 @@
 		9F524FB32B7E1F8400DE246A /* RMFirebaseFirestoreSaveDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F524FB22B7E1F8400DE246A /* RMFirebaseFirestoreSaveDocuments.swift */; };
 		9F7959032B6A6AD70083E9F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7959022B6A6AD70083E9F1 /* GoogleService-Info.plist */; };
 		9F798BCB2B18FFA7008BEC6E /* ListWithSeparation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F798BCA2B18FFA7008BEC6E /* ListWithSeparation.swift */; };
-		9F8445F92AF1E50700460822 /* SectionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8445F82AF1E50700460822 /* SectionImageView.swift */; };
-		9F8445FB2AF1E6B200460822 /* SectionInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8445FA2AF1E6B200460822 /* SectionInformationView.swift */; };
+		9F8445F92AF1E50700460822 /* EntityDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8445F82AF1E50700460822 /* EntityDetailHeaderView.swift */; };
+		9F8445FB2AF1E6B200460822 /* EntityDetailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8445FA2AF1E6B200460822 /* EntityDetailCardView.swift */; };
 		9F8814882AE26F4700448501 /* EpisodeModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8814872AE26F4700448501 /* EpisodeModelDTO.swift */; };
 		9F88148A2AE26F5300448501 /* EpisodeModelBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8814892AE26F5300448501 /* EpisodeModelBO.swift */; };
 		9F88148C2AE26F6100448501 /* EpisodeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88148B2AE26F6100448501 /* EpisodeMapper.swift */; };
@@ -117,8 +117,8 @@
 		9F524FB22B7E1F8400DE246A /* RMFirebaseFirestoreSaveDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMFirebaseFirestoreSaveDocuments.swift; sourceTree = "<group>"; };
 		9F7959022B6A6AD70083E9F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9F798BCA2B18FFA7008BEC6E /* ListWithSeparation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWithSeparation.swift; sourceTree = "<group>"; };
-		9F8445F82AF1E50700460822 /* SectionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionImageView.swift; sourceTree = "<group>"; };
-		9F8445FA2AF1E6B200460822 /* SectionInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionInformationView.swift; sourceTree = "<group>"; };
+		9F8445F82AF1E50700460822 /* EntityDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDetailHeaderView.swift; sourceTree = "<group>"; };
+		9F8445FA2AF1E6B200460822 /* EntityDetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDetailCardView.swift; sourceTree = "<group>"; };
 		9F8814872AE26F4700448501 /* EpisodeModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeModelDTO.swift; sourceTree = "<group>"; };
 		9F8814892AE26F5300448501 /* EpisodeModelBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeModelBO.swift; sourceTree = "<group>"; };
 		9F88148B2AE26F6100448501 /* EpisodeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeMapper.swift; sourceTree = "<group>"; };
@@ -523,8 +523,8 @@
 		9F8445F72AF1E4E600460822 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				9F8445F82AF1E50700460822 /* SectionImageView.swift */,
-				9F8445FA2AF1E6B200460822 /* SectionInformationView.swift */,
+				9F8445F82AF1E50700460822 /* EntityDetailHeaderView.swift */,
+				9F8445FA2AF1E6B200460822 /* EntityDetailCardView.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -865,7 +865,7 @@
 				9F1221042EB0F5380024BCEF /* SimpsonsLocationDetailDTO.swift in Sources */,
 				9F1BFCA22EB91EFA00E7922F /* NavigationManager.swift in Sources */,
 				9F0DEA3C2AE17AF6009376F1 /* Util.swift in Sources */,
-				9F8445FB2AF1E6B200460822 /* SectionInformationView.swift in Sources */,
+				9F8445FB2AF1E6B200460822 /* EntityDetailCardView.swift in Sources */,
 				9F0DEA312AE149E1009376F1 /* CharacterMapper.swift in Sources */,
 				9F0DEA2F2AE149C6009376F1 /* CharacterModelBO.swift in Sources */,
 				9F11CA0E2B6A7A0C00602315 /* FavouritesView.swift in Sources */,
@@ -878,7 +878,7 @@
 				9FCB85B02E96861900F1E21C /* SimpsonsInteractorProtocol.swift in Sources */,
 				9F1221152EB122210024BCEF /* SimpsonsLocationBO.swift in Sources */,
 				9FC545D22EBA108600CB3DF1 /* DetailLocationView.swift in Sources */,
-				9F8445F92AF1E50700460822 /* SectionImageView.swift in Sources */,
+				9F8445F92AF1E50700460822 /* EntityDetailHeaderView.swift in Sources */,
 				9F88148A2AE26F5300448501 /* EpisodeModelBO.swift in Sources */,
 				9F8CFF192B04D92E00BC00EC /* Repository.swift in Sources */,
 				9F1220FE2EB0F31E0024BCEF /* SimpsonsCharacterDetailDTO.swift in Sources */,
