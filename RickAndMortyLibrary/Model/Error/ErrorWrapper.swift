@@ -2,8 +2,10 @@
 //  ErrorWrapper.swift
 //  RickAndMortyLibrary
 //
-//  Created by Andres Aleu on 4/11/25.
+//  Created by Andres Aleu on 5/11/25.
 //
+
+import Foundation
 
 import Foundation
 
