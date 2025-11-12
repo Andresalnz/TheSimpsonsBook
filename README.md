@@ -4,7 +4,7 @@ Aplicación iOS desarrollada con Swift, SwiftUI y arquitectura MVVM que muestra 
  
  ## Tabla de contenidos
  
-1. [Características principales](#Característicasprincipales)
+1. [Características principales](#Características principales)
 2. [Capturas](#Capturas)
 3. [Tecnologías](#Tecnologías)
 4. [Arquitectura](#Arquitectura)
