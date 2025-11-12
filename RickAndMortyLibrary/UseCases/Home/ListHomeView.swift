@@ -23,13 +23,13 @@ struct ListHomeView: View {
     
     //MARK: - ViewModel
     @EnvironmentObject var viewModel: ListHomeViewModel
-    @StateObject private var nav = NavigationManager()
+    @State var path = NavigationPath()
     
     var type: TypeViewList
     let navigationTitle: String?
     
     var body: some View {
-        NavigationStack(path: $nav.path) {
+        NavigationStack(path: $path) {
             List {
                 HomeContentView
             }
