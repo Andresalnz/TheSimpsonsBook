@@ -1,6 +1,8 @@
-# Rick And Morty Library
+# TheSimpsonsBookApp
 
-Aplicación que muestra un listado de personajes de Rick and Morty y su detalle, que da una información completa del personaje elegido. Esta construida usando [The Rick and Morty API](https://rickandmortyapi.com/).
+Aplicación iOS desarrollada con Swift, SwiftUI y arquitectura MVVM que muestra información de la serie Los Simpson: personajes, episodios y localizaciones. Incluye listado con detalle individual y paginación. Implementa Swift Concurrency (async/await) y un patrón de Interactor/Repository para el acceso a datos.
+ 
+ ## Tabla de contenidos
  
 1. [Capturas](#capturas)
 2. [Conociendo el proyecto](#conociendo)
@@ -9,54 +11,61 @@ Aplicación que muestra un listado de personajes de Rick and Morty y su detalle,
 5. [Instalación](#instalacion)
 6. [Autor](#autor)
 
-<h2 id="capturas">Capturas</h2>
+## Características principales
 
-| Lista de personajes | Lista de episodios | Buscador |
+- Listado de:
+  - Personajes
+  - Episodios
+  - Localizaciones
+- Detalle de cada elemento:
+  - Personaje: Imagen, nombre e información, primer episodio en el que aparece y sus frases mas famosas
+  - Episodio: Imagen, nombre e información y sinopsis
+  - Localización: Imagen, nombre e información y primer episodio en el que aparece
+- Paginación con carga incremental (infinite scroll)
+- Gestión de estado de la vista (loading, finished, error)
+- Manejo de errores con mensajes de usuario
+- UI basada en SwiftUI con TabBar para navegación principal
+
+## Capturas
+
+| Lista de personajes | Lista de episodios | Lista de localizaciones |
 | ----------- | ------------ | ------------ | 
-| ![List Characters](ScreenShots/ListCharacters.png) | ![List Episodes](ScreenShots/ListEpisodes.png) | ![List Characters](ScreenShots/Search.png) |
+| ![List Characters](ScreenShots/ListCharacters.png) | ![List Episodes](ScreenShots/ListEpisodes.png) | ![List Locations](ScreenShots/ListLocations.png) |
 
 | Detalle de personaje | Detalle de personaje | Detalle del episodio |
 | ----------- | ------------ | ------------ |
-| ![Detail Characters](ScreenShots/DetailImageAndInfo.png) | ![Detail Characters](ScreenShots/DetailInfoAndEpisodes.png) | ![Detail Episode](ScreenShots/DetailEpisode.png) | 
+| ![Detail Character](ScreenShots/DetailCharacter.png) | ![Detail Episode](ScreenShots/DetailEpisode.png) | ![Detail Location](ScreenShots/DetailLocation.png) | 
 
-<h2 id="conociendo">Conociendo el proyecto</h2>
+## Tecnologías
 
-Al ejecutar la aplicación, se realiza una petición que devuelve algunos personajes, la respuesta se almacenan en un array, el cual, se usa en la vista para ver una lista completa de personajes de Rick and Morty, en la cual se puede observar:
+- Swift 6
+- SwiftUI
+- Xcode 26.0.1
+- Async/Await, Sendable, MainActor (Swift Concurrency)
 
-- La imagen 
-- El nombre
-- El estado
+## Arquitectura
 
-Si se hace scroll para observar mas personajes, cuando llega al final de la lista, se actualiza para realizar una nueva petición a la siguiente página para poder cargar mas personajes. 
+- MVVM (Model-View-ViewModel)
+- Interactor + Repository para capa de datos
+- DTO -> BO (Business Object) con mapeos explícitos
+- Swift Concurrency (async/await) para peticiones asíncronas
+- Gestión de estados con `enum ViewState` (loading, finished, error)
+- Paginación con URL “next” 
 
-Si se pulsa sobre algún personaje, se redirige a la vista de detalle, en la cual se sirve de la información de la anterior pantalla para mostrar la imagen, la información del personaje y el nombre de los episodios en los que aparece. 
+## Requisitos
 
-Para poder mostrar los episodios, se instancia el viewModel de detalle y se envía a su vista, con las URLs de los episodios. Este viewModel, se inicializa con un array que almacena todas las URLs de los episodios en los que aparece el personaje pulsado. Este array, se va recorriendo y se va realizando peticiones al endpoint que devuelve la información de un solo episodio, la información recibida se almacena en una propiedad, la cual, se almacena en un nuevo array que es utilizado en la vista.
+- iOS 18.0 o superior
+- Xcode 16.0 o superior
 
-Esta aplicación esta construida usando:
+## Instalación
 
-- Arquitectura MVVM
-- Async/Await
+1. Clona el repositorio:
+   git clone https://github.com/Andresalnz/TheSimpsonsBook.git
+2. Abre el proyecto en Xcode 16+.
+3. Selecciona el esquema “TheSimpsonsBookApp”.
+4. Ejecuta la app en un simulador o dispositivo con iOS 18+.
 
-<h2 id="stack">Stack Tecnologico</h2>
-
-- Swift 5.9
-- Xcode 15.0.1
-- SwiftUI 
-
-<h2 id="requisitos">Requisitos</h2>
-
-- iOS 15.0 o superior
-- Xcode 12.0 o superior
-
-<h2 id="instalacion">Instalación</h2>
-
-1. Clona el repositorio
-2. Abra el proyecto
-3. Abra el archivo `RickAndMortyLibrary.xcodeproj` y ejecute la app. 
-
-
-<h2 id="autor">Autor</h2>
+## Autor
 
 **Andres Aleu :v:** 
 
