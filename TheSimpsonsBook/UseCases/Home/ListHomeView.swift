@@ -69,7 +69,7 @@ struct ListHomeView: View {
                 ForEach(viewModel.characters, id: \.id) { character in
                     
                     NavigationLink(value: AppRoute.characters(character), label: {
-                        CharacterRowView(name: character.name, image: character.portraitPath, sizeImage: 70, text: character.occupation)
+                        RowSimpsonsListHome(name: character.name, image: character.portraitPath, sizeImage: 70, text: character.occupation)
                     })
                         .onAppear {
                             if viewModel.checkTheLastIdCharacters(.characters, of: character.id) {
@@ -89,7 +89,7 @@ struct ListHomeView: View {
                 }
                 ForEach(viewModel.episodes, id: \.id) { episode in
                     NavigationLink(value: AppRoute.episodes(episode), label: {
-                        CharacterRowView(name: episode.name, image: episode.imagePath, sizeImage: 150, text: episode.synopsis)
+                        RowSimpsonsListHome(name: episode.name, image: episode.imagePath, sizeImage: 150, text: episode.synopsis)
                     })
                         .onAppear {
                             if viewModel.checkTheLastIdCharacters(.episodes, of: episode.id) {
@@ -109,7 +109,7 @@ struct ListHomeView: View {
                 }
                 ForEach(viewModel.locations, id: \.id) { location in
                     NavigationLink(value: AppRoute.locations(location), label: {
-                        CharacterRowView(name: location.name, image: location.imagePath, sizeImage: 150, text: location.town)
+                        RowSimpsonsListHome(name: location.name, image: location.imagePath, sizeImage: 150, text: location.town)
                     })
                         .onAppear {
                             if viewModel.checkTheLastIdCharacters(.locations, of: location.id) {

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9F0C75D22B31C30F00DF1CB7 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0C75D12B31C30F00DF1CB7 /* TabBarView.swift */; };
-		9F0DEA162AE13CC5009376F1 /* RickAndMortyLibraryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA152AE13CC5009376F1 /* RickAndMortyLibraryApp.swift */; };
+		9F0DEA162AE13CC5009376F1 /* TheSimpsonsBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA152AE13CC5009376F1 /* TheSimpsonsBookApp.swift */; };
 		9F0DEA1A2AE13CC6009376F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0DEA192AE13CC6009376F1 /* Assets.xcassets */; };
 		9F0DEA1D2AE13CC6009376F1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0DEA1C2AE13CC6009376F1 /* Preview Assets.xcassets */; };
 		9F0DEA2D2AE149A9009376F1 /* CharacterModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA2C2AE149A9009376F1 /* CharacterModelDTO.swift */; };
@@ -16,7 +16,7 @@
 		9F0DEA312AE149E1009376F1 /* CharacterMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA302AE149E1009376F1 /* CharacterMapper.swift */; };
 		9F0DEA382AE15F23009376F1 /* ListHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA372AE15F23009376F1 /* ListHomeView.swift */; };
 		9F0DEA3A2AE15F3B009376F1 /* ListHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA392AE15F3B009376F1 /* ListHomeViewModel.swift */; };
-		9F0DEA452AE18C8C009376F1 /* CharacterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA442AE18C8C009376F1 /* CharacterRowView.swift */; };
+		9F0DEA452AE18C8C009376F1 /* RowSimpsonsListHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA442AE18C8C009376F1 /* RowSimpsonsListHome.swift */; };
 		9F1220FE2EB0F31E0024BCEF /* SimpsonsCharacterDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1220FD2EB0F31E0024BCEF /* SimpsonsCharacterDetailDTO.swift */; };
 		9F1221002EB0F4D10024BCEF /* SimpsonsEpisodeDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1220FF2EB0F4D10024BCEF /* SimpsonsEpisodeDetailDTO.swift */; };
 		9F1221042EB0F5380024BCEF /* SimpsonsLocationDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1221032EB0F5380024BCEF /* SimpsonsLocationDetailDTO.swift */; };
@@ -60,8 +60,8 @@
 
 /* Begin PBXFileReference section */
 		9F0C75D12B31C30F00DF1CB7 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
-		9F0DEA122AE13CC5009376F1 /* RickAndMortyLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F0DEA152AE13CC5009376F1 /* RickAndMortyLibraryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyLibraryApp.swift; sourceTree = "<group>"; };
+		9F0DEA122AE13CC5009376F1 /* TheSimpsonsBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSimpsonsBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F0DEA152AE13CC5009376F1 /* TheSimpsonsBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSimpsonsBookApp.swift; sourceTree = "<group>"; };
 		9F0DEA192AE13CC6009376F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F0DEA1C2AE13CC6009376F1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F0DEA2C2AE149A9009376F1 /* CharacterModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModelDTO.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		9F0DEA302AE149E1009376F1 /* CharacterMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMapper.swift; sourceTree = "<group>"; };
 		9F0DEA372AE15F23009376F1 /* ListHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHomeView.swift; sourceTree = "<group>"; };
 		9F0DEA392AE15F3B009376F1 /* ListHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHomeViewModel.swift; sourceTree = "<group>"; };
-		9F0DEA442AE18C8C009376F1 /* CharacterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRowView.swift; sourceTree = "<group>"; };
+		9F0DEA442AE18C8C009376F1 /* RowSimpsonsListHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowSimpsonsListHome.swift; sourceTree = "<group>"; };
 		9F1220FD2EB0F31E0024BCEF /* SimpsonsCharacterDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsCharacterDetailDTO.swift; sourceTree = "<group>"; };
 		9F1220FF2EB0F4D10024BCEF /* SimpsonsEpisodeDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsEpisodeDetailDTO.swift; sourceTree = "<group>"; };
 		9F1221032EB0F5380024BCEF /* SimpsonsLocationDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsLocationDetailDTO.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		9F1221162EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonLocationDetailMapper.swift; sourceTree = "<group>"; };
 		9F1221192EB125290024BCEF /* SimpsonsDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsDetailInteractor.swift; sourceTree = "<group>"; };
 		9F12211D2EB142AA0024BCEF /* DetailCharcterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharcterView.swift; sourceTree = "<group>"; };
-		9F12211F2EB142CB0024BCEF /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewModel.swift; path = RickAndMortyLibrary/UseCases/Detail/ViewModel/DetailViewModel.swift; sourceTree = SOURCE_ROOT; };
+		9F12211F2EB142CB0024BCEF /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewModel.swift; path = TheSimpsonsBook/UseCases/Detail/ViewModel/DetailViewModel.swift; sourceTree = SOURCE_ROOT; };
 		9F358A8A2EA8067C00673350 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		9F494F6C2EBB509B00D552B9 /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
 		9F7959022B6A6AD70083E9F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				9F8814912AE2BBBE00448501 /* README.md */,
-				9F0DEA142AE13CC5009376F1 /* RickAndMortyLibrary */,
+				9F0DEA142AE13CC5009376F1 /* TheSimpsonsBook */,
 				9F0DEA132AE13CC5009376F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -142,12 +142,12 @@
 		9F0DEA132AE13CC5009376F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9F0DEA122AE13CC5009376F1 /* RickAndMortyLibrary.app */,
+				9F0DEA122AE13CC5009376F1 /* TheSimpsonsBook.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9F0DEA142AE13CC5009376F1 /* RickAndMortyLibrary */ = {
+		9F0DEA142AE13CC5009376F1 /* TheSimpsonsBook */ = {
 			isa = PBXGroup;
 			children = (
 				9F8CFF122B04004800BC00EC /* Shared */,
@@ -155,12 +155,12 @@
 				9F0DEA262AE143FD009376F1 /* UseCases */,
 				9F0DEA242AE143E1009376F1 /* Utils */,
 				9F0DEA232AE142CB009376F1 /* SupportingFiles */,
-				9F0DEA152AE13CC5009376F1 /* RickAndMortyLibraryApp.swift */,
+				9F0DEA152AE13CC5009376F1 /* TheSimpsonsBookApp.swift */,
 				9F0DEA192AE13CC6009376F1 /* Assets.xcassets */,
 				9F7959022B6A6AD70083E9F1 /* GoogleService-Info.plist */,
 				9F0DEA1B2AE13CC6009376F1 /* Preview Content */,
 			);
-			path = RickAndMortyLibrary;
+			path = TheSimpsonsBook;
 			sourceTree = "<group>";
 		};
 		9F0DEA1B2AE13CC6009376F1 /* Preview Content */ = {
@@ -244,7 +244,7 @@
 		9F0DEA432AE18C79009376F1 /* Rows */ = {
 			isa = PBXGroup;
 			children = (
-				9F0DEA442AE18C8C009376F1 /* CharacterRowView.swift */,
+				9F0DEA442AE18C8C009376F1 /* RowSimpsonsListHome.swift */,
 			);
 			path = Rows;
 			sourceTree = "<group>";
@@ -549,9 +549,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9F0DEA112AE13CC5009376F1 /* RickAndMortyLibrary */ = {
+		9F0DEA112AE13CC5009376F1 /* TheSimpsonsBook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F0DEA202AE13CC6009376F1 /* Build configuration list for PBXNativeTarget "RickAndMortyLibrary" */;
+			buildConfigurationList = 9F0DEA202AE13CC6009376F1 /* Build configuration list for PBXNativeTarget "TheSimpsonsBook" */;
 			buildPhases = (
 				9F0DEA0E2AE13CC5009376F1 /* Sources */,
 				9F0DEA0F2AE13CC5009376F1 /* Frameworks */,
@@ -561,7 +561,7 @@
 			);
 			dependencies = (
 			);
-			name = RickAndMortyLibrary;
+			name = TheSimpsonsBook;
 			packageProductDependencies = (
 				9FFF45CA2C9C7F240026F21E /* FirebaseAnalytics */,
 				9FFF45CC2C9C7F240026F21E /* FirebaseAnalyticsOnDeviceConversion */,
@@ -573,7 +573,7 @@
 				9FFF45D82C9C7F240026F21E /* FirebaseStorage */,
 			);
 			productName = RickAndMortyLibrary;
-			productReference = 9F0DEA122AE13CC5009376F1 /* RickAndMortyLibrary.app */;
+			productReference = 9F0DEA122AE13CC5009376F1 /* TheSimpsonsBook.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -591,7 +591,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9F0DEA0D2AE13CC5009376F1 /* Build configuration list for PBXProject "RickAndMortyLibrary" */;
+			buildConfigurationList = 9F0DEA0D2AE13CC5009376F1 /* Build configuration list for PBXProject "TheSimpsonsBook" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -607,7 +607,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9F0DEA112AE13CC5009376F1 /* RickAndMortyLibrary */,
+				9F0DEA112AE13CC5009376F1 /* TheSimpsonsBook */,
 			);
 		};
 /* End PBXProject section */
@@ -631,7 +631,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F0DEA452AE18C8C009376F1 /* CharacterRowView.swift in Sources */,
+				9F0DEA452AE18C8C009376F1 /* RowSimpsonsListHome.swift in Sources */,
 				9FAAFBC12B0B880100D65E6F /* LocationModelDTO.swift in Sources */,
 				9F1221092EB11C750024BCEF /* SimpsonsCharacterDetailBO.swift in Sources */,
 				9FAAFBC32B0B881000D65E6F /* LocationModelBO.swift in Sources */,
@@ -664,7 +664,7 @@
 				9F88148A2AE26F5300448501 /* EpisodeModelBO.swift in Sources */,
 				9F8CFF192B04D92E00BC00EC /* Repository.swift in Sources */,
 				9F1220FE2EB0F31E0024BCEF /* SimpsonsCharacterDetailDTO.swift in Sources */,
-				9F0DEA162AE13CC5009376F1 /* RickAndMortyLibraryApp.swift in Sources */,
+				9F0DEA162AE13CC5009376F1 /* TheSimpsonsBookApp.swift in Sources */,
 				9F8814882AE26F4700448501 /* EpisodeModelDTO.swift in Sources */,
 				9F88148E2AE2975B00448501 /* ErrorHandler.swift in Sources */,
 				9F12210F2EB121500024BCEF /* SimpsonsEpisodeDetailBO.swift in Sources */,
@@ -800,7 +800,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RickAndMortyLibrary/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TheSimpsonsBook/Preview Content\"";
 				DEVELOPMENT_TEAM = NV5FY49WBP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -815,7 +815,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = andresaleu.RickAndMortyLibrary;
+				PRODUCT_BUNDLE_IDENTIFIER = andresaleu.TheSimpsonsBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -830,7 +830,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RickAndMortyLibrary/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TheSimpsonsBook/Preview Content\"";
 				DEVELOPMENT_TEAM = NV5FY49WBP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -845,7 +845,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = andresaleu.RickAndMortyLibrary;
+				PRODUCT_BUNDLE_IDENTIFIER = andresaleu.TheSimpsonsBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -856,7 +856,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9F0DEA0D2AE13CC5009376F1 /* Build configuration list for PBXProject "RickAndMortyLibrary" */ = {
+		9F0DEA0D2AE13CC5009376F1 /* Build configuration list for PBXProject "TheSimpsonsBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F0DEA1E2AE13CC6009376F1 /* Debug */,
@@ -865,7 +865,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F0DEA202AE13CC6009376F1 /* Build configuration list for PBXNativeTarget "RickAndMortyLibrary" */ = {
+		9F0DEA202AE13CC6009376F1 /* Build configuration list for PBXNativeTarget "TheSimpsonsBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F0DEA212AE13CC6009376F1 /* Debug */,

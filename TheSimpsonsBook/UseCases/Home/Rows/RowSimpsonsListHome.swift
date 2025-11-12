@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CharacterRowView: View {
+struct RowSimpsonsListHome: View {
     
     let name: String?
     let image: URL?
@@ -48,5 +48,5 @@ struct CharacterRowView: View {
 
 #Preview {
 
-    CharacterRowView(name: "Homer", image: URL(string: "https://cdn.thesimpsonsapi.com/200/episode/1.webp" ), sizeImage: 150, text: "Saety Guardian")
+    RowSimpsonsListHome(name: "Homer", image: URL(string: "https://cdn.thesimpsonsapi.com/200/episode/1.webp" ), sizeImage: 150, text: "Saety Guardian")
 }
