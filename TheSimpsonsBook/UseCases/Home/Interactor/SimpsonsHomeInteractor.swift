@@ -34,27 +34,27 @@ extension Interactor {
     
     //MARK: - Primera carga
     func getAllCharacters() async throws -> SimpsonsCharactersPageDTO {
-        return try await fetch(.characters, as: SimpsonsCharactersPageDTO.self)
+        try await fetch(.characters, as: SimpsonsCharactersPageDTO.self)
     }
     
     func getAllEpisodes() async throws -> SimpsonsEpisodesPageDTO {
-        return try await fetch(.episodes, as: SimpsonsEpisodesPageDTO.self)
+        try await fetch(.episodes, as: SimpsonsEpisodesPageDTO.self)
     }
     
     func getAllLocations() async throws -> SimpsonsLocationsPageDTO {
-        return try await fetch(.locations, as: SimpsonsLocationsPageDTO.self)
+        try await fetch(.locations, as: SimpsonsLocationsPageDTO.self)
     }
     
     //MARK: - Para cargar mas datos
     func getMoreCharacters(next: URL) async throws -> SimpsonsCharactersPageDTO {
-        return try await repository.getJSON(url: next, type: SimpsonsCharactersPageDTO.self)
+        try await repository.getJSON(url: next, type: SimpsonsCharactersPageDTO.self)
     }
     
     func getMoreEpisodes(next: URL) async throws -> SimpsonsEpisodesPageDTO {
-        return try await repository.getJSON(url: next, type: SimpsonsEpisodesPageDTO.self)
+        try await repository.getJSON(url: next, type: SimpsonsEpisodesPageDTO.self)
     }
     
     func getMoreLocations(next: URL) async throws -> SimpsonsLocationsPageDTO {
-        return try await repository.getJSON(url: next, type: SimpsonsLocationsPageDTO.self)
+        try await repository.getJSON(url: next, type: SimpsonsLocationsPageDTO.self)
     }
 }

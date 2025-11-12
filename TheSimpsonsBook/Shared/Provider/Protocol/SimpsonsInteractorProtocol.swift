@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol Interactor {
+protocol Interactor: Sendable {
     var repository: Repository { get }
     var baseURL: URL? { get }
 }
 
 struct SimpsonsInteractor: Interactor {
-    var repository: Repository
+    let repository: Repository
     
     var baseURL: URL? {
         URL(string: "https://thesimpsonsapi.com/")

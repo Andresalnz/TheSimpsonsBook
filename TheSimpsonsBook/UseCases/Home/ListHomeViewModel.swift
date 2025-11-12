@@ -18,6 +18,7 @@ enum ViewState {
     case error(ErrorWrapper)
 }
 
+
 final class ListHomeViewModel: ObservableObject {
     
     //MARK: - Variables
@@ -87,13 +88,13 @@ final class ListHomeViewModel: ObservableObject {
     }
     
     //MARK: - load
+    @MainActor
     func load(_ type: TypeViewList, mode: LoadMode) async {
         do {
-            await MainActor.run { viewState = .loading }
-            try await Task.sleep(nanoseconds: 2_000_000_000)
+            viewState = .loading
+            
             switch type {
                 case .characters:
-                    
                     try await loadCharacters(mode: mode)
                 case .episodes:
                     try await loadEpisodes(mode: mode)
@@ -103,111 +104,107 @@ final class ListHomeViewModel: ObservableObject {
         } catch let err {
             print(err.localizedDescription)
         }
-        
     }
     
     //MARK: - loadCharacters
+    @MainActor
     private func loadCharacters(mode: LoadMode) async throws {
         switch mode {
             case .initial:
                 let page = try await interactor.getAllCharacters()
-                await MainActor.run {
-                    if let info = page.characters {
-                        let mapped = info.compactMap { $0.toBo() }
-                        self.characters.append(contentsOf: mapped)
-                    }
-                    if let nextStr = page.next, let url = URL(string: nextStr) {
-                        self.nextCharactersURL = url
-                    } else {
-                        self.nextCharactersURL = nil
-                    }
-                    viewState = .finished
+                
+                if let info = page.characters {
+                    let mapped = info.compactMap { $0.toBo() }
+                    self.characters.append(contentsOf: mapped)
                 }
+                if let nextStr = page.next, let url = URL(string: nextStr) {
+                    self.nextCharactersURL = url
+                } else {
+                    self.nextCharactersURL = nil
+                }
+                viewState = .finished
                 
             case .nextPage:
                 guard let next = nextCharactersURL else { return }
                 let page = try await interactor.getMoreCharacters(next: next)
-                await MainActor.run {
-                    if let info = page.characters {
-                        let mapped = info.compactMap { $0.toBo() }
-                        self.characters.append(contentsOf: mapped)
-                    }
-                    if let nextStr = page.next, let url = URL(string: nextStr) {
-                        self.nextCharactersURL = url
-                    } else {
-                        self.nextCharactersURL = nil
-                    }
+                
+                if let info = page.characters {
+                    let mapped = info.compactMap { $0.toBo() }
+                    self.characters.append(contentsOf: mapped)
                 }
-                await MainActor.run { viewState = .finished }
+                if let nextStr = page.next, let url = URL(string: nextStr) {
+                    self.nextCharactersURL = url
+                } else {
+                    self.nextCharactersURL = nil
+                }
+                viewState = .finished
         }
     }
     
     //MARK: - loadEpisodes
+    @MainActor
     private func loadEpisodes(mode: LoadMode) async throws {
         switch mode {
             case .initial:
                 let page = try await interactor.getAllEpisodes()
-                await MainActor.run {
-                    if let info = page.episodes {
-                        let mapped = info.compactMap { $0.toBo() }
-                        self.episodes.append(contentsOf: mapped)
-                    }
-                    if let nextStr = page.next, let url = URL(string: nextStr) {
-                        self.nextEpisodesURL = url
-                    } else {
-                        self.nextEpisodesURL = nil
-                    }
-                    self.viewState = .finished
+                
+                if let info = page.episodes {
+                    let mapped = info.compactMap { $0.toBo() }
+                    self.episodes.append(contentsOf: mapped)
                 }
+                if let nextStr = page.next, let url = URL(string: nextStr) {
+                    self.nextEpisodesURL = url
+                } else {
+                    self.nextEpisodesURL = nil
+                }
+                self.viewState = .finished
                 
             case .nextPage:
                 guard let next = nextEpisodesURL else { return }
                 let page = try await interactor.getMoreEpisodes(next: next)
-                await MainActor.run {
-                    if let info = page.episodes {
-                        let mapped = info.compactMap { $0.toBo() }
-                        self.episodes.append(contentsOf: mapped)
-                    }
-                    if let nextStr = page.next, let url = URL(string: nextStr) {
-                        self.nextEpisodesURL = url
-                    } else {
-                        self.nextEpisodesURL = nil
-                    }
+                
+                if let info = page.episodes {
+                    let mapped = info.compactMap { $0.toBo() }
+                    self.episodes.append(contentsOf: mapped)
+                }
+                if let nextStr = page.next, let url = URL(string: nextStr) {
+                    self.nextEpisodesURL = url
+                } else {
+                    self.nextEpisodesURL = nil
                 }
         }
     }
     
     //MARK: - loadLocations
+    @MainActor
     private func loadLocations(mode: LoadMode) async throws {
         switch mode {
             case .initial:
                 let page = try await interactor.getAllLocations()
-                await MainActor.run {
-                    if let info = page.locations {
-                        let mapped = info.compactMap { $0.toBo() }
-                        self.locations.append(contentsOf: mapped)
-                    }
-                    if let nextStr = page.next, let url = URL(string: nextStr) {
-                        self.nextLocationsURL = url
-                    } else {
-                        self.nextLocationsURL = nil
-                    }
-                    self.viewState = .finished
+                
+                if let info = page.locations {
+                    let mapped = info.compactMap { $0.toBo() }
+                    self.locations.append(contentsOf: mapped)
                 }
+                if let nextStr = page.next, let url = URL(string: nextStr) {
+                    self.nextLocationsURL = url
+                } else {
+                    self.nextLocationsURL = nil
+                }
+                self.viewState = .finished
                 
             case .nextPage:
                 guard let next = nextLocationsURL else { return }
                 let page = try await interactor.getMoreLocations(next: next)
-                await MainActor.run {
-                    if let info = page.locations {
-                        let mapped = info.compactMap { $0.toBo() }
-                        self.locations.append(contentsOf: mapped)
-                    }
-                    if let nextStr = page.next, let url = URL(string: nextStr) {
-                        self.nextLocationsURL = url
-                    } else {
-                        self.nextLocationsURL = nil
-                    }
+                
+                if let info = page.locations {
+                    let mapped = info.compactMap { $0.toBo() }
+                    self.locations.append(contentsOf: mapped)
+                }
+                if let nextStr = page.next, let url = URL(string: nextStr) {
+                    self.nextLocationsURL = url
+                } else {
+                    self.nextLocationsURL = nil
                 }
         }
     }

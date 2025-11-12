@@ -33,17 +33,18 @@ final class DetailViewModel: ObservableObject {
         self.location = location
     }
     //MARK: - Load
+    @MainActor
     func loadCharacter(id: Int?) async {
         do {
-            await MainActor.run { viewState = .loading }
+            viewState = .loading
             try await Task.sleep(nanoseconds: 1_000_000_000)
             let detailCharacter = try await interactor.getCharacterDetail(id: id!)
-            await MainActor.run {
-                let mapped = detailCharacter.toBo()
-                
-                character = mapped
-                viewState = .finished
-            }
+            
+            let mapped = detailCharacter.toBo()
+            
+            character = mapped
+            viewState = .finished
+            
         } catch {
             errorInfo = ErrorWrapper(title: "An error has occurred!", error: ErrorHandler.invalidUrl, guidance: "We couldn’t complete your request.")
             guard let errorInfo else { return }
@@ -52,16 +53,16 @@ final class DetailViewModel: ObservableObject {
         }
     }
     
+    @MainActor
     func loadEpisode(id: Int?) async {
         do {
-            await MainActor.run { viewState = .loading }
+            viewState = .loading
             try await Task.sleep(nanoseconds: 1_000_000_000)
             let detailEpisode = try await interactor.getEpisodeDetail(id: id!)
-            await MainActor.run {
-                let mapped = detailEpisode.toBo()
-                episode = mapped
-                viewState = .finished
-            }
+            
+            let mapped = detailEpisode.toBo()
+            episode = mapped
+            viewState = .finished
         } catch {
             errorInfo = ErrorWrapper(title: "An error has occurred!", error: ErrorHandler.invalidUrl, guidance: "We couldn’t complete your request.")
             guard let errorInfo else { return }
@@ -69,16 +70,16 @@ final class DetailViewModel: ObservableObject {
         }
     }
     
+    @MainActor
     func loadLocation(id: Int?) async {
         do {
-            await MainActor.run { viewState = .loading }
+            viewState = .loading
             try await Task.sleep(nanoseconds: 1_000_000_000)
             let detailLocation = try await interactor.getLocationDetail(id: id!)
-            await MainActor.run {
-                let mapped = detailLocation.toBo()
-                location = mapped
-                viewState = .finished
-            }
+            let mapped = detailLocation.toBo()
+            location = mapped
+            viewState = .finished
+            
         } catch {
             errorInfo = ErrorWrapper(title: "An error has occurred!", error: ErrorHandler.invalidUrl, guidance: "We couldn’t complete your request.")
             guard let errorInfo else { return }
