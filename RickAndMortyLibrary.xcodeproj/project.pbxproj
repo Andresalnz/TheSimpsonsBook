@@ -16,12 +16,7 @@
 		9F0DEA312AE149E1009376F1 /* CharacterMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA302AE149E1009376F1 /* CharacterMapper.swift */; };
 		9F0DEA382AE15F23009376F1 /* ListHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA372AE15F23009376F1 /* ListHomeView.swift */; };
 		9F0DEA3A2AE15F3B009376F1 /* ListHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA392AE15F3B009376F1 /* ListHomeViewModel.swift */; };
-		9F0DEA3C2AE17AF6009376F1 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA3B2AE17AF6009376F1 /* Util.swift */; };
-		9F0DEA402AE18559009376F1 /* AppImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA3F2AE18559009376F1 /* AppImage.swift */; };
 		9F0DEA452AE18C8C009376F1 /* CharacterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA442AE18C8C009376F1 /* CharacterRowView.swift */; };
-		9F0DEA532AE1D93B009376F1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA522AE1D93B009376F1 /* DetailView.swift */; };
-		9F11CA0C2B6A79FD00602315 /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F11CA0B2B6A79FD00602315 /* FavouritesViewModel.swift */; };
-		9F11CA0E2B6A7A0C00602315 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F11CA0D2B6A7A0C00602315 /* FavouritesView.swift */; };
 		9F1220FE2EB0F31E0024BCEF /* SimpsonsCharacterDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1220FD2EB0F31E0024BCEF /* SimpsonsCharacterDetailDTO.swift */; };
 		9F1221002EB0F4D10024BCEF /* SimpsonsEpisodeDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1220FF2EB0F4D10024BCEF /* SimpsonsEpisodeDetailDTO.swift */; };
 		9F1221042EB0F5380024BCEF /* SimpsonsLocationDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1221032EB0F5380024BCEF /* SimpsonsLocationDetailDTO.swift */; };
@@ -34,14 +29,9 @@
 		9F12211A2EB125290024BCEF /* SimpsonsDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1221192EB125290024BCEF /* SimpsonsDetailInteractor.swift */; };
 		9F12211E2EB142AA0024BCEF /* DetailCharcterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F12211D2EB142AA0024BCEF /* DetailCharcterView.swift */; };
 		9F1221202EB142CB0024BCEF /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F12211F2EB142CB0024BCEF /* DetailViewModel.swift */; };
-		9F1BFCA22EB91EFA00E7922F /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1BFCA12EB91EFA00E7922F /* NavigationManager.swift */; };
 		9F358A8B2EA8067C00673350 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F358A8A2EA8067C00673350 /* LoadingView.swift */; };
-		9F358A8D2EA8096100673350 /* ListRowLoadingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F358A8C2EA8095900673350 /* ListRowLoadingStyle.swift */; };
-		9F4458182B6BB62B0076994F /* CharacterFavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4458172B6BB62B0076994F /* CharacterFavouriteView.swift */; };
 		9F494F6D2EBB509B00D552B9 /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F494F6C2EBB509B00D552B9 /* ErrorWrapper.swift */; };
-		9F524FB32B7E1F8400DE246A /* RMFirebaseFirestoreSaveDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F524FB22B7E1F8400DE246A /* RMFirebaseFirestoreSaveDocuments.swift */; };
 		9F7959032B6A6AD70083E9F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7959022B6A6AD70083E9F1 /* GoogleService-Info.plist */; };
-		9F798BCB2B18FFA7008BEC6E /* ListWithSeparation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F798BCA2B18FFA7008BEC6E /* ListWithSeparation.swift */; };
 		9F8445F92AF1E50700460822 /* EntityDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8445F82AF1E50700460822 /* EntityDetailHeaderView.swift */; };
 		9F8445FB2AF1E6B200460822 /* EntityDetailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8445FA2AF1E6B200460822 /* EntityDetailCardView.swift */; };
 		9F8814882AE26F4700448501 /* EpisodeModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8814872AE26F4700448501 /* EpisodeModelDTO.swift */; };
@@ -51,25 +41,13 @@
 		9F8814902AE2A96A00448501 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88148F2AE2A96A00448501 /* Constants.swift */; };
 		9F8814922AE2BBBE00448501 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9F8814912AE2BBBE00448501 /* README.md */; };
 		9F8CFF192B04D92E00BC00EC /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8CFF182B04D92E00BC00EC /* Repository.swift */; };
-		9F8CFF1B2B04DA4800BC00EC /* InteractorRickAndMorty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8CFF1A2B04DA4800BC00EC /* InteractorRickAndMorty.swift */; };
 		9FAAFBC12B0B880100D65E6F /* LocationModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAFBC02B0B880100D65E6F /* LocationModelDTO.swift */; };
 		9FAAFBC32B0B881000D65E6F /* LocationModelBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAFBC22B0B881000D65E6F /* LocationModelBO.swift */; };
 		9FAAFBC52B0B882000D65E6F /* LocationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAFBC42B0B882000D65E6F /* LocationMapper.swift */; };
-		9FAAFBCE2B0CD53800D65E6F /* DetailViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAFBCD2B0CD53800D65E6F /* DetailViewProtocols.swift */; };
-		9FAAFBD02B0CD69800D65E6F /* DetailModelVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAAFBCF2B0CD69800D65E6F /* DetailModelVO.swift */; };
-		9FB5F8532B61073F00C4042D /* StyleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB5F8522B61073F00C4042D /* StyleList.swift */; };
 		9FC545D02EBA107700CB3DF1 /* DetailEpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC545CF2EBA107700CB3DF1 /* DetailEpisodeView.swift */; };
 		9FC545D22EBA108600CB3DF1 /* DetailLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC545D12EBA108600CB3DF1 /* DetailLocationView.swift */; };
 		9FCB85B02E96861900F1E21C /* SimpsonsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB85AF2E96861900F1E21C /* SimpsonsInteractorProtocol.swift */; };
 		9FCB85B32E9692C300F1E21C /* SimpsonsHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB85B22E9692C300F1E21C /* SimpsonsHomeInteractor.swift */; };
-		9FD128B62B6BF9AA00A9B8D6 /* EpisodeLocationFavourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD128B52B6BF9AA00A9B8D6 /* EpisodeLocationFavourite.swift */; };
-		9FD128B92B6C026700A9B8D6 /* ButtonFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD128B82B6C026700A9B8D6 /* ButtonFilterView.swift */; };
-		9FF9F9082AF18EAB00411BCC /* InfoDetailCharacterRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF9F9072AF18EAB00411BCC /* InfoDetailCharacterRowView.swift */; };
-		9FFE6A3A2B7E81F8004CEEA9 /* FirebaseFirestoreCharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFE6A392B7E81F8004CEEA9 /* FirebaseFirestoreCharacterModel.swift */; };
-		9FFE6A3C2B7E8238004CEEA9 /* FirebaseFirestoreEpisodeLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFE6A3B2B7E8238004CEEA9 /* FirebaseFirestoreEpisodeLocationModel.swift */; };
-		9FFE6A412B7EA288004CEEA9 /* RMFirebaseFirestoreGetDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFE6A402B7EA288004CEEA9 /* RMFirebaseFirestoreGetDocuments.swift */; };
-		9FFE6A432B7F7B9E004CEEA9 /* SwipeActionsViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFE6A422B7F7B9E004CEEA9 /* SwipeActionsViewModifier.swift */; };
-		9FFE6A452B83792E004CEEA9 /* RMFirebaseFirestoreDeleteDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFE6A442B83792E004CEEA9 /* RMFirebaseFirestoreDeleteDocuments.swift */; };
 		9FFF45CB2C9C7F240026F21E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9FFF45CA2C9C7F240026F21E /* FirebaseAnalytics */; };
 		9FFF45CD2C9C7F240026F21E /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 9FFF45CC2C9C7F240026F21E /* FirebaseAnalyticsOnDeviceConversion */; };
 		9FFF45CF2C9C7F240026F21E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 9FFF45CE2C9C7F240026F21E /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -91,12 +69,7 @@
 		9F0DEA302AE149E1009376F1 /* CharacterMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMapper.swift; sourceTree = "<group>"; };
 		9F0DEA372AE15F23009376F1 /* ListHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHomeView.swift; sourceTree = "<group>"; };
 		9F0DEA392AE15F3B009376F1 /* ListHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHomeViewModel.swift; sourceTree = "<group>"; };
-		9F0DEA3B2AE17AF6009376F1 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
-		9F0DEA3F2AE18559009376F1 /* AppImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImage.swift; sourceTree = "<group>"; };
 		9F0DEA442AE18C8C009376F1 /* CharacterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRowView.swift; sourceTree = "<group>"; };
-		9F0DEA522AE1D93B009376F1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		9F11CA0B2B6A79FD00602315 /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
-		9F11CA0D2B6A7A0C00602315 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 		9F1220FD2EB0F31E0024BCEF /* SimpsonsCharacterDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsCharacterDetailDTO.swift; sourceTree = "<group>"; };
 		9F1220FF2EB0F4D10024BCEF /* SimpsonsEpisodeDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsEpisodeDetailDTO.swift; sourceTree = "<group>"; };
 		9F1221032EB0F5380024BCEF /* SimpsonsLocationDetailDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsLocationDetailDTO.swift; sourceTree = "<group>"; };
@@ -109,14 +82,9 @@
 		9F1221192EB125290024BCEF /* SimpsonsDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsDetailInteractor.swift; sourceTree = "<group>"; };
 		9F12211D2EB142AA0024BCEF /* DetailCharcterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharcterView.swift; sourceTree = "<group>"; };
 		9F12211F2EB142CB0024BCEF /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewModel.swift; path = RickAndMortyLibrary/UseCases/Detail/ViewModel/DetailViewModel.swift; sourceTree = SOURCE_ROOT; };
-		9F1BFCA12EB91EFA00E7922F /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		9F358A8A2EA8067C00673350 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		9F358A8C2EA8095900673350 /* ListRowLoadingStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowLoadingStyle.swift; sourceTree = "<group>"; };
-		9F4458172B6BB62B0076994F /* CharacterFavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFavouriteView.swift; sourceTree = "<group>"; };
 		9F494F6C2EBB509B00D552B9 /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
-		9F524FB22B7E1F8400DE246A /* RMFirebaseFirestoreSaveDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMFirebaseFirestoreSaveDocuments.swift; sourceTree = "<group>"; };
 		9F7959022B6A6AD70083E9F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		9F798BCA2B18FFA7008BEC6E /* ListWithSeparation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWithSeparation.swift; sourceTree = "<group>"; };
 		9F8445F82AF1E50700460822 /* EntityDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDetailHeaderView.swift; sourceTree = "<group>"; };
 		9F8445FA2AF1E6B200460822 /* EntityDetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDetailCardView.swift; sourceTree = "<group>"; };
 		9F8814872AE26F4700448501 /* EpisodeModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeModelDTO.swift; sourceTree = "<group>"; };
@@ -126,25 +94,13 @@
 		9F88148F2AE2A96A00448501 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9F8814912AE2BBBE00448501 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9F8CFF182B04D92E00BC00EC /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		9F8CFF1A2B04DA4800BC00EC /* InteractorRickAndMorty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorRickAndMorty.swift; sourceTree = "<group>"; };
 		9FAAFBC02B0B880100D65E6F /* LocationModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModelDTO.swift; sourceTree = "<group>"; };
 		9FAAFBC22B0B881000D65E6F /* LocationModelBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModelBO.swift; sourceTree = "<group>"; };
 		9FAAFBC42B0B882000D65E6F /* LocationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapper.swift; sourceTree = "<group>"; };
-		9FAAFBCD2B0CD53800D65E6F /* DetailViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewProtocols.swift; sourceTree = "<group>"; };
-		9FAAFBCF2B0CD69800D65E6F /* DetailModelVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModelVO.swift; sourceTree = "<group>"; };
-		9FB5F8522B61073F00C4042D /* StyleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleList.swift; sourceTree = "<group>"; };
 		9FC545CF2EBA107700CB3DF1 /* DetailEpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEpisodeView.swift; sourceTree = "<group>"; };
 		9FC545D12EBA108600CB3DF1 /* DetailLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationView.swift; sourceTree = "<group>"; };
 		9FCB85AF2E96861900F1E21C /* SimpsonsInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsInteractorProtocol.swift; sourceTree = "<group>"; };
 		9FCB85B22E9692C300F1E21C /* SimpsonsHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsHomeInteractor.swift; sourceTree = "<group>"; };
-		9FD128B52B6BF9AA00A9B8D6 /* EpisodeLocationFavourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeLocationFavourite.swift; sourceTree = "<group>"; };
-		9FD128B82B6C026700A9B8D6 /* ButtonFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFilterView.swift; sourceTree = "<group>"; };
-		9FF9F9072AF18EAB00411BCC /* InfoDetailCharacterRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDetailCharacterRowView.swift; sourceTree = "<group>"; };
-		9FFE6A392B7E81F8004CEEA9 /* FirebaseFirestoreCharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreCharacterModel.swift; sourceTree = "<group>"; };
-		9FFE6A3B2B7E8238004CEEA9 /* FirebaseFirestoreEpisodeLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFirestoreEpisodeLocationModel.swift; sourceTree = "<group>"; };
-		9FFE6A402B7EA288004CEEA9 /* RMFirebaseFirestoreGetDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMFirebaseFirestoreGetDocuments.swift; sourceTree = "<group>"; };
-		9FFE6A422B7F7B9E004CEEA9 /* SwipeActionsViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeActionsViewModifier.swift; sourceTree = "<group>"; };
-		9FFE6A442B83792E004CEEA9 /* RMFirebaseFirestoreDeleteDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMFirebaseFirestoreDeleteDocuments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,7 +153,6 @@
 				9F8CFF122B04004800BC00EC /* Shared */,
 				9F0DEA272AE1440E009376F1 /* Model */,
 				9F0DEA262AE143FD009376F1 /* UseCases */,
-				9F0DEA252AE143F3009376F1 /* Provider */,
 				9F0DEA242AE143E1009376F1 /* Utils */,
 				9F0DEA232AE142CB009376F1 /* SupportingFiles */,
 				9F0DEA152AE13CC5009376F1 /* RickAndMortyLibraryApp.swift */,
@@ -226,21 +181,10 @@
 		9F0DEA242AE143E1009376F1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				9F0DEA3B2AE17AF6009376F1 /* Util.swift */,
 				9F88148D2AE2975B00448501 /* ErrorHandler.swift */,
 				9F88148F2AE2A96A00448501 /* Constants.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		9F0DEA252AE143F3009376F1 /* Provider */ = {
-			isa = PBXGroup;
-			children = (
-				9FAAFBCA2B0BCBC000D65E6F /* Interactor */,
-				9F0DEA322AE1575C009376F1 /* Repository */,
-				9F524FB12B7E1F3B00DE246A /* Firebase */,
-			);
-			path = Provider;
 			sourceTree = "<group>";
 		};
 		9F0DEA262AE143FD009376F1 /* UseCases */ = {
@@ -249,7 +193,6 @@
 				9F0C75D02B31C2D600DF1CB7 /* TabBar */,
 				9F8CFF142B04D5C600BC00EC /* Home */,
 				9F0DEA4F2AE1D916009376F1 /* Detail */,
-				9F11CA0A2B6A79DE00602315 /* Favourites */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -260,11 +203,6 @@
 				9FC546082EBA701B00CB3DF1 /* Error */,
 				9F1220F92EB0F27A0024BCEF /* Detail */,
 				9F1220F82EB0F2380024BCEF /* MainListings */,
-				9FFE6A342B7E81B7004CEEA9 /* Firebase */,
-				9F0DEA282AE1497E009376F1 /* Character */,
-				9F8814832AE26EE100448501 /* Episode */,
-				9FAAFBBC2B0B87D000D65E6F /* Locations */,
-				9FAAFBB92B0B83AA00D65E6F /* VO */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,22 +241,6 @@
 			path = DTO;
 			sourceTree = "<group>";
 		};
-		9F0DEA322AE1575C009376F1 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				9F8CFF182B04D92E00BC00EC /* Repository.swift */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		9F0DEA3E2AE18547009376F1 /* AppImage */ = {
-			isa = PBXGroup;
-			children = (
-				9F0DEA3F2AE18559009376F1 /* AppImage.swift */,
-			);
-			path = AppImage;
-			sourceTree = "<group>";
-		};
 		9F0DEA432AE18C79009376F1 /* Rows */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,25 +256,16 @@
 				9F12211B2EB142620024BCEF /* Views */,
 				9F1221182EB125020024BCEF /* Interactor */,
 				9F8445F72AF1E4E600460822 /* Sections */,
-				9F0DEA522AE1D93B009376F1 /* DetailView.swift */,
 			);
 			path = Detail;
-			sourceTree = "<group>";
-		};
-		9F11CA0A2B6A79DE00602315 /* Favourites */ = {
-			isa = PBXGroup;
-			children = (
-				9FD128B72B6C024D00A9B8D6 /* Views */,
-				9F4458162B6BB6130076994F /* Rows */,
-				9F11CA0B2B6A79FD00602315 /* FavouritesViewModel.swift */,
-				9F11CA0D2B6A7A0C00602315 /* FavouritesView.swift */,
-			);
-			path = Favourites;
 			sourceTree = "<group>";
 		};
 		9F1220F82EB0F2380024BCEF /* MainListings */ = {
 			isa = PBXGroup;
 			children = (
+				9F0DEA282AE1497E009376F1 /* Character */,
+				9F8814832AE26EE100448501 /* Episode */,
+				9FAAFBBC2B0B87D000D65E6F /* Locations */,
 			);
 			path = MainListings;
 			sourceTree = "<group>";
@@ -495,31 +408,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		9F1BFCA02EB91EDD00E7922F /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-				9F1BFCA12EB91EFA00E7922F /* NavigationManager.swift */,
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
-		9F4458162B6BB6130076994F /* Rows */ = {
-			isa = PBXGroup;
-			children = (
-				9F4458172B6BB62B0076994F /* CharacterFavouriteView.swift */,
-				9FD128B52B6BF9AA00A9B8D6 /* EpisodeLocationFavourite.swift */,
-			);
-			path = Rows;
-			sourceTree = "<group>";
-		};
-		9F524FB12B7E1F3B00DE246A /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				9FFE6A3F2B7EA21F004CEEA9 /* Firestore */,
-			);
-			path = Firebase;
-			sourceTree = "<group>";
-		};
 		9F8445F72AF1E4E600460822 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,24 +451,11 @@
 			path = DTO;
 			sourceTree = "<group>";
 		};
-		9F8CFF112B04004100BC00EC /* Modifiers */ = {
-			isa = PBXGroup;
-			children = (
-				9F358A8C2EA8095900673350 /* ListRowLoadingStyle.swift */,
-				9FB5F8522B61073F00C4042D /* StyleList.swift */,
-				9FFE6A422B7F7B9E004CEEA9 /* SwipeActionsViewModifier.swift */,
-			);
-			path = Modifiers;
-			sourceTree = "<group>";
-		};
 		9F8CFF122B04004800BC00EC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				9F1BFCA02EB91EDD00E7922F /* Navigation */,
-				9F8CFF112B04004100BC00EC /* Modifiers */,
-				9F8CFF1C2B056E7700BC00EC /* Protocols */,
+				9FCB85AC2E9684D700F1E21C /* Provider */,
 				9F8CFF132B04014A00BC00EC /* Views */,
-				9F0DEA3E2AE18547009376F1 /* AppImage */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -588,8 +463,6 @@
 		9F8CFF132B04014A00BC00EC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9FF9F9072AF18EAB00411BCC /* InfoDetailCharacterRowView.swift */,
-				9F798BCA2B18FFA7008BEC6E /* ListWithSeparation.swift */,
 				9F358A8A2EA8067C00673350 /* LoadingView.swift */,
 			);
 			path = Views;
@@ -604,23 +477,6 @@
 				9F0DEA392AE15F3B009376F1 /* ListHomeViewModel.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		9F8CFF1C2B056E7700BC00EC /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				9FCB85AC2E9684D700F1E21C /* Provider */,
-				9FAAFBCD2B0CD53800D65E6F /* DetailViewProtocols.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		9FAAFBB92B0B83AA00D65E6F /* VO */ = {
-			isa = PBXGroup;
-			children = (
-				9FAAFBCF2B0CD69800D65E6F /* DetailModelVO.swift */,
-			);
-			path = VO;
 			sourceTree = "<group>";
 		};
 		9FAAFBBC2B0B87D000D65E6F /* Locations */ = {
@@ -657,14 +513,6 @@
 			path = DTO;
 			sourceTree = "<group>";
 		};
-		9FAAFBCA2B0BCBC000D65E6F /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				9F8CFF1A2B04DA4800BC00EC /* InteractorRickAndMorty.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
 		9FC546082EBA701B00CB3DF1 /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -676,6 +524,7 @@
 		9FCB85AC2E9684D700F1E21C /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				9F8CFF182B04D92E00BC00EC /* Repository.swift */,
 				9FCB85AD2E9684E900F1E21C /* Protocol */,
 			);
 			path = Provider;
@@ -695,57 +544,6 @@
 				9FCB85B22E9692C300F1E21C /* SimpsonsHomeInteractor.swift */,
 			);
 			path = Interactor;
-			sourceTree = "<group>";
-		};
-		9FD128B72B6C024D00A9B8D6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				9FD128B82B6C026700A9B8D6 /* ButtonFilterView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		9FFE6A342B7E81B7004CEEA9 /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				9FFE6A352B7E81BF004CEEA9 /* Firestore */,
-			);
-			path = Firebase;
-			sourceTree = "<group>";
-		};
-		9FFE6A352B7E81BF004CEEA9 /* Firestore */ = {
-			isa = PBXGroup;
-			children = (
-				9FFE6A372B7E81D1004CEEA9 /* Episode */,
-				9FFE6A362B7E81C8004CEEA9 /* Character */,
-			);
-			path = Firestore;
-			sourceTree = "<group>";
-		};
-		9FFE6A362B7E81C8004CEEA9 /* Character */ = {
-			isa = PBXGroup;
-			children = (
-				9FFE6A392B7E81F8004CEEA9 /* FirebaseFirestoreCharacterModel.swift */,
-			);
-			path = Character;
-			sourceTree = "<group>";
-		};
-		9FFE6A372B7E81D1004CEEA9 /* Episode */ = {
-			isa = PBXGroup;
-			children = (
-				9FFE6A3B2B7E8238004CEEA9 /* FirebaseFirestoreEpisodeLocationModel.swift */,
-			);
-			path = Episode;
-			sourceTree = "<group>";
-		};
-		9FFE6A3F2B7EA21F004CEEA9 /* Firestore */ = {
-			isa = PBXGroup;
-			children = (
-				9F524FB22B7E1F8400DE246A /* RMFirebaseFirestoreSaveDocuments.swift */,
-				9FFE6A402B7EA288004CEEA9 /* RMFirebaseFirestoreGetDocuments.swift */,
-				9FFE6A442B83792E004CEEA9 /* RMFirebaseFirestoreDeleteDocuments.swift */,
-			);
-			path = Firestore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -834,12 +632,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F0DEA452AE18C8C009376F1 /* CharacterRowView.swift in Sources */,
-				9FFE6A412B7EA288004CEEA9 /* RMFirebaseFirestoreGetDocuments.swift in Sources */,
-				9FFE6A3C2B7E8238004CEEA9 /* FirebaseFirestoreEpisodeLocationModel.swift in Sources */,
 				9FAAFBC12B0B880100D65E6F /* LocationModelDTO.swift in Sources */,
-				9F798BCB2B18FFA7008BEC6E /* ListWithSeparation.swift in Sources */,
-				9FB5F8532B61073F00C4042D /* StyleList.swift in Sources */,
-				9F8CFF1B2B04DA4800BC00EC /* InteractorRickAndMorty.swift in Sources */,
 				9F1221092EB11C750024BCEF /* SimpsonsCharacterDetailBO.swift in Sources */,
 				9FAAFBC32B0B881000D65E6F /* LocationModelBO.swift in Sources */,
 				9F1221002EB0F4D10024BCEF /* SimpsonsEpisodeDetailDTO.swift in Sources */,
@@ -848,28 +641,17 @@
 				9FC545D02EBA107700CB3DF1 /* DetailEpisodeView.swift in Sources */,
 				9F1221112EB121800024BCEF /* SimpsonsEpisodeDetailMapper.swift in Sources */,
 				9F0DEA3A2AE15F3B009376F1 /* ListHomeViewModel.swift in Sources */,
-				9F4458182B6BB62B0076994F /* CharacterFavouriteView.swift in Sources */,
-				9FFE6A432B7F7B9E004CEEA9 /* SwipeActionsViewModifier.swift in Sources */,
 				9F494F6D2EBB509B00D552B9 /* ErrorWrapper.swift in Sources */,
 				9F0C75D22B31C30F00DF1CB7 /* TabBarView.swift in Sources */,
-				9F0DEA532AE1D93B009376F1 /* DetailView.swift in Sources */,
 				9F12211E2EB142AA0024BCEF /* DetailCharcterView.swift in Sources */,
-				9F524FB32B7E1F8400DE246A /* RMFirebaseFirestoreSaveDocuments.swift in Sources */,
 				9F1221202EB142CB0024BCEF /* DetailViewModel.swift in Sources */,
-				9FD128B92B6C026700A9B8D6 /* ButtonFilterView.swift in Sources */,
-				9F358A8D2EA8096100673350 /* ListRowLoadingStyle.swift in Sources */,
 				9FCB85B32E9692C300F1E21C /* SimpsonsHomeInteractor.swift in Sources */,
 				9F1221172EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift in Sources */,
-				9FAAFBD02B0CD69800D65E6F /* DetailModelVO.swift in Sources */,
 				9F358A8B2EA8067C00673350 /* LoadingView.swift in Sources */,
 				9F1221042EB0F5380024BCEF /* SimpsonsLocationDetailDTO.swift in Sources */,
-				9F1BFCA22EB91EFA00E7922F /* NavigationManager.swift in Sources */,
-				9F0DEA3C2AE17AF6009376F1 /* Util.swift in Sources */,
 				9F8445FB2AF1E6B200460822 /* EntityDetailCardView.swift in Sources */,
 				9F0DEA312AE149E1009376F1 /* CharacterMapper.swift in Sources */,
 				9F0DEA2F2AE149C6009376F1 /* CharacterModelBO.swift in Sources */,
-				9F11CA0E2B6A7A0C00602315 /* FavouritesView.swift in Sources */,
-				9F11CA0C2B6A79FD00602315 /* FavouritesViewModel.swift in Sources */,
 				9F12211A2EB125290024BCEF /* SimpsonsDetailInteractor.swift in Sources */,
 				9F0DEA382AE15F23009376F1 /* ListHomeView.swift in Sources */,
 				9F88148C2AE26F6100448501 /* EpisodeMapper.swift in Sources */,
@@ -884,14 +666,8 @@
 				9F1220FE2EB0F31E0024BCEF /* SimpsonsCharacterDetailDTO.swift in Sources */,
 				9F0DEA162AE13CC5009376F1 /* RickAndMortyLibraryApp.swift in Sources */,
 				9F8814882AE26F4700448501 /* EpisodeModelDTO.swift in Sources */,
-				9FFE6A452B83792E004CEEA9 /* RMFirebaseFirestoreDeleteDocuments.swift in Sources */,
-				9FF9F9082AF18EAB00411BCC /* InfoDetailCharacterRowView.swift in Sources */,
 				9F88148E2AE2975B00448501 /* ErrorHandler.swift in Sources */,
 				9F12210F2EB121500024BCEF /* SimpsonsEpisodeDetailBO.swift in Sources */,
-				9FAAFBCE2B0CD53800D65E6F /* DetailViewProtocols.swift in Sources */,
-				9FD128B62B6BF9AA00A9B8D6 /* EpisodeLocationFavourite.swift in Sources */,
-				9FFE6A3A2B7E81F8004CEEA9 /* FirebaseFirestoreCharacterModel.swift in Sources */,
-				9F0DEA402AE18559009376F1 /* AppImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

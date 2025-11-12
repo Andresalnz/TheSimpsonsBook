@@ -11,7 +11,9 @@ struct LoadingView: View {
     let title: String
     var body: some View {
         ProgressView(title)
-            .modifier(ListRowLoadingStyle())
+            .listRowBackground(Color.clear)
+            .listRowInsets(EdgeInsets())
+            .frame(maxWidth: .infinity)
     }
 }
 
