@@ -37,12 +37,6 @@ final class ListHomeViewModel: ObservableObject {
     @Published var viewState: ViewState = .loading
     let type: TypeViewList
     
-    //Manejo de errores
-    @Published var errorMsg = ""
-    @Published var showAlert = false
-    
-    // Búsqueda
-    @Published var searchText: String = ""
     
     //MARK: - Init
     init(interactor: Interactor = SimpsonsInteractor(repository: Repository()), characters: [SimpsonsCharacterBO] = [], episodes: [SimpsonsEpisodeBO] = [], locations: [SimpsonsLocationBO] = [], type: TypeViewList) {
@@ -53,27 +47,6 @@ final class ListHomeViewModel: ObservableObject {
         self.type = type
     }
    
-    //MARK: - Search
-    var searchCharacters: [SimpsonsCharacterBO] {
-        guard !searchText.isEmpty else { return characters }
-        return characters.filter { character in
-            character.name?.lowercased().contains(searchText.lowercased()) == true
-        }
-    }
-    
-    var searchEpisodes: [SimpsonsEpisodeBO] {
-        guard !searchText.isEmpty else { return episodes }
-        return episodes.filter { episode in
-            episode.name?.lowercased().contains(searchText.lowercased()) == true
-        }
-    }
-    
-    var searchLocations: [SimpsonsLocationBO] {
-        guard !searchText.isEmpty else { return locations }
-        return locations.filter { location in
-            location.name?.lowercased().contains(searchText.lowercased()) == true
-        }
-    }
     
     //MARK: - checkTheLastIdCharacters
     func checkTheLastIdCharacters(_ type: TypeViewList, of: UUID) -> Bool {

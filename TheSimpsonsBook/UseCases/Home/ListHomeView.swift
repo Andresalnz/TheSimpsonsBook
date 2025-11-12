@@ -46,13 +46,8 @@ struct ListHomeView: View {
             .navigationTitle(navigationTitle ?? Constants.noText)
         }
         .navigationViewStyle(.stack)
-        .searchable(text: $viewModel.searchText, prompt: Constants.searchPrompt)
-        .alert(viewModel.errorMsg, isPresented: $viewModel.showAlert) {
-            //
-        } message: {
-            Text(Constants.messageAlertError)
-                .font(.body)
-        }
+       
+        
         .task {
             await viewModel.load(type, mode: .initial)
         }
