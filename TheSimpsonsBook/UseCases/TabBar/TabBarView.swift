@@ -33,13 +33,6 @@ struct TabBarView: View {
             }
             
             
-            
-            
-//            FavouritesView(viewModel: FavouritesViewModel(typeList: .locations))
-//                .tabItem {
-//                    Image(systemName: "heart")
-//                    Text(Constants.titleFavourite)
-//                }
         }
         .searchable(text: $searchText, prompt: "Enter any search...")
     }
