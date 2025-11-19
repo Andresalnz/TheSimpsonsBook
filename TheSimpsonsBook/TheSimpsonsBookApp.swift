@@ -6,13 +6,19 @@
 //
 
 import SwiftUI
-
+import SwiftData
 
 @main
 struct TheSimpsonsBookApp: App {
+    let dataContainer = DataContainer()
+    
     var body: some Scene {
         WindowGroup {
            TabBarView()
+                
         }
+        // Registro del contenedor SwiftData con el esquema de favoritos
+        .modelContainer(dataContainer.modelCotainer)
+        
     }
 }

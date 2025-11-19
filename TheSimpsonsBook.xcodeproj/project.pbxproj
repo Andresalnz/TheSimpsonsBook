@@ -31,6 +31,9 @@
 		9F1221202EB142CB0024BCEF /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F12211F2EB142CB0024BCEF /* DetailViewModel.swift */; };
 		9F358A8B2EA8067C00673350 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F358A8A2EA8067C00673350 /* LoadingView.swift */; };
 		9F494F6D2EBB509B00D552B9 /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F494F6C2EBB509B00D552B9 /* ErrorWrapper.swift */; };
+		9F7DD9F12ECCDC9B003FE7BF /* FavouriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DD9F02ECCDC9B003FE7BF /* FavouriteModel.swift */; };
+		9F7DD9F62ECCDF84003FE7BF /* FavouriteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DD9F52ECCDF84003FE7BF /* FavouriteStore.swift */; };
+		9F7DD9FB2ECCEFE2003FE7BF /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7DD9FA2ECCEFE2003FE7BF /* DataContainer.swift */; };
 		9F8445F92AF1E50700460822 /* EntityDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8445F82AF1E50700460822 /* EntityDetailHeaderView.swift */; };
 		9F8445FB2AF1E6B200460822 /* EntityDetailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8445FA2AF1E6B200460822 /* EntityDetailCardView.swift */; };
 		9F8814882AE26F4700448501 /* EpisodeModelDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8814872AE26F4700448501 /* EpisodeModelDTO.swift */; };
@@ -75,6 +78,9 @@
 		9F12211F2EB142CB0024BCEF /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewModel.swift; path = TheSimpsonsBook/UseCases/Detail/ViewModel/DetailViewModel.swift; sourceTree = SOURCE_ROOT; };
 		9F358A8A2EA8067C00673350 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		9F494F6C2EBB509B00D552B9 /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
+		9F7DD9F02ECCDC9B003FE7BF /* FavouriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteModel.swift; sourceTree = "<group>"; };
+		9F7DD9F52ECCDF84003FE7BF /* FavouriteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteStore.swift; sourceTree = "<group>"; };
+		9F7DD9FA2ECCEFE2003FE7BF /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		9F8445F82AF1E50700460822 /* EntityDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDetailHeaderView.swift; sourceTree = "<group>"; };
 		9F8445FA2AF1E6B200460822 /* EntityDetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDetailCardView.swift; sourceTree = "<group>"; };
 		9F8814872AE26F4700448501 /* EpisodeModelDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeModelDTO.swift; sourceTree = "<group>"; };
@@ -171,6 +177,7 @@
 		9F0DEA262AE143FD009376F1 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				9F7DD9F22ECCDD20003FE7BF /* Favourite */,
 				9F0C75D02B31C2D600DF1CB7 /* TabBar */,
 				9F8CFF142B04D5C600BC00EC /* Home */,
 				9F0DEA4F2AE1D916009376F1 /* Detail */,
@@ -181,6 +188,7 @@
 		9F0DEA272AE1440E009376F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F7DD9EF2ECCDC20003FE7BF /* SwifData */,
 				9FC546082EBA701B00CB3DF1 /* Error */,
 				9F1220F92EB0F27A0024BCEF /* Detail */,
 				9F1220F82EB0F2380024BCEF /* MainListings */,
@@ -389,6 +397,46 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		9F7DD9EF2ECCDC20003FE7BF /* SwifData */ = {
+			isa = PBXGroup;
+			children = (
+				9F7DD9F02ECCDC9B003FE7BF /* FavouriteModel.swift */,
+			);
+			path = SwifData;
+			sourceTree = "<group>";
+		};
+		9F7DD9F22ECCDD20003FE7BF /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				9F7DD9F42ECCDF53003FE7BF /* Logic */,
+				9F7DD9F32ECCDD30003FE7BF /* Views */,
+			);
+			path = Favourite;
+			sourceTree = "<group>";
+		};
+		9F7DD9F32ECCDD30003FE7BF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9F7DD9F42ECCDF53003FE7BF /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		9F7DD9F92ECCEFC7003FE7BF /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				9F7DD9F52ECCDF84003FE7BF /* FavouriteStore.swift */,
+				9F7DD9FA2ECCEFE2003FE7BF /* DataContainer.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		9F8445F72AF1E4E600460822 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,6 +483,7 @@
 		9F8CFF122B04004800BC00EC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				9F7DD9F92ECCEFC7003FE7BF /* Database */,
 				9FCB85AC2E9684D700F1E21C /* Provider */,
 				9F8CFF132B04014A00BC00EC /* Views */,
 			);
@@ -602,6 +651,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F7DD9F12ECCDC9B003FE7BF /* FavouriteModel.swift in Sources */,
 				9F0DEA452AE18C8C009376F1 /* RowSimpsonsListHome.swift in Sources */,
 				9FAAFBC12B0B880100D65E6F /* LocationModelDTO.swift in Sources */,
 				9F1221092EB11C750024BCEF /* SimpsonsCharacterDetailBO.swift in Sources */,
@@ -612,10 +662,12 @@
 				9FC545D02EBA107700CB3DF1 /* DetailEpisodeView.swift in Sources */,
 				9F1221112EB121800024BCEF /* SimpsonsEpisodeDetailMapper.swift in Sources */,
 				9F0DEA3A2AE15F3B009376F1 /* ListHomeViewModel.swift in Sources */,
+				9F7DD9FB2ECCEFE2003FE7BF /* DataContainer.swift in Sources */,
 				9F494F6D2EBB509B00D552B9 /* ErrorWrapper.swift in Sources */,
 				9F0C75D22B31C30F00DF1CB7 /* TabBarView.swift in Sources */,
 				9F12211E2EB142AA0024BCEF /* DetailCharcterView.swift in Sources */,
 				9F1221202EB142CB0024BCEF /* DetailViewModel.swift in Sources */,
+				9F7DD9F62ECCDF84003FE7BF /* FavouriteStore.swift in Sources */,
 				9FCB85B32E9692C300F1E21C /* SimpsonsHomeInteractor.swift in Sources */,
 				9F1221172EB1226E0024BCEF /* SimpsonLocationDetailMapper.swift in Sources */,
 				9F358A8B2EA8067C00673350 /* LoadingView.swift in Sources */,
