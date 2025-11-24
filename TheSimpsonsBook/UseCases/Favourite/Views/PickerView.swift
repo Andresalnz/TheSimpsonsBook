@@ -25,18 +25,22 @@ struct PickerView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Picker("Categoría", selection: $selectedType) {
-                    ForEach(FavouriteType.allCases) { type in
-                        Text(type.title).tag(type)
-                    }
-                }
-                .pickerStyle(.segmented)
-                .padding([.horizontal, .top])
+                picker
                 
                 ListFavouritesView(fileterBy: selectedType, viewModel: viewModel)
             }
             .navigationTitle("Favourites")
         }
+    }
+    
+    var picker: some View {
+        Picker("Categoría", selection: $selectedType) {
+            ForEach(FavouriteType.allCases) { type in
+                Text(type.title).tag(type)
+            }
+        }
+        .pickerStyle(.segmented)
+        .padding([.horizontal, .top])
     }
 }
 
