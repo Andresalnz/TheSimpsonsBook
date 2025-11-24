@@ -41,7 +41,6 @@ struct ListFavouritesView: View {
   
     
     var body: some View {
-        
         if favouritesCharacters.isEmpty {
             ContentUnavailableView("No favourites yet",
                                    systemImage: "heart",

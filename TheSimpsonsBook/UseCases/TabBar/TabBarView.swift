@@ -10,6 +10,7 @@ import SwiftUI
 struct TabBarView: View {
     
     @State private var searchText: String = ""
+    @Environment(\.modelContext) private var modelContext
     
     var body: some View {
         TabView {
@@ -25,6 +26,9 @@ struct TabBarView: View {
                 ListHomeView(type: .locations, navigationTitle: Constants.titleLocations).environmentObject(ListHomeViewModel(type: .locations))
             }
             
+            Tab(Constants.titleFavourite, systemImage: "heart.fill") {
+               PickerView(context: modelContext)
+            }
            
             Tab(role: .search) {
                 NavigationStack {
@@ -39,5 +43,6 @@ struct TabBarView: View {
 }
 
 #Preview {
-    TabBarView()
+    return TabBarView()
+        .sampleDataContainer()
 }

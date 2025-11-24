@@ -21,19 +21,21 @@ struct PickerView: View {
             wrappedValue: FavouritesViewModel(databaseLocal: FavouriteStore(context: context))
         )
     }
-
+    
     var body: some View {
-        Text(selectedType.rawValue)
-        VStack {
-            Picker("Categoría", selection: $selectedType) {
-                ForEach(FavouriteType.allCases) { type in
-                    Text(type.title).tag(type)
+        NavigationStack {
+            VStack {
+                Picker("Categoría", selection: $selectedType) {
+                    ForEach(FavouriteType.allCases) { type in
+                        Text(type.title).tag(type)
+                    }
                 }
+                .pickerStyle(.segmented)
+                .padding([.horizontal, .top])
+                
+                ListFavouritesView(fileterBy: selectedType, viewModel: viewModel)
             }
-            .pickerStyle(.segmented)
-            .padding([.horizontal, .top])
-            
-            ListFavouritesView(fileterBy: selectedType, viewModel: viewModel)
+            .navigationTitle("Favourites")
         }
     }
 }
