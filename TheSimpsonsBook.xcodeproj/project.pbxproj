@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F029F6A2ECDF22900AF9C9B /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F029F692ECDF22900AF9C9B /* FavouritesView.swift */; };
+		9F029F6D2ECE176E00AF9C9B /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F029F6C2ECE176E00AF9C9B /* FavouritesViewModel.swift */; };
 		9F0C75D22B31C30F00DF1CB7 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0C75D12B31C30F00DF1CB7 /* TabBarView.swift */; };
 		9F0DEA162AE13CC5009376F1 /* TheSimpsonsBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA152AE13CC5009376F1 /* TheSimpsonsBookApp.swift */; };
 		9F0DEA1A2AE13CC6009376F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0DEA192AE13CC6009376F1 /* Assets.xcassets */; };
@@ -50,9 +52,13 @@
 		9FC545D22EBA108600CB3DF1 /* DetailLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC545D12EBA108600CB3DF1 /* DetailLocationView.swift */; };
 		9FCB85B02E96861900F1E21C /* SimpsonsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB85AF2E96861900F1E21C /* SimpsonsInteractorProtocol.swift */; };
 		9FCB85B32E9692C300F1E21C /* SimpsonsHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB85B22E9692C300F1E21C /* SimpsonsHomeInteractor.swift */; };
+		9FF27C8A2ED0B11E00B41757 /* ListFavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF27C892ED0B11E00B41757 /* ListFavouritesView.swift */; };
+		9FF27C8C2ED0B12C00B41757 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF27C8B2ED0B12C00B41757 /* PickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F029F692ECDF22900AF9C9B /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		9F029F6C2ECE176E00AF9C9B /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
 		9F0C75D12B31C30F00DF1CB7 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		9F0DEA122AE13CC5009376F1 /* TheSimpsonsBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSimpsonsBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F0DEA152AE13CC5009376F1 /* TheSimpsonsBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheSimpsonsBookApp.swift; sourceTree = "<group>"; };
@@ -97,6 +103,8 @@
 		9FC545D12EBA108600CB3DF1 /* DetailLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationView.swift; sourceTree = "<group>"; };
 		9FCB85AF2E96861900F1E21C /* SimpsonsInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsInteractorProtocol.swift; sourceTree = "<group>"; };
 		9FCB85B22E9692C300F1E21C /* SimpsonsHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpsonsHomeInteractor.swift; sourceTree = "<group>"; };
+		9FF27C892ED0B11E00B41757 /* ListFavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFavouritesView.swift; sourceTree = "<group>"; };
+		9FF27C8B2ED0B12C00B41757 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F029F6B2ECE174800AF9C9B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9F029F6C2ECE176E00AF9C9B /* FavouritesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		9F0C75D02B31C2D600DF1CB7 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,7 +424,7 @@
 		9F7DD9F22ECCDD20003FE7BF /* Favourite */ = {
 			isa = PBXGroup;
 			children = (
-				9F7DD9F42ECCDF53003FE7BF /* Logic */,
+				9F029F6B2ECE174800AF9C9B /* ViewModel */,
 				9F7DD9F32ECCDD30003FE7BF /* Views */,
 			);
 			path = Favourite;
@@ -417,15 +433,11 @@
 		9F7DD9F32ECCDD30003FE7BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9F029F692ECDF22900AF9C9B /* FavouritesView.swift */,
+				9FF27C892ED0B11E00B41757 /* ListFavouritesView.swift */,
+				9FF27C8B2ED0B12C00B41757 /* PickerView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		9F7DD9F42ECCDF53003FE7BF /* Logic */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Logic;
 			sourceTree = "<group>";
 		};
 		9F7DD9F92ECCEFC7003FE7BF /* Database */ = {
@@ -659,6 +671,7 @@
 				9F1221002EB0F4D10024BCEF /* SimpsonsEpisodeDetailDTO.swift in Sources */,
 				9F8814902AE2A96A00448501 /* Constants.swift in Sources */,
 				9F12210B2EB11C770024BCEF /* SimpsonsCharacterDetailMapper.swift in Sources */,
+				9F029F6D2ECE176E00AF9C9B /* FavouritesViewModel.swift in Sources */,
 				9FC545D02EBA107700CB3DF1 /* DetailEpisodeView.swift in Sources */,
 				9F1221112EB121800024BCEF /* SimpsonsEpisodeDetailMapper.swift in Sources */,
 				9F0DEA3A2AE15F3B009376F1 /* ListHomeViewModel.swift in Sources */,
@@ -666,6 +679,7 @@
 				9F494F6D2EBB509B00D552B9 /* ErrorWrapper.swift in Sources */,
 				9F0C75D22B31C30F00DF1CB7 /* TabBarView.swift in Sources */,
 				9F12211E2EB142AA0024BCEF /* DetailCharcterView.swift in Sources */,
+				9FF27C8C2ED0B12C00B41757 /* PickerView.swift in Sources */,
 				9F1221202EB142CB0024BCEF /* DetailViewModel.swift in Sources */,
 				9F7DD9F62ECCDF84003FE7BF /* FavouriteStore.swift in Sources */,
 				9FCB85B32E9692C300F1E21C /* SimpsonsHomeInteractor.swift in Sources */,
@@ -690,6 +704,8 @@
 				9F0DEA162AE13CC5009376F1 /* TheSimpsonsBookApp.swift in Sources */,
 				9F8814882AE26F4700448501 /* EpisodeModelDTO.swift in Sources */,
 				9F88148E2AE2975B00448501 /* ErrorHandler.swift in Sources */,
+				9FF27C8A2ED0B11E00B41757 /* ListFavouritesView.swift in Sources */,
+				9F029F6A2ECDF22900AF9C9B /* FavouritesView.swift in Sources */,
 				9F12210F2EB121500024BCEF /* SimpsonsEpisodeDetailBO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
