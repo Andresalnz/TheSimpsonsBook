@@ -17,7 +17,6 @@ struct TheSimpsonsBookApp: App {
            TabBarView()
                 
         }
-        // Registro del contenedor SwiftData con el esquema de favoritos
         .modelContainer(dataContainer.modelCotainer)
         
     }
