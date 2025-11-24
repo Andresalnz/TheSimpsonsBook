@@ -46,7 +46,7 @@ class DataContainer {
     }
 }
 
-@MainActor private let sampleContainer = DataContainer(includeItems: true)
+@MainActor let sampleContainer = DataContainer(includeItems: true)
 
 extension View {
     func sampleDataContainer() -> some View {
