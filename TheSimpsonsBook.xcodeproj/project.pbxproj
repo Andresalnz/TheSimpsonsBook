@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F029F6A2ECDF22900AF9C9B /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F029F692ECDF22900AF9C9B /* FavouritesView.swift */; };
 		9F029F6D2ECE176E00AF9C9B /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F029F6C2ECE176E00AF9C9B /* FavouritesViewModel.swift */; };
 		9F0C75D22B31C30F00DF1CB7 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0C75D12B31C30F00DF1CB7 /* TabBarView.swift */; };
 		9F0DEA162AE13CC5009376F1 /* TheSimpsonsBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DEA152AE13CC5009376F1 /* TheSimpsonsBookApp.swift */; };
@@ -57,7 +56,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9F029F692ECDF22900AF9C9B /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 		9F029F6C2ECE176E00AF9C9B /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
 		9F0C75D12B31C30F00DF1CB7 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		9F0DEA122AE13CC5009376F1 /* TheSimpsonsBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheSimpsonsBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -433,7 +431,6 @@
 		9F7DD9F32ECCDD30003FE7BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9F029F692ECDF22900AF9C9B /* FavouritesView.swift */,
 				9FF27C892ED0B11E00B41757 /* ListFavouritesView.swift */,
 				9FF27C8B2ED0B12C00B41757 /* PickerView.swift */,
 			);
@@ -705,7 +702,6 @@
 				9F8814882AE26F4700448501 /* EpisodeModelDTO.swift in Sources */,
 				9F88148E2AE2975B00448501 /* ErrorHandler.swift in Sources */,
 				9FF27C8A2ED0B11E00B41757 /* ListFavouritesView.swift in Sources */,
-				9F029F6A2ECDF22900AF9C9B /* FavouritesView.swift in Sources */,
 				9F12210F2EB121500024BCEF /* SimpsonsEpisodeDetailBO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
