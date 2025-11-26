@@ -24,7 +24,7 @@ struct ListHomeView: View {
     //MARK: - ViewModel
     @EnvironmentObject var viewModel: ListHomeViewModel
     @State var path = NavigationPath()
-    
+    @Environment(\.modelContext) private var context
     var type: TypeViewList
     let navigationTitle: String?
     
@@ -36,11 +36,11 @@ struct ListHomeView: View {
             .navigationDestination(for: AppRoute.self, destination: { route in
                 switch route {
                     case .characters(let character):
-                        DetailCharcterView(id: character.characterId)
+                        DetailCharcterView(id: character.characterId, viewModel: DetailViewModel(database: FavouriteStore(context: context)))
                     case .episodes(let episode):
-                        DetailEpisodeView(id: episode.episodeId)
+                        DetailEpisodeView(id: episode.episodeId, viewModel: DetailViewModel(database: FavouriteStore(context: context)))
                     case .locations(let location):
-                        DetailLocationView(id: location.locationId)
+                        DetailLocationView(id: location.locationId, viewModel: DetailViewModel(database: FavouriteStore(context: context)))
                 }
             })
             .navigationTitle(navigationTitle ?? Constants.noText)

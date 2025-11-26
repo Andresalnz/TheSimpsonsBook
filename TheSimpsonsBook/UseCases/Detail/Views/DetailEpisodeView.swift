@@ -12,8 +12,9 @@ struct DetailEpisodeView: View {
     let id: Int?
     let rows = [GridItem(.adaptive(minimum: 150))]
     
-    @StateObject var viewModel: DetailViewModel = DetailViewModel()
+    @StateObject var viewModel: DetailViewModel
     
+
     var body: some View {
         switch viewModel.viewState {
             case .loading:
@@ -49,5 +50,7 @@ struct DetailEpisodeView: View {
 }
 
 #Preview {
-    DetailEpisodeView(id: 1, viewModel: DetailViewModel(character: Previews.previewDetailCharacter, episode: Previews.previewDetailEpisode, location: Previews.previewDetailLocation))
+    let context = sampleContainer.modelCotainer.mainContext
+    DetailEpisodeView(id: 1, viewModel: DetailViewModel(database: FavouriteStore(context: context), character: Previews.previewDetailCharacter, episode: Previews.previewDetailEpisode, location: Previews.previewDetailLocation))
+        .sampleDataContainer()
 }
