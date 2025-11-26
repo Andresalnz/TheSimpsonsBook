@@ -106,6 +106,6 @@ final class DetailViewModel: ObservableObject {
     
     @MainActor
     func removeoFavorites(type: FavouriteType, remoteId: Int?) throws {
-        try database.remove(type: .character, remoteId: remoteId)
+        try database.remove(type: type, remoteId: remoteId)
     }
 }

@@ -25,7 +25,6 @@ struct DetailCharcterView: View {
                     }
             case .finished:
                 ScrollView {
-                    Text("\(viewModel.character?.characterDetailId ?? 0)")
                     VStack(spacing: 25) {
                         EntityDetailHeaderView(image: viewModel.character?.portraitPath, title: viewModel.character?.name, description: viewModel.character?.description)
                         LazyVGrid(columns: rows, spacing: 20) {
@@ -75,20 +74,20 @@ struct DetailCharcterView: View {
                     }
                 }
                 // Alertas de confirmación
-                .alert("Añadir a favoritos", isPresented: $viewModel.showConfirmAdd) {
-                    Button("Cancelar", role: .cancel) {}
-                    Button("Añadir", role: .none) {
+                .alert("Add to favourites", isPresented: $viewModel.showConfirmAdd) {
+                    Button("Cancel", role: .cancel) {}
+                    Button("Add", role: .none) {
                         Task {
                            try viewModel.saveToFavorites(type: .character, remoteId: viewModel.character?.characterDetailId, title: viewModel.character?.name, subtitle: viewModel.character?.occupation, imageURL: viewModel.character?.portraitPath, createdAt: .now)
                         }
                         isFavourite = true
                     }
                 } message: {
-                    Text("¿Quieres guardar este personaje en favoritos?")
+                    Text("Do you want to save this character to your favourites?")
                 }
-                .alert("Eliminar de favoritos", isPresented: $viewModel.showConfirmRemove) {
-                    Button("Cancelar", role: .cancel) {}
-                    Button("Eliminar", role: .destructive) {
+                .alert("Remove from favourites", isPresented: $viewModel.showConfirmRemove) {
+                    Button("Cancel", role: .cancel) {}
+                    Button("Remove", role: .destructive) {
                         Task {
                           try viewModel.removeoFavorites(type: .character, remoteId: viewModel.character?.characterDetailId)
                             
@@ -96,7 +95,7 @@ struct DetailCharcterView: View {
                         isFavourite = false
                     }
                 } message: {
-                    Text("¿Quieres eliminar este personaje de tus favoritos?")
+                    Text("Are you sure you want to remove this character from your favourites?")
                 }
             case .error(let error):
                 ContentUnavailableView(error.title, systemImage: "exclamationmark.triangle", description: Text(error.guidance))
