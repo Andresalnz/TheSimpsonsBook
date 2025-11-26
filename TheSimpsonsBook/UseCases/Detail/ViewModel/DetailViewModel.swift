@@ -24,7 +24,9 @@ final class DetailViewModel: ObservableObject {
     @Published var episode: SimpsonsEpisodeDetailBO?
     @Published var location: SimpsonsLocationDetailBO?
     @Published var viewState: ViewState = .loading
-    @Published var isPresented: Bool = false
+    
+    @Published var showConfirmAdd: Bool = false
+    @Published var showConfirmRemove: Bool = false
     @Published var errorInfo: ErrorWrapper?
     
     init(interactor: Interactor = SimpsonsInteractor(repository: Repository()), database: FavouriteStoreProtocol, character: SimpsonsCharacterDetailBO? = nil, episode: SimpsonsEpisodeDetailBO? = nil, location: SimpsonsLocationDetailBO? = nil) {
@@ -89,6 +91,13 @@ final class DetailViewModel: ObservableObject {
         }
     }
     
+    func handleFavouriteButtonTap(isFavourite: Bool) {
+       if isFavourite {
+           showConfirmRemove.toggle()
+       } else {
+           showConfirmAdd.toggle()
+       }
+   }
     
     @MainActor
     func saveToFavorites(type: FavouriteType, remoteId: Int?, title: String?, subtitle: String?, imageURL: URL?, createdAt: Date) throws {

@@ -13,12 +13,7 @@ struct DetailCharcterView: View {
     let rows = [GridItem(.adaptive(minimum: 150))]
     
     @StateObject var viewModel: DetailViewModel
-    
-    // MARK: - Favourite
-    @State private var isFavourite: Bool = false
-    @State private var showConfirmAdd: Bool = false
-    @State private var showConfirmRemove: Bool = false
-    
+    @State var isFavourite: Bool = false
     
     var body: some View {
         switch viewModel.viewState {
@@ -70,7 +65,7 @@ struct DetailCharcterView: View {
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button {
-                            handleFavouriteButtonTap()
+                            viewModel.handleFavouriteButtonTap(isFavourite: isFavourite)
                         } label: {
                             Image(systemName: isFavourite ? "heart.fill" : "heart")
                                 .foregroundStyle(isFavourite ? .red : .primary)
@@ -80,7 +75,7 @@ struct DetailCharcterView: View {
                     }
                 }
                 // Alertas de confirmación
-                .alert("Añadir a favoritos", isPresented: $showConfirmAdd) {
+                .alert("Añadir a favoritos", isPresented: $viewModel.showConfirmAdd) {
                     Button("Cancelar", role: .cancel) {}
                     Button("Añadir", role: .none) {
                         Task {
@@ -91,28 +86,20 @@ struct DetailCharcterView: View {
                 } message: {
                     Text("¿Quieres guardar este personaje en favoritos?")
                 }
-                .alert("Eliminar de favoritos", isPresented: $showConfirmRemove) {
+                .alert("Eliminar de favoritos", isPresented: $viewModel.showConfirmRemove) {
                     Button("Cancelar", role: .cancel) {}
                     Button("Eliminar", role: .destructive) {
                         Task {
                           try viewModel.removeoFavorites(type: .character, remoteId: viewModel.character?.characterDetailId)
                             
                         }
+                        isFavourite = false
                     }
                 } message: {
                     Text("¿Quieres eliminar este personaje de tus favoritos?")
                 }
             case .error(let error):
                 ContentUnavailableView(error.title, systemImage: "exclamationmark.triangle", description: Text(error.guidance))
-        }
-    }
-    
-    // MARK: - Helpers Favourites
-    private func handleFavouriteButtonTap() {
-        if isFavourite {
-            showConfirmRemove.toggle()
-        } else {
-            showConfirmAdd.toggle()
         }
     }
 }
