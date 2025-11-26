@@ -13,7 +13,7 @@ struct DetailEpisodeView: View {
     let rows = [GridItem(.adaptive(minimum: 150))]
     
     @StateObject var viewModel: DetailViewModel
-    
+    @State private var isFavourite: Bool = false
 
     var body: some View {
         switch viewModel.viewState {
@@ -42,6 +42,48 @@ struct DetailEpisodeView: View {
                         }
                         .padding(.horizontal)
                     }
+                }
+                .onAppear {
+                    Task {
+                        isFavourite = try viewModel.database.isFavorite(type: .episode, remoteId: viewModel.episode?.episodeDetailId)
+                    }
+                }
+                // Toolbar con botón de favorito
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button {
+                            viewModel.handleFavouriteButtonTap(isFavourite: isFavourite)
+                        } label: {
+                            Image(systemName: isFavourite ? "heart.fill" : "heart")
+                                .foregroundStyle(isFavourite ? .red : .primary)
+                                .accessibilityLabel(isFavourite ? "Eliminar de favoritos" : "Añadir a favoritos")
+                        }
+                  
+                    }
+                }
+                // Alertas de confirmación
+                .alert("Añadir a favoritos", isPresented: $viewModel.showConfirmAdd) {
+                    Button("Cancelar", role: .cancel) {}
+                    Button("Añadir", role: .none) {
+                        Task {
+                            try viewModel.saveToFavorites(type: .episode, remoteId: viewModel.episode?.episodeDetailId, title: viewModel.episode?.name, subtitle: viewModel.episode?.description, imageURL: viewModel.episode?.imagePath, createdAt: .now)
+                        }
+                        isFavourite = true
+                    }
+                } message: {
+                    Text("¿Quieres guardar este personaje en favoritos?")
+                }
+                .alert("Eliminar de favoritos", isPresented: $viewModel.showConfirmRemove) {
+                    Button("Cancelar", role: .cancel) {}
+                    Button("Eliminar", role: .destructive) {
+                        Task {
+                          try viewModel.removeoFavorites(type: .episode, remoteId: viewModel.episode?.episodeDetailId)
+                            
+                        }
+                        isFavourite = false
+                    }
+                } message: {
+                    Text("¿Quieres eliminar este personaje de tus favoritos?")
                 }
             case .error(let error):
                 ContentUnavailableView(error.title, systemImage: "exclamationmark.triangle", description: Text(error.guidance))
