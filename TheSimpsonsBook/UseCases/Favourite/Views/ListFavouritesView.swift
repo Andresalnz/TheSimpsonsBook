@@ -17,8 +17,10 @@ struct FavoritesScreenFactory: View {
         // Creamos las dependencias y se las pasamos a la vista real.
         let repository = FavouriteStore(context: context)
         let viewModel = FavouritesViewModel(databaseLocal: repository)
+        let viewModelDetail = DetailViewModel(database: repository)
         
         ListFavouritesView(fileterBy: .character, viewModel: viewModel)
+        DetailCharcterView(id: 2,viewModel: viewModelDetail)
     }
 }
 
@@ -57,7 +59,7 @@ struct ListFavouritesView: View {
                     )
                     .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                         Button(role: .destructive) {
-                            Task { await viewModel.onDelete(in: fav) }
+                            Task { try viewModel.onDelete(in: fav) }
                         } label: {
                             Label("Delete", systemImage: "trash.fill")
                         }

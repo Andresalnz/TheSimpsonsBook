@@ -18,6 +18,7 @@ struct AlertInfo: Identifiable {
 final class DetailViewModel: ObservableObject {
     
     private let interactor: Interactor
+     let database: FavouriteStoreProtocol
     
     @Published var character: SimpsonsCharacterDetailBO?
     @Published var episode: SimpsonsEpisodeDetailBO?
@@ -26,8 +27,9 @@ final class DetailViewModel: ObservableObject {
     @Published var isPresented: Bool = false
     @Published var errorInfo: ErrorWrapper?
     
-    init(interactor: Interactor = SimpsonsInteractor(repository: Repository()), character: SimpsonsCharacterDetailBO? = nil, episode: SimpsonsEpisodeDetailBO? = nil, location: SimpsonsLocationDetailBO? = nil) {
+    init(interactor: Interactor = SimpsonsInteractor(repository: Repository()), database: FavouriteStoreProtocol, character: SimpsonsCharacterDetailBO? = nil, episode: SimpsonsEpisodeDetailBO? = nil, location: SimpsonsLocationDetailBO? = nil) {
         self.interactor = interactor
+        self.database = database
         self.character = character
         self.episode = episode
         self.location = location
@@ -85,5 +87,16 @@ final class DetailViewModel: ObservableObject {
             guard let errorInfo else { return }
             viewState = .error(errorInfo)
         }
+    }
+    
+    
+    @MainActor
+    func saveToFavorites(type: FavouriteType, remoteId: Int?, title: String?, subtitle: String?, imageURL: URL?, createdAt: Date) throws {
+        try database.add(type: type, remoteId: remoteId, title: title, subtitle: subtitle, imageURL: imageURL, createdAt: createdAt)
+    }
+    
+    @MainActor
+    func removeoFavorites(type: FavouriteType, remoteId: Int?) throws {
+        try database.remove(type: .character, remoteId: remoteId)
     }
 }

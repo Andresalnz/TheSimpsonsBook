@@ -16,13 +16,7 @@ final class FavouritesViewModel: ObservableObject {
         self.databaseLocal = databaseLocal
     }
     
-    func onDelete(in favourites: FavouriteModel) async {
-      
-            do {
-                try databaseLocal.remove(type: favourites.type, remoteId: favourites.remoteId)
-            } catch {
-                print("Error removing favourite: \(error)")
-            }
-        
+    func onDelete(in favourites: FavouriteModel) throws {
+        try databaseLocal.remove(type: favourites.type, remoteId: favourites.remoteId)
     }
 }
