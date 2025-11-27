@@ -77,7 +77,7 @@ struct DetailEpisodeView: View {
                     Button("Cancel", role: .cancel) {}
                     Button("Remove", role: .destructive) {
                         Task {
-                          try viewModel.removeoFavorites(type: .episode, remoteId: viewModel.episode?.episodeDetailId)
+                          try viewModel.removeFavorites(type: .episode, remoteId: viewModel.episode?.episodeDetailId)
                             
                         }
                         isFavourite = false

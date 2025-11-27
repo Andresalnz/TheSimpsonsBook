@@ -78,7 +78,7 @@ struct DetailLocationView: View {
                     Button("Cancel", role: .cancel) {}
                     Button("Remove", role: .destructive) {
                         Task {
-                            try viewModel.removeoFavorites(type: .location, remoteId: viewModel.location?.locationDetailId)
+                            try viewModel.removeFavorites(type: .location, remoteId: viewModel.location?.locationDetailId)
                             
                         }
                         isFavourite = false

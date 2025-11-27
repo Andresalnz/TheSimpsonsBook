@@ -89,7 +89,7 @@ struct DetailCharcterView: View {
                     Button("Cancel", role: .cancel) {}
                     Button("Remove", role: .destructive) {
                         Task {
-                          try viewModel.removeoFavorites(type: .character, remoteId: viewModel.character?.characterDetailId)
+                          try viewModel.removeFavorites(type: .character, remoteId: viewModel.character?.characterDetailId)
                             
                         }
                         isFavourite = false
