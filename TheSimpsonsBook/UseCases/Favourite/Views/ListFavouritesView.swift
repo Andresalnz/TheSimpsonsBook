@@ -30,6 +30,9 @@ struct ListFavouritesView: View {
 
     @ObservedObject private var viewModel: FavouritesViewModel
     
+    @State var showConfirmRemove: Bool = false
+    @State private var favToDelete: FavouriteModel? = nil
+    
     init(fileterBy option: FavouriteType, viewModel: FavouritesViewModel) {
         let targetRaw = option.rawValue
         _viewModel = ObservedObject(wrappedValue: viewModel)
@@ -57,16 +60,25 @@ struct ListFavouritesView: View {
                         sizeImage: 70,
                         text: fav.subtitle
                     )
+                   
                     .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                         Button(role: .destructive) {
-                            Task { try viewModel.onDelete(in: fav) }
+                            favToDelete = fav
+                            showConfirmRemove = true
                         } label: {
                             Label("Delete", systemImage: "trash.fill")
                         }
                     }
                 }
             }
-           
+            .alert("Remove from favourites", isPresented: $showConfirmRemove) {
+                Button("Cancel", role: .cancel) {}
+                Button("Remove", role: .destructive) {
+                    Task { try viewModel.onDelete(in: favToDelete) }
+                }
+            } message: {
+                Text("Are you sure you want to remove this character from your favourites?")
+            }
         }
     }
 }
