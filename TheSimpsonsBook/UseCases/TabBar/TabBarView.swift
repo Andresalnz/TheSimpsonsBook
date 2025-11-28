@@ -9,7 +9,6 @@ import SwiftUI
 
 struct TabBarView: View {
     
-    @State private var searchText: String = ""
     @Environment(\.modelContext) private var modelContext
     
     var body: some View {
@@ -29,16 +28,7 @@ struct TabBarView: View {
             Tab(Constants.titleFavourite, systemImage: "heart.fill") {
                PickerView(context: modelContext)
             }
-           
-            Tab(role: .search) {
-                NavigationStack {
-                    Text("Search")
-                }
-            }
-            
-            
         }
-        .searchable(text: $searchText, prompt: "Enter any search...")
     }
 }
 
